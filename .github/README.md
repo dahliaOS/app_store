@@ -14,10 +14,6 @@
 
 If you're interested in contributing to the project, please refer to [CONTRIBUTING.md](../CONTRIBUTING.md)
 
-## Donate
-
-If you're interested in donating to the project, you can do so by clicking [here](https://dahliaos.io/donate) or by clicking on the Sponsor button featured on this repo!
-
 ## License
 
 <p align="left">
