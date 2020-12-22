@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea for Pangolin
+about: Suggest an idea for the App store
 title: ''
 labels: ''
 assignees: ''
