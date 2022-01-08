@@ -1,0 +1,23 @@
+name: appstore
+description: dahliaOS App store
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: ">=2.15.1 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.0.2
+
+dev_dependencies:
+  lint: ^1.8.1
+#  flutter_test:
+#    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+#  assets:
+#    - assets/

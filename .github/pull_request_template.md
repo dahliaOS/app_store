@@ -33,4 +33,4 @@ Please tick the relevant option by putting an X inside the bracket
 - [ ] All current GitHub actions pass
 - [ ] Any dependent changes have been merged and published in downstream modules
 - [ ] I have checked my code and corrected any misspellings
-- [ ] I have read the [CONTRIBUTING](../CONTRIBUTING.md) document
+- [ ] I have read the [CONTRIBUTING](CONTRIBUTING.md) document
