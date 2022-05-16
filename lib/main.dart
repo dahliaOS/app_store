@@ -14,12 +14,16 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import 'package:appstore/pages/landing.dart';
-import 'package:appstore/theme/theme.dart';
-import 'package:appstore/theme/theme_manager.dart';
-import 'package:appstore/theme/theme_provider.dart';
+import 'package:app_store/pages/app_page.dart';
+import 'package:app_store/pages/landing.dart';
+import 'package:app_store/pages/settings.dart';
+import 'package:app_store/pages/user.dart';
+import 'package:app_store/providers/chip_button_provider.dart';
+import 'package:app_store/providers/switch_list_tile_provider.dart';
+import 'package:app_store/providers/theme_provider.dart';
+import 'package:app_store/theme/theme.dart';
+import 'package:app_store/widgets/buttons/chip_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -34,22 +38,36 @@ class AppStore extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<ThemeProvider>.value(
-          value: ThemeProvider(
-            SchedulerBinding.instance!.window.platformBrightness ==
-                    Brightness.light
-                ? lightTheme
-                : darkTheme,
-          ),
-          builder: (context, child) => MaterialApp(
-            title: 'App store',
-            theme: theme(context),
-            initialRoute: '/',
-            routes: {
-              '/': (context) => const Landing(),
-            },
-          ),
+          value: ThemeProvider(lightTheme),
+        ),
+        ChangeNotifierProvider<ChipButtonProvider>.value(
+          value: ChipButtonProvider(Choice.all),
+        ),
+        ChangeNotifierProvider<SwitchListTileProvider>.value(
+          value: SwitchListTileProvider(false),
         ),
       ],
+      child: const AppStoreHome(),
+    );
+  }
+}
+
+class AppStoreHome extends StatelessWidget {
+  const AppStoreHome({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'App store',
+      theme: theme(context),
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Landing(),
+        '/user': (context) => const User(),
+        '/settings': (context) => const Settings(),
+        '/app_page': (context) => const AppPage(),
+      },
     );
   }
 }

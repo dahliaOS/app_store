@@ -23,17 +23,20 @@ final ThemeData darkTheme = ThemeData(
   colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepOrange)
       .copyWith(secondary: const Color(0xFF212121)),
   iconTheme: const IconThemeData(color: Colors.deepOrange),
+  highlightColor: Colors.deepOrangeAccent,
+  focusColor: Colors.deepOrangeAccent,
+  splashColor: Colors.deepOrangeAccent,
   textTheme: const TextTheme(
     button: TextStyle(
       color: Colors.white,
-      fontSize: 13,
+      fontSize: 11,
       fontWeight: FontWeight.normal,
       overflow: TextOverflow.ellipsis,
     ),
     headline1: TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w500,
-      fontSize: 15,
+      fontSize: 17,
       overflow: TextOverflow.ellipsis,
     ),
     subtitle1: TextStyle(
@@ -45,43 +48,49 @@ final ThemeData darkTheme = ThemeData(
     headline2: TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w500,
-      fontSize: 14,
+      fontSize: 12,
       overflow: TextOverflow.ellipsis,
     ),
     subtitle2: TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.normal,
-      fontSize: 14,
+      fontSize: 11,
       overflow: TextOverflow.ellipsis,
     ),
   ),
   canvasColor: const Color(0xFF212121),
+  cardColor: Colors.white10,
   cardTheme: const CardTheme(
     color: Colors.white10,
     elevation: 0,
-    shape: RoundedRectangleBorder(),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(15)),
+    ),
     margin: EdgeInsets.all(5),
   ),
   inputDecorationTheme: const InputDecorationTheme(
+    filled: true,
+    fillColor: Colors.white10,
+    prefixIconColor: Colors.deepOrange,
     labelStyle: TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.w500,
-      fontSize: 14,
+      fontSize: 12,
       overflow: TextOverflow.ellipsis,
     ),
     hintStyle: TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.normal,
-      fontSize: 14,
+      fontSize: 12,
       overflow: TextOverflow.ellipsis,
     ),
     enabledBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.white),
-      borderRadius: BorderRadius.zero,
+      borderSide: BorderSide.none,
+      borderRadius: BorderRadius.all(Radius.circular(10)),
     ),
     focusedBorder: OutlineInputBorder(
       borderSide: BorderSide(color: Colors.deepOrangeAccent),
-      borderRadius: BorderRadius.all(Radius.circular(5)),
+      borderRadius: BorderRadius.all(Radius.circular(10)),
     ),
   ),
   appBarTheme: const AppBarTheme(
@@ -96,13 +105,111 @@ final ThemeData darkTheme = ThemeData(
     backgroundColor: Color(0xFF212121),
     iconTheme: IconThemeData(color: Colors.deepOrange),
   ),
+  chipTheme: const ChipThemeData(
+    pressElevation: 0,
+    labelPadding: EdgeInsets.all(4),
+    checkmarkColor: Colors.white,
+    showCheckmark: true,
+    elevation: 0,
+    backgroundColor: Colors.white10,
+    disabledColor: Colors.grey,
+    selectedColor: Colors.deepOrange,
+    secondarySelectedColor: Colors.orange,
+    padding: EdgeInsets.all(8),
+    labelStyle: TextStyle(
+      color: Colors.white,
+      fontWeight: FontWeight.normal,
+      fontSize: 13,
+      overflow: TextOverflow.ellipsis,
+    ),
+    secondaryLabelStyle: TextStyle(
+      color: Colors.white,
+      fontWeight: FontWeight.normal,
+      fontSize: 12,
+      overflow: TextOverflow.ellipsis,
+    ),
+    brightness: Brightness.dark,
+  ),
+  listTileTheme: const ListTileThemeData(
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(15)),
+    ),
+    iconColor: Colors.deepOrange,
+    textColor: Colors.black,
+    tileColor: Colors.white10,
+    selectedColor: Colors.deepOrangeAccent,
+  ),
+  dialogTheme: const DialogTheme(
+    backgroundColor: Color(0xFF212121),
+    elevation: 20,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(15)),
+    ),
+  ),
+  outlinedButtonTheme: OutlinedButtonThemeData(
+    style: ButtonStyle(
+      foregroundColor: MaterialStateProperty.all<Color>(Colors.deepOrange),
+      side: MaterialStateProperty.all<BorderSide>(
+        const BorderSide(color: Colors.deepOrange, width: 2),
+      ),
+      textStyle: MaterialStateProperty.all<TextStyle>(
+        const TextStyle(
+          fontWeight: FontWeight.normal,
+          fontSize: 13,
+          overflow: TextOverflow.ellipsis,
+        ),
+      ),
+      fixedSize: MaterialStateProperty.all<Size>(const Size(120, 45)),
+      elevation: MaterialStateProperty.all(0),
+      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(15),
+          ),
+        ),
+      ),
+    ),
+  ),
+  textButtonTheme: TextButtonThemeData(
+    style: ButtonStyle(
+      foregroundColor: MaterialStateProperty.all<Color>(Colors.deepOrange),
+      textStyle: MaterialStateProperty.all<TextStyle>(
+        const TextStyle(
+          fontWeight: FontWeight.normal,
+          fontSize: 13,
+          overflow: TextOverflow.ellipsis,
+        ),
+      ),
+      fixedSize: MaterialStateProperty.all<Size>(const Size(90, 45)),
+      elevation: MaterialStateProperty.all(0),
+      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(15),
+          ),
+        ),
+      ),
+    ),
+  ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ButtonStyle(
-      fixedSize: MaterialStateProperty.all<Size>(const Size(120, 40)),
+      textStyle: MaterialStateProperty.all<TextStyle>(
+        const TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.normal,
+          fontSize: 13,
+          overflow: TextOverflow.ellipsis,
+        ),
+      ),
+      fixedSize: MaterialStateProperty.all<Size>(const Size(120, 45)),
       backgroundColor: MaterialStateProperty.all<Color>(Colors.deepOrange),
       elevation: MaterialStateProperty.all(0),
       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-        const RoundedRectangleBorder(),
+        const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(15),
+          ),
+        ),
       ),
     ),
   ),
@@ -115,17 +222,20 @@ final ThemeData lightTheme = ThemeData(
   colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepOrange)
       .copyWith(secondary: Colors.white),
   iconTheme: const IconThemeData(color: Colors.deepOrange),
+  highlightColor: Colors.deepOrangeAccent,
+  focusColor: Colors.deepOrangeAccent,
+  splashColor: Colors.deepOrangeAccent,
   textTheme: const TextTheme(
     button: TextStyle(
       color: Colors.white,
-      fontSize: 13,
+      fontSize: 11,
       fontWeight: FontWeight.normal,
       overflow: TextOverflow.ellipsis,
     ),
     headline1: TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.w500,
-      fontSize: 15,
+      fontSize: 17,
       overflow: TextOverflow.ellipsis,
     ),
     subtitle1: TextStyle(
@@ -137,42 +247,49 @@ final ThemeData lightTheme = ThemeData(
     headline2: TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.w500,
-      fontSize: 14,
+      fontSize: 12,
       overflow: TextOverflow.ellipsis,
     ),
     subtitle2: TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.normal,
-      fontSize: 14,
+      fontSize: 11,
       overflow: TextOverflow.ellipsis,
     ),
   ),
   canvasColor: const Color.fromRGBO(255, 255, 255, 1),
+  cardColor: Colors.grey.shade200,
   cardTheme: CardTheme(
     color: Colors.grey.shade200,
     elevation: 0,
-    shape: const RoundedRectangleBorder(),
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(15)),
+    ),
     margin: const EdgeInsets.all(5),
   ),
-  inputDecorationTheme: const InputDecorationTheme(
-    labelStyle: TextStyle(
+  inputDecorationTheme: InputDecorationTheme(
+    filled: true,
+    fillColor: Colors.grey.shade200,
+    prefixIconColor: Colors.deepOrange,
+    labelStyle: const TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.w500,
-      fontSize: 14,
+      fontSize: 12,
       overflow: TextOverflow.ellipsis,
     ),
-    hintStyle: TextStyle(
+    hintStyle: const TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.normal,
-      fontSize: 14,
+      fontSize: 12,
       overflow: TextOverflow.ellipsis,
     ),
-    enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.zero,
+    enabledBorder: const OutlineInputBorder(
+      borderSide: BorderSide.none,
+      borderRadius: BorderRadius.all(Radius.circular(10)),
     ),
-    focusedBorder: OutlineInputBorder(
+    focusedBorder: const OutlineInputBorder(
       borderSide: BorderSide(color: Colors.deepOrangeAccent),
-      borderRadius: BorderRadius.all(Radius.circular(5)),
+      borderRadius: BorderRadius.all(Radius.circular(10)),
     ),
   ),
   appBarTheme: const AppBarTheme(
@@ -187,13 +304,111 @@ final ThemeData lightTheme = ThemeData(
     backgroundColor: Color.fromRGBO(255, 255, 255, 1),
     iconTheme: IconThemeData(color: Colors.deepOrange),
   ),
+  chipTheme: ChipThemeData(
+    pressElevation: 0,
+    labelPadding: const EdgeInsets.all(4),
+    checkmarkColor: Colors.black,
+    showCheckmark: true,
+    elevation: 0,
+    backgroundColor: Colors.grey.shade200,
+    disabledColor: Colors.grey.shade100,
+    selectedColor: Colors.deepOrange,
+    secondarySelectedColor: Colors.orange,
+    padding: const EdgeInsets.all(8),
+    labelStyle: const TextStyle(
+      color: Colors.black,
+      fontWeight: FontWeight.normal,
+      fontSize: 13,
+      overflow: TextOverflow.ellipsis,
+    ),
+    secondaryLabelStyle: const TextStyle(
+      color: Colors.black,
+      fontWeight: FontWeight.normal,
+      fontSize: 12,
+      overflow: TextOverflow.ellipsis,
+    ),
+    brightness: Brightness.light,
+  ),
+  listTileTheme: ListTileThemeData(
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(15)),
+    ),
+    iconColor: Colors.deepOrange,
+    textColor: Colors.black,
+    tileColor: Colors.grey.shade200,
+    selectedColor: Colors.deepOrangeAccent,
+  ),
+  dialogTheme: const DialogTheme(
+    backgroundColor: Color.fromRGBO(255, 255, 255, 1),
+    elevation: 20,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(15)),
+    ),
+  ),
+  outlinedButtonTheme: OutlinedButtonThemeData(
+    style: ButtonStyle(
+      foregroundColor: MaterialStateProperty.all<Color>(Colors.deepOrange),
+      side: MaterialStateProperty.all<BorderSide>(
+        const BorderSide(color: Colors.deepOrange, width: 2),
+      ),
+      textStyle: MaterialStateProperty.all<TextStyle>(
+        const TextStyle(
+          fontWeight: FontWeight.normal,
+          fontSize: 13,
+          overflow: TextOverflow.ellipsis,
+        ),
+      ),
+      fixedSize: MaterialStateProperty.all<Size>(const Size(120, 45)),
+      elevation: MaterialStateProperty.all(0),
+      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(15),
+          ),
+        ),
+      ),
+    ),
+  ),
+  textButtonTheme: TextButtonThemeData(
+    style: ButtonStyle(
+      foregroundColor: MaterialStateProperty.all<Color>(Colors.deepOrange),
+      textStyle: MaterialStateProperty.all<TextStyle>(
+        const TextStyle(
+          fontWeight: FontWeight.normal,
+          fontSize: 13,
+          overflow: TextOverflow.ellipsis,
+        ),
+      ),
+      fixedSize: MaterialStateProperty.all<Size>(const Size(90, 45)),
+      elevation: MaterialStateProperty.all(0),
+      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(15),
+          ),
+        ),
+      ),
+    ),
+  ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ButtonStyle(
-      fixedSize: MaterialStateProperty.all<Size>(const Size(120, 40)),
+      textStyle: MaterialStateProperty.all<TextStyle>(
+        const TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.normal,
+          fontSize: 13,
+          overflow: TextOverflow.ellipsis,
+        ),
+      ),
+      fixedSize: MaterialStateProperty.all<Size>(const Size(120, 45)),
       backgroundColor: MaterialStateProperty.all<Color>(Colors.deepOrange),
       elevation: MaterialStateProperty.all(0),
       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-        const RoundedRectangleBorder(),
+        const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(15),
+          ),
+        ),
       ),
     ),
   ),

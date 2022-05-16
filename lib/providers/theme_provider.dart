@@ -14,11 +14,23 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import 'package:appstore/theme/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+class ThemeProvider with ChangeNotifier {
+  ThemeData _themeData;
+
+  ThemeProvider(this._themeData);
+
+  ThemeData getTheme() => _themeData;
+
+  Future<void> setTheme(ThemeData themeData) async {
+    _themeData = themeData;
+    return notifyListeners();
+  }
+}
+
 ThemeData theme(BuildContext context) {
-  final _themeprovider = Provider.of<ThemeProvider>(context);
+  final ThemeProvider _themeprovider = Provider.of<ThemeProvider>(context);
   return _themeprovider.getTheme();
 }

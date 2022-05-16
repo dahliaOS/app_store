@@ -14,17 +14,19 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+import 'package:app_store/widgets/buttons/chip_button.dart';
 import 'package:flutter/material.dart';
 
-class ThemeProvider with ChangeNotifier {
-  ThemeData _themeData;
+class ChipButtonProvider with ChangeNotifier {
+  Choice? _choice;
 
-  ThemeProvider(this._themeData);
+  ChipButtonProvider(this._choice);
 
-  ThemeData getTheme() => _themeData;
+  Choice? get() => _choice;
 
-  Future<void> setTheme(ThemeData themeData) async {
-    _themeData = themeData;
+  Future<void> setAdd(Choice? choice, Set? set) async {
+    _choice = choice;
+    set?.add(_choice);
     return notifyListeners();
   }
 }
