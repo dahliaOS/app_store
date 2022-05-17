@@ -14,6 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+import 'package:app_store/models/buttons/chip_button_model.dart';
 import 'package:app_store/pages/featured_applications.dart';
 import 'package:app_store/pages/new_applications.dart';
 import 'package:app_store/pages/trending_applications.dart';
@@ -28,6 +29,25 @@ class Landing extends StatelessWidget {
   Landing({Key? key}) : super(key: key);
   final PageController _pageController = PageController();
   final ScrollController _scrollController = ScrollController();
+  static final _chipButtons = <ChipButtonModel>[
+    ChipButtonModel(name: 'All', icon: Icons.apps),
+    ChipButtonModel(name: 'Design', icon: Icons.design_services),
+    ChipButtonModel(name: 'Games', icon: Icons.games),
+    ChipButtonModel(name: 'Entertainment', icon: Icons.movie),
+    ChipButtonModel(name: 'Development', icon: Icons.developer_mode),
+    ChipButtonModel(name: 'Music', icon: Icons.audiotrack),
+    ChipButtonModel(name: 'Productivity', icon: Icons.work),
+    ChipButtonModel(name: 'Tools', icon: Icons.developer_board),
+    ChipButtonModel(name: 'Finance', icon: Icons.money),
+    ChipButtonModel(
+      name: 'Health and well-being',
+      icon: Icons.health_and_safety,
+    ),
+    ChipButtonModel(name: 'Education', icon: Icons.cast_for_education),
+    ChipButtonModel(name: 'Fitness', icon: Icons.fitness_center),
+    ChipButtonModel(name: 'Communication', icon: Icons.comment),
+    ChipButtonModel(name: 'Business', icon: Icons.business),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +97,18 @@ class Landing extends StatelessWidget {
                       .copyWith(scrollbars: false),
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
-                    child: ChipButton(),
+                    child: Wrap(
+                      alignment: WrapAlignment.spaceBetween,
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      spacing: 10,
+                      children: <Widget>[
+                        for (final item in _chipButtons)
+                          ChipButton(
+                            icon: item.icon,
+                            name: item.name,
+                          ),
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(

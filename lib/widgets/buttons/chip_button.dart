@@ -14,65 +14,50 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import 'package:app_store/providers/chip_button_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
-class ChipButton extends StatelessWidget {
+class ChipButton extends StatefulWidget {
+  final String name;
+  final IconData icon;
+
+  const ChipButton({
+    required this.name,
+    required this.icon,
+    Key? key,
+  }) : super(key: key);
+
   @override
-  Widget build(BuildContext context) {
-    final ChipButtonProvider _chipprovider =
-        Provider.of<ChipButtonProvider>(context);
-    final Set<Choice> choiceChipSet = {};
-    return Wrap(
-      alignment: WrapAlignment.spaceBetween,
-      crossAxisAlignment: WrapCrossAlignment.center,
-      spacing: 10,
-      children: Choice.values
-          .map(
-            (e) => Container(
-              constraints: const BoxConstraints(maxHeight: 80),
-              child: ChoiceChip(
-                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                label: Text(e.name),
-                avatar: Icon(
-                  Icons.ac_unit,
-                  size: 20,
-                  color: e == _chipprovider.get()
-                      ? Colors.white
-                      : Theme.of(context).iconTheme.color,
-                ),
-                labelPadding: Theme.of(context).chipTheme.labelPadding,
-                elevation: Theme.of(context).chipTheme.elevation,
-                backgroundColor: Theme.of(context).chipTheme.backgroundColor,
-                labelStyle: Theme.of(context).textTheme.subtitle2,
-                pressElevation: Theme.of(context).chipTheme.pressElevation,
-                selectedColor: Theme.of(context).chipTheme.selectedColor,
-                onSelected: (value) {
-                  _chipprovider.setAdd(e, choiceChipSet);
-                },
-                selected: e == _chipprovider.get(),
-              ),
-            ),
-          )
-          .toList(),
-    );
-  }
+  State<ChipButton> createState() => _ChipButtonState();
 }
 
-enum Choice {
-  all,
-  design,
-  games,
-  entertainment,
-  development,
-  music,
-  productivity,
-  tools,
-  finance,
-  health,
-  education,
-  fitness,
-  communication,
-  business,
+class _ChipButtonState extends State<ChipButton> {
+  bool _isSelected = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      constraints: const BoxConstraints(maxHeight: 80),
+      child: ChoiceChip(
+        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        label: Text(widget.name),
+        avatar: Icon(
+          widget.icon,
+          size: 20,
+          color: _isSelected ? Colors.white : Theme.of(context).iconTheme.color,
+        ),
+        labelPadding: Theme.of(context).chipTheme.labelPadding,
+        elevation: Theme.of(context).chipTheme.elevation,
+        backgroundColor: Theme.of(context).chipTheme.backgroundColor,
+        labelStyle: Theme.of(context).textTheme.subtitle2,
+        pressElevation: Theme.of(context).chipTheme.pressElevation,
+        selectedColor: Theme.of(context).chipTheme.selectedColor,
+        onSelected: (value) {
+          setState(() {
+            _isSelected = value;
+          });
+        },
+        selected: _isSelected,
+      ),
+    );
+  }
 }

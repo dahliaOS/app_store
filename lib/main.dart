@@ -18,11 +18,9 @@ import 'package:app_store/pages/app_page.dart';
 import 'package:app_store/pages/landing.dart';
 import 'package:app_store/pages/settings.dart';
 import 'package:app_store/pages/user.dart';
-import 'package:app_store/providers/chip_button_provider.dart';
 import 'package:app_store/providers/switch_list_tile_provider.dart';
 import 'package:app_store/providers/theme_provider.dart';
 import 'package:app_store/theme/theme.dart';
-import 'package:app_store/widgets/buttons/chip_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -39,9 +37,6 @@ class AppStore extends StatelessWidget {
       providers: [
         ChangeNotifierProvider<ThemeProvider>.value(
           value: ThemeProvider(lightTheme),
-        ),
-        ChangeNotifierProvider<ChipButtonProvider>.value(
-          value: ChipButtonProvider(Choice.all),
         ),
         ChangeNotifierProvider<SwitchListTileProvider>.value(
           value: SwitchListTileProvider(false),
