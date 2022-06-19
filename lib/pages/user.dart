@@ -36,38 +36,11 @@ class User extends StatelessWidget {
       ),
       body: ScrollConfiguration(
         behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
-        child: SingleChildScrollView(
+        child: const SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(
-              right: 40,
-              left: 40,
-              top: 30,
-              bottom: 30,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    const SizedBox(
-                      height: 150,
-                      width: 150,
-                      child: Card(),
-                    ),
-                    Wrap(
-                      direction: Axis.vertical,
-                      children: <Widget>[
-                        Text(
-                          'Marin Heđeš',
-                          style: Theme.of(context).textTheme.headline1,
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
+            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 40),
+            child: Center(
+              child: Text('Coming soon.'),
             ),
           ),
         ),

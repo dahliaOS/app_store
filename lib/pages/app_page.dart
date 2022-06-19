@@ -459,7 +459,7 @@ class AppPage extends StatelessWidget {
                       height: 20,
                     ),
                     Text(
-                      'Quite possibly the best application out there, just download, send donation and we will be just fine. I really do not know what else you want me to say here, okay? Leave me alone and use this damn application. Give money.',
+                      'Insert application description here.',
                       style: Theme.of(context).textTheme.subtitle2,
                       overflow: TextOverflow.clip,
                     )
@@ -561,7 +561,7 @@ class AppPage extends StatelessWidget {
                                   style: Theme.of(context).textTheme.headline2,
                                 ),
                                 Text(
-                                  'Just spaghetti stuff.',
+                                  'Good app.',
                                   style: Theme.of(context).textTheme.subtitle2,
                                 ),
                                 Row(
@@ -705,238 +705,70 @@ class AppPage extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 50,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Row(
                           children: <Widget>[
-                            Icon(
-                              Icons.person,
-                              color: Theme.of(context).iconTheme.color,
-                              size: 30,
-                            ),
+                            const Icon(Icons.control_point_duplicate),
                             const SizedBox(
                               width: 10,
                             ),
-                            Wrap(
-                              direction: Axis.vertical,
-                              spacing: 1,
-                              children: <Widget>[
-                                Text(
-                                  'Marin Heđeš',
-                                  style: Theme.of(context).textTheme.headline2,
-                                ),
-                                Text(
-                                  'Just spaghetti stuff.',
-                                  style: Theme.of(context).textTheme.subtitle2,
-                                ),
-                                Row(
-                                  children: <Widget>[
-                                    Text(
-                                      '3',
-                                      style:
-                                          Theme.of(context).textTheme.subtitle2,
-                                    ),
-                                    Icon(
-                                      Icons.star,
-                                      size: 12,
-                                      color: Theme.of(context).iconTheme.color,
-                                    ),
-                                  ],
-                                )
-                              ],
-                            ),
+                            Text(
+                              'Similar applications',
+                              style: Theme.of(context).textTheme.headline2,
+                            )
                           ],
                         ),
-                        Row(
-                          children: <Widget>[
-                            Icon(
-                              Icons.person,
-                              color: Theme.of(context).iconTheme.color,
-                              size: 30,
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            Wrap(
-                              direction: Axis.vertical,
-                              spacing: 1,
-                              children: <Widget>[
-                                Text(
-                                  'Davide Bianco',
-                                  style: Theme.of(context).textTheme.headline2,
-                                ),
-                                Text(
-                                  'Pog',
-                                  style: Theme.of(context).textTheme.subtitle2,
-                                ),
-                                Row(
-                                  children: <Widget>[
-                                    Text(
-                                      '5',
-                                      style:
-                                          Theme.of(context).textTheme.subtitle2,
-                                    ),
-                                    Icon(
-                                      Icons.star,
-                                      size: 12,
-                                      color: Theme.of(context).iconTheme.color,
-                                    ),
-                                  ],
-                                )
-                              ],
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: <Widget>[
-                            Icon(
-                              Icons.person,
-                              color: Theme.of(context).iconTheme.color,
-                              size: 30,
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            Wrap(
-                              direction: Axis.vertical,
-                              spacing: 1,
-                              children: <Widget>[
-                                Text(
-                                  'Joey Diaz',
-                                  style: Theme.of(context).textTheme.headline2,
-                                ),
-                                Text(
-                                  'It does something',
-                                  style: Theme.of(context).textTheme.subtitle2,
-                                ),
-                                Row(
-                                  children: <Widget>[
-                                    Text(
-                                      '5',
-                                      style:
-                                          Theme.of(context).textTheme.subtitle2,
-                                    ),
-                                    Icon(
-                                      Icons.star,
-                                      size: 12,
-                                      color: Theme.of(context).iconTheme.color,
-                                    ),
-                                  ],
-                                )
-                              ],
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: <Widget>[
-                            Icon(
-                              Icons.person,
-                              color: Theme.of(context).iconTheme.color,
-                              size: 30,
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            Wrap(
-                              direction: Axis.vertical,
-                              spacing: 1,
-                              children: <Widget>[
-                                Text(
-                                  'Mattia Barbieri',
-                                  style: Theme.of(context).textTheme.headline2,
-                                ),
-                                Text(
-                                  'Grazie!',
-                                  style: Theme.of(context).textTheme.subtitle2,
-                                ),
-                                Row(
-                                  children: <Widget>[
-                                    Text(
-                                      '4',
-                                      style:
-                                          Theme.of(context).textTheme.subtitle2,
-                                    ),
-                                    Icon(
-                                      Icons.star,
-                                      size: 12,
-                                      color: Theme.of(context).iconTheme.color,
-                                    ),
-                                  ],
-                                )
-                              ],
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 50,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Row(
-                      children: <Widget>[
-                        const Icon(Icons.control_point_duplicate),
                         const SizedBox(
-                          width: 10,
+                          height: 20,
                         ),
-                        Text(
-                          'Similar applications',
-                          style: Theme.of(context).textTheme.headline2,
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    GridView.count(
-                      childAspectRatio: 3,
-                      primary: false,
-                      crossAxisSpacing: 10,
-                      mainAxisSpacing: 10,
-                      crossAxisCount: 3,
-                      shrinkWrap: true,
-                      children: const <Widget>[
-                        AppItem(
-                          name: 'Application',
-                          rating: 5.0,
-                          category: ['Tools', 'Development'],
-                        ),
-                        AppItem(
-                          name: 'Application',
-                          rating: 5.0,
-                          category: ['Tools', 'Development'],
-                        ),
-                        AppItem(
-                          name: 'Application',
-                          rating: 5.0,
-                          category: ['Tools', 'Development'],
-                        ),
-                        AppItem(
-                          name: 'Application',
-                          rating: 5.0,
-                          category: ['Tools', 'Development'],
-                        ),
-                        AppItem(
-                          name: 'Application',
-                          rating: 5.0,
-                          category: ['Tools', 'Development'],
-                        ),
-                        AppItem(
-                          name: 'Application',
-                          rating: 5.0,
-                          category: ['Tools', 'Development'],
+                        GridView.count(
+                          childAspectRatio: 3,
+                          primary: false,
+                          crossAxisSpacing: 10,
+                          mainAxisSpacing: 10,
+                          crossAxisCount: 3,
+                          shrinkWrap: true,
+                          children: const <Widget>[
+                            AppItem(
+                              name: 'Application',
+                              rating: 5.0,
+                              category: ['Tools', 'Development'],
+                            ),
+                            AppItem(
+                              name: 'Application',
+                              rating: 5.0,
+                              category: ['Tools', 'Development'],
+                            ),
+                            AppItem(
+                              name: 'Application',
+                              rating: 5.0,
+                              category: ['Tools', 'Development'],
+                            ),
+                            AppItem(
+                              name: 'Application',
+                              rating: 5.0,
+                              category: ['Tools', 'Development'],
+                            ),
+                            AppItem(
+                              name: 'Application',
+                              rating: 5.0,
+                              category: ['Tools', 'Development'],
+                            ),
+                            AppItem(
+                              name: 'Application',
+                              rating: 5.0,
+                              category: ['Tools', 'Development'],
+                            ),
+                          ],
                         ),
                       ],
-                    ),
+                    )
                   ],
-                )
+                ),
               ],
             ),
           ),
