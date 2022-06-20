@@ -61,23 +61,13 @@ class FeaturedApplications extends StatelessWidget {
           height: 10,
         ),
         GridView.count(
-          childAspectRatio: 3,
+          childAspectRatio: 4,
           primary: false,
           crossAxisSpacing: 10,
           mainAxisSpacing: 10,
-          crossAxisCount: 3,
+          crossAxisCount: 4,
           shrinkWrap: true,
           children: const <Widget>[
-            AppItem(
-              name: 'Application',
-              rating: 5.0,
-              category: ['Tools', 'Development'],
-            ),
-            AppItem(
-              name: 'Application',
-              rating: 5.0,
-              category: ['Tools', 'Development'],
-            ),
             AppItem(
               name: 'Application',
               rating: 5.0,

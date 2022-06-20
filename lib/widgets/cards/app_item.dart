@@ -31,8 +31,6 @@ class AppItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 85,
-      width: 210,
       child: InkWell(
         splashColor: Theme.of(context).primaryColor,
         borderRadius: BorderRadius.circular(15),

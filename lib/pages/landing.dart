@@ -51,6 +51,8 @@ class Landing extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    final width = size.width;
     return Scaffold(
       body: ScrollConfiguration(
         behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
@@ -98,9 +100,9 @@ class Landing extends StatelessWidget {
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Wrap(
-                      alignment: WrapAlignment.spaceBetween,
+                      alignment: WrapAlignment.spaceEvenly,
                       crossAxisAlignment: WrapCrossAlignment.center,
-                      spacing: 10,
+                      spacing: width / 47,
                       children: <Widget>[
                         for (final item in _chipButtons)
                           ChipButton(
@@ -155,13 +157,29 @@ class Landing extends StatelessWidget {
                               height: 10,
                             ),
                             GridView.count(
-                              childAspectRatio: 3,
+                              childAspectRatio: 4,
                               primary: false,
                               crossAxisSpacing: 10,
                               mainAxisSpacing: 10,
-                              crossAxisCount: 3,
+                              crossAxisCount: 4,
                               shrinkWrap: true,
                               children: const <Widget>[
+                                AppItem(
+                                  name: 'Application',
+                                  rating: 5.0,
+                                  category: [
+                                    'Tools',
+                                    'Development',
+                                  ],
+                                ),
+                                AppItem(
+                                  name: 'Application',
+                                  rating: 5.0,
+                                  category: [
+                                    'Tools',
+                                    'Development',
+                                  ],
+                                ),
                                 AppItem(
                                   name: 'Application',
                                   rating: 5.0,
@@ -252,13 +270,29 @@ class Landing extends StatelessWidget {
                               height: 10,
                             ),
                             GridView.count(
-                              childAspectRatio: 3,
+                              childAspectRatio: 4,
                               primary: false,
                               crossAxisSpacing: 10,
                               mainAxisSpacing: 10,
-                              crossAxisCount: 3,
+                              crossAxisCount: 4,
                               shrinkWrap: true,
                               children: const <Widget>[
+                                AppItem(
+                                  name: 'Application',
+                                  rating: 5.0,
+                                  category: [
+                                    'Tools',
+                                    'Development',
+                                  ],
+                                ),
+                                AppItem(
+                                  name: 'Application',
+                                  rating: 5.0,
+                                  category: [
+                                    'Tools',
+                                    'Development',
+                                  ],
+                                ),
                                 AppItem(
                                   name: 'Application',
                                   rating: 5.0,
@@ -350,13 +384,29 @@ class Landing extends StatelessWidget {
                               height: 10,
                             ),
                             GridView.count(
-                              childAspectRatio: 3,
+                              childAspectRatio: 4,
                               primary: false,
                               crossAxisSpacing: 10,
                               mainAxisSpacing: 10,
-                              crossAxisCount: 3,
+                              crossAxisCount: 4,
                               shrinkWrap: true,
                               children: const <Widget>[
+                                AppItem(
+                                  name: 'Application',
+                                  rating: 5.0,
+                                  category: [
+                                    'Tools',
+                                    'Development',
+                                  ],
+                                ),
+                                AppItem(
+                                  name: 'Application',
+                                  rating: 5.0,
+                                  category: [
+                                    'Tools',
+                                    'Development',
+                                  ],
+                                ),
                                 AppItem(
                                   name: 'Application',
                                   rating: 5.0,

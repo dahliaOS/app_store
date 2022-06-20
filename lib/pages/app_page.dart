@@ -726,11 +726,11 @@ class AppPage extends StatelessWidget {
                           height: 20,
                         ),
                         GridView.count(
-                          childAspectRatio: 3,
+                          childAspectRatio: 4,
                           primary: false,
                           crossAxisSpacing: 10,
                           mainAxisSpacing: 10,
-                          crossAxisCount: 3,
+                          crossAxisCount: 4,
                           shrinkWrap: true,
                           children: const <Widget>[
                             AppItem(
