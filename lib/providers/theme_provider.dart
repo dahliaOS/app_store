@@ -19,13 +19,20 @@ import 'package:provider/provider.dart';
 
 class ThemeProvider with ChangeNotifier {
   ThemeData _themeData;
+  bool _themeSwitched;
 
-  ThemeProvider(this._themeData);
+  ThemeProvider(this._themeData, this._themeSwitched);
 
   ThemeData getTheme() => _themeData;
+  bool getThemeSwitched() => _themeSwitched;
 
   Future<void> setTheme(ThemeData themeData) async {
     _themeData = themeData;
+    return notifyListeners();
+  }
+
+  Future<void> setThemeSwitched(bool themeSwitched) async {
+    _themeSwitched = themeSwitched;
     return notifyListeners();
   }
 }

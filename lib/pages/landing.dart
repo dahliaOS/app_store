@@ -100,8 +100,6 @@ class Landing extends StatelessWidget {
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Wrap(
-                      alignment: WrapAlignment.spaceEvenly,
-                      crossAxisAlignment: WrapCrossAlignment.center,
                       spacing: width / 47,
                       children: <Widget>[
                         for (final item in _chipButtons)
