@@ -49,7 +49,7 @@ class AppStoreHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'App store',
+      title: 'App Store',
       theme: theme(context),
       debugShowCheckedModeBanner: false,
       initialRoute: '/',

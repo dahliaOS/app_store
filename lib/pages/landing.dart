@@ -360,7 +360,7 @@ class _LandingState extends State<Landing> {
                                 ),
                                 IconButton(
                                   onPressed: () {
-                                    onAddButtonTapped(1);
+                                    loadPage(1);
                                     scrollToTop();
                                   },
                                   icon: const Icon(Icons.navigate_next),
@@ -413,7 +413,7 @@ class _LandingState extends State<Landing> {
                                 ),
                                 IconButton(
                                   onPressed: () {
-                                    onAddButtonTapped(2);
+                                    loadPage(2);
                                     scrollToTop();
                                   },
                                   icon: const Icon(Icons.navigate_next),
@@ -463,7 +463,7 @@ class _LandingState extends State<Landing> {
                                 ),
                                 IconButton(
                                   onPressed: () {
-                                    onAddButtonTapped(3);
+                                    loadPage(3);
                                     scrollToTop();
                                   },
                                   icon: const Icon(Icons.navigate_next),
@@ -498,9 +498,9 @@ class _LandingState extends State<Landing> {
                         ),
                       ],
                     ),
-                    TrendingApplications(onAddButtonTapped, scrollToTop),
-                    FeaturedApplications(onAddButtonTapped, scrollToTop),
-                    NewApplications(onAddButtonTapped, scrollToTop),
+                    TrendingApplications(loadPage, scrollToTop),
+                    FeaturedApplications(loadPage, scrollToTop),
+                    NewApplications(loadPage, scrollToTop),
                   ],
                 ),
               ],
@@ -523,13 +523,9 @@ class _LandingState extends State<Landing> {
     }
   }
 
-  void onAddButtonTapped(int index) {
-    _pageController.animateToPage(
+  void loadPage(int index) {
+    _pageController.jumpToPage(
       index,
-      curve: Curves.fastOutSlowIn,
-      duration: const Duration(
-        milliseconds: 700,
-      ),
     );
   }
 }

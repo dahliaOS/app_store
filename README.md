@@ -7,7 +7,7 @@
 
 # App store
 
-- **App store** for dahliaOS
+- **Curated marketplace** for third-party applications on dahliaOS
 
 ## Contribute
 

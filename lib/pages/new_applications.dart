@@ -119,12 +119,12 @@ final _appItems = <AppItemModel>[
 
 class NewApplications extends StatelessWidget {
   const NewApplications(
-    this.onAddButtonTapped,
+    this.loadPage,
     this.scrollToTop, {
     Key? key,
   }) : super(key: key);
 
-  final void Function(int) onAddButtonTapped;
+  final void Function(int) loadPage;
   final void Function() scrollToTop;
 
   @override
@@ -146,7 +146,7 @@ class NewApplications extends StatelessWidget {
             ),
             IconButton(
               onPressed: () {
-                onAddButtonTapped(0);
+                loadPage(0);
                 scrollToTop();
               },
               icon: const Icon(Icons.navigate_before),
@@ -164,16 +164,19 @@ class NewApplications extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
-        Wrap(
-          spacing: width / 80,
-          children: <Widget>[
-            for (final item in _appItems)
-              AppItem(
-                name: item.name,
-                rating: item.rating,
-                category: item.category,
-              ),
-          ],
+        SizedBox(
+          width: width,
+          child: Wrap(
+            alignment: WrapAlignment.spaceBetween,
+            children: <Widget>[
+              for (final item in _appItems)
+                AppItem(
+                  name: item.name,
+                  rating: item.rating,
+                  category: item.category,
+                ),
+            ],
+          ),
         ),
       ],
     );
