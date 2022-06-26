@@ -54,7 +54,7 @@ class AppStoreHome extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => Landing(),
+        '/': (context) => const Landing(),
         '/user': (context) => const User(),
         '/settings': (context) => const Settings(),
         '/app_page': (context) => const AppPage(),

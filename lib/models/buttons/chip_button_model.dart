@@ -19,9 +19,11 @@ import 'package:flutter/material.dart';
 class ChipButtonModel {
   final String name;
   final IconData icon;
+  final int id;
 
   ChipButtonModel({
     required this.name,
     required this.icon,
+    required this.id,
   });
 }

@@ -18,36 +18,96 @@ import 'package:app_store/models/buttons/chip_button_model.dart';
 import 'package:app_store/pages/featured_applications.dart';
 import 'package:app_store/pages/new_applications.dart';
 import 'package:app_store/pages/trending_applications.dart';
-import 'package:app_store/widgets/buttons/chip_button.dart';
 import 'package:app_store/widgets/buttons/icon_button.dart';
 import 'package:app_store/widgets/cards/app_item.dart';
 import 'package:app_store/widgets/text_fields/search_bar.dart';
 import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
 
-class Landing extends StatelessWidget {
-  Landing({Key? key}) : super(key: key);
-  final PageController _pageController = PageController();
-  final ScrollController _scrollController = ScrollController();
+class Landing extends StatefulWidget {
+  const Landing({Key? key}) : super(key: key);
+
   static final _chipButtons = <ChipButtonModel>[
-    ChipButtonModel(name: 'All', icon: Icons.apps),
-    ChipButtonModel(name: 'Design', icon: Icons.design_services),
-    ChipButtonModel(name: 'Games', icon: Icons.games),
-    ChipButtonModel(name: 'Entertainment', icon: Icons.movie),
-    ChipButtonModel(name: 'Development', icon: Icons.developer_mode),
-    ChipButtonModel(name: 'Music', icon: Icons.audiotrack),
-    ChipButtonModel(name: 'Productivity', icon: Icons.work),
-    ChipButtonModel(name: 'Tools', icon: Icons.developer_board),
-    ChipButtonModel(name: 'Finance', icon: Icons.money),
+    ChipButtonModel(
+      name: 'All',
+      icon: Icons.apps,
+      id: 1,
+    ),
+    ChipButtonModel(
+      name: 'Design',
+      icon: Icons.design_services,
+      id: 2,
+    ),
+    ChipButtonModel(
+      name: 'Games',
+      icon: Icons.games,
+      id: 3,
+    ),
+    ChipButtonModel(
+      name: 'Entertainment',
+      icon: Icons.movie,
+      id: 4,
+    ),
+    ChipButtonModel(
+      name: 'Development',
+      icon: Icons.developer_mode,
+      id: 5,
+    ),
+    ChipButtonModel(
+      name: 'Music',
+      icon: Icons.audiotrack,
+      id: 6,
+    ),
+    ChipButtonModel(
+      name: 'Productivity',
+      icon: Icons.work,
+      id: 7,
+    ),
+    ChipButtonModel(
+      name: 'Tools',
+      icon: Icons.developer_board,
+      id: 8,
+    ),
+    ChipButtonModel(
+      name: 'Finance',
+      icon: Icons.money,
+      id: 9,
+    ),
     ChipButtonModel(
       name: 'Health and well-being',
       icon: Icons.health_and_safety,
+      id: 10,
     ),
-    ChipButtonModel(name: 'Education', icon: Icons.cast_for_education),
-    ChipButtonModel(name: 'Fitness', icon: Icons.fitness_center),
-    ChipButtonModel(name: 'Communication', icon: Icons.comment),
-    ChipButtonModel(name: 'Business', icon: Icons.business),
+    ChipButtonModel(
+      name: 'Education',
+      icon: Icons.cast_for_education,
+      id: 11,
+    ),
+    ChipButtonModel(
+      name: 'Fitness',
+      icon: Icons.fitness_center,
+      id: 12,
+    ),
+    ChipButtonModel(
+      name: 'Communication',
+      icon: Icons.comment,
+      id: 13,
+    ),
+    ChipButtonModel(
+      name: 'Business',
+      icon: Icons.business,
+      id: 14,
+    ),
   ];
+
+  @override
+  State<Landing> createState() => _LandingState();
+}
+
+class _LandingState extends State<Landing> {
+  final PageController _pageController = PageController();
+  final ScrollController _scrollController = ScrollController();
+  final Set _selectedChipButtons = {1};
 
   @override
   Widget build(BuildContext context) {
@@ -101,13 +161,59 @@ class Landing extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     child: Wrap(
                       spacing: width / 47,
-                      children: <Widget>[
-                        for (final item in _chipButtons)
-                          ChipButton(
-                            icon: item.icon,
-                            name: item.name,
-                          ),
-                      ],
+                      children: Landing._chipButtons
+                          .map(
+                            (e) => Container(
+                              constraints: const BoxConstraints(maxHeight: 80),
+                              child: ChoiceChip(
+                                materialTapTargetSize:
+                                    MaterialTapTargetSize.shrinkWrap,
+                                label: Text(e.name),
+                                avatar: Icon(
+                                  e.icon,
+                                  size: 20,
+                                  color: _selectedChipButtons.contains(e.id)
+                                      ? Colors.white
+                                      : Theme.of(context).iconTheme.color,
+                                ),
+                                labelPadding:
+                                    Theme.of(context).chipTheme.labelPadding,
+                                elevation:
+                                    Theme.of(context).chipTheme.elevation,
+                                backgroundColor:
+                                    Theme.of(context).chipTheme.backgroundColor,
+                                labelStyle:
+                                    Theme.of(context).textTheme.subtitle2,
+                                pressElevation:
+                                    Theme.of(context).chipTheme.pressElevation,
+                                selectedColor:
+                                    Theme.of(context).chipTheme.selectedColor,
+                                onSelected: (value) {
+                                  setState(() {
+                                    if (value == true &&
+                                        _selectedChipButtons.contains(1) &&
+                                        _selectedChipButtons.length < 2) {
+                                      _selectedChipButtons.clear();
+                                      _selectedChipButtons.add(e.id);
+                                    } else if (value == true && e.id == 1) {
+                                      _selectedChipButtons.clear();
+                                      _selectedChipButtons.add(1);
+                                    } else if (value == false &&
+                                        _selectedChipButtons.length < 2) {
+                                      _selectedChipButtons.remove(e.id);
+                                      _selectedChipButtons.add(1);
+                                    } else if (value == false) {
+                                      _selectedChipButtons.remove(e.id);
+                                    } else if (value == true) {
+                                      _selectedChipButtons.add(e.id);
+                                    }
+                                  });
+                                },
+                                selected: _selectedChipButtons.contains(e.id),
+                              ),
+                            ),
+                          )
+                          .toList(),
                     ),
                   ),
                 ),

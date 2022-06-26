@@ -310,7 +310,7 @@ final ThemeData lightTheme = ThemeData(
     checkmarkColor: Colors.black,
     showCheckmark: true,
     elevation: 0,
-    backgroundColor: Colors.grey.shade200,
+    backgroundColor: Colors.grey.withAlpha(45),
     disabledColor: Colors.grey.shade100,
     selectedColor: Colors.deepOrange,
     secondarySelectedColor: Colors.orange,
