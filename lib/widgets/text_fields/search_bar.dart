@@ -28,7 +28,8 @@ class SearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      margin: const EdgeInsets.only(bottom: 20),
       height: 40,
       width: 250,
       child: TextField(
