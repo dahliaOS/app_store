@@ -14,6 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+import 'package:app_store/models/buttons/app_item_model.dart';
 import 'package:app_store/models/buttons/chip_button_model.dart';
 import 'package:app_store/pages/featured_applications.dart';
 import 'package:app_store/pages/new_applications.dart';
@@ -100,6 +101,105 @@ class Landing extends StatefulWidget {
     ),
   ];
 
+  static final _appItems = <AppItemModel>[
+    AppItemModel(
+      name: 'Application',
+      rating: 5.0,
+      category: [
+        'Tools',
+        'Development',
+      ],
+    ),
+    AppItemModel(
+      name: 'Application',
+      rating: 5.0,
+      category: [
+        'Tools',
+        'Development',
+      ],
+    ),
+    AppItemModel(
+      name: 'Application',
+      rating: 5.0,
+      category: [
+        'Tools',
+        'Development',
+      ],
+    ),
+    AppItemModel(
+      name: 'Application',
+      rating: 5.0,
+      category: [
+        'Tools',
+        'Development',
+      ],
+    ),
+    AppItemModel(
+      name: 'Application',
+      rating: 5.0,
+      category: [
+        'Tools',
+        'Development',
+      ],
+    ),
+    AppItemModel(
+      name: 'Application',
+      rating: 5.0,
+      category: [
+        'Tools',
+        'Development',
+      ],
+    ),
+    AppItemModel(
+      name: 'Application',
+      rating: 5.0,
+      category: [
+        'Tools',
+        'Development',
+      ],
+    ),
+    AppItemModel(
+      name: 'Application',
+      rating: 5.0,
+      category: [
+        'Tools',
+        'Development',
+      ],
+    ),
+    AppItemModel(
+      name: 'Application',
+      rating: 5.0,
+      category: [
+        'Tools',
+        'Development',
+      ],
+    ),
+    AppItemModel(
+      name: 'Application',
+      rating: 5.0,
+      category: [
+        'Tools',
+        'Development',
+      ],
+    ),
+    AppItemModel(
+      name: 'Application',
+      rating: 5.0,
+      category: [
+        'Tools',
+        'Development',
+      ],
+    ),
+    AppItemModel(
+      name: 'Application',
+      rating: 5.0,
+      category: [
+        'Tools',
+        'Development',
+      ],
+    ),
+  ];
+
   @override
   State<Landing> createState() => _LandingState();
 }
@@ -127,29 +227,36 @@ class _LandingState extends State<Landing> {
             ),
             child: Column(
               children: <Widget>[
-                Row(
-                  children: <Widget>[
-                    const SearchBar(
-                      hint: 'Search applications...',
-                      icon: Icons.search,
-                    ),
-                    const Spacer(),
-                    MyIconButton(
-                      icon: Icons.person,
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/user');
-                      },
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    MyIconButton(
-                      icon: Icons.settings,
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/settings');
-                      },
-                    ),
-                  ],
+                SizedBox(
+                  width: width,
+                  child: Wrap(
+                    alignment: WrapAlignment.spaceBetween,
+                    children: <Widget>[
+                      const SearchBar(
+                        hint: 'Search applications...',
+                        icon: Icons.search,
+                      ),
+                      Wrap(
+                        children: [
+                          MyIconButton(
+                            icon: Icons.person,
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/user');
+                            },
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          MyIconButton(
+                            icon: Icons.settings,
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/settings');
+                            },
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
                 const SizedBox(
                   height: 40,
@@ -159,61 +266,73 @@ class _LandingState extends State<Landing> {
                       .copyWith(scrollbars: false),
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
-                    child: Wrap(
-                      spacing: width / 47,
-                      children: Landing._chipButtons
-                          .map(
-                            (e) => Container(
-                              constraints: const BoxConstraints(maxHeight: 80),
-                              child: ChoiceChip(
-                                materialTapTargetSize:
-                                    MaterialTapTargetSize.shrinkWrap,
-                                label: Text(e.name),
-                                avatar: Icon(
-                                  e.icon,
-                                  size: 20,
-                                  color: _selectedChipButtons.contains(e.id)
-                                      ? Colors.white
-                                      : Theme.of(context).iconTheme.color,
+                    child: Expanded(
+                      child: Wrap(
+                        spacing: width / 80,
+                        children: Landing._chipButtons
+                            .map(
+                              (e) => Container(
+                                constraints:
+                                    const BoxConstraints(maxHeight: 80),
+                                child: ChoiceChip(
+                                  materialTapTargetSize:
+                                      MaterialTapTargetSize.shrinkWrap,
+                                  label: Text(
+                                    e.name,
+                                    style: TextStyle(
+                                      color: _selectedChipButtons.contains(e.id)
+                                          ? Colors.white
+                                          : null,
+                                    ),
+                                  ),
+                                  avatar: Icon(
+                                    e.icon,
+                                    size: 20,
+                                    color: _selectedChipButtons.contains(e.id)
+                                        ? Colors.white
+                                        : Theme.of(context).iconTheme.color,
+                                  ),
+                                  labelPadding:
+                                      Theme.of(context).chipTheme.labelPadding,
+                                  elevation:
+                                      Theme.of(context).chipTheme.elevation,
+                                  backgroundColor: Theme.of(context)
+                                      .chipTheme
+                                      .backgroundColor,
+                                  labelStyle:
+                                      Theme.of(context).textTheme.subtitle2,
+                                  pressElevation: Theme.of(context)
+                                      .chipTheme
+                                      .pressElevation,
+                                  selectedColor:
+                                      Theme.of(context).chipTheme.selectedColor,
+                                  onSelected: (value) {
+                                    setState(() {
+                                      if (value == true &&
+                                          _selectedChipButtons.contains(1) &&
+                                          _selectedChipButtons.length < 2) {
+                                        _selectedChipButtons.clear();
+                                        _selectedChipButtons.add(e.id);
+                                      } else if (value == true && e.id == 1) {
+                                        _selectedChipButtons.clear();
+                                        _selectedChipButtons.add(1);
+                                      } else if (value == false &&
+                                          _selectedChipButtons.length < 2) {
+                                        _selectedChipButtons.remove(e.id);
+                                        _selectedChipButtons.add(1);
+                                      } else if (value == false) {
+                                        _selectedChipButtons.remove(e.id);
+                                      } else if (value == true) {
+                                        _selectedChipButtons.add(e.id);
+                                      }
+                                    });
+                                  },
+                                  selected: _selectedChipButtons.contains(e.id),
                                 ),
-                                labelPadding:
-                                    Theme.of(context).chipTheme.labelPadding,
-                                elevation:
-                                    Theme.of(context).chipTheme.elevation,
-                                backgroundColor:
-                                    Theme.of(context).chipTheme.backgroundColor,
-                                labelStyle:
-                                    Theme.of(context).textTheme.subtitle2,
-                                pressElevation:
-                                    Theme.of(context).chipTheme.pressElevation,
-                                selectedColor:
-                                    Theme.of(context).chipTheme.selectedColor,
-                                onSelected: (value) {
-                                  setState(() {
-                                    if (value == true &&
-                                        _selectedChipButtons.contains(1) &&
-                                        _selectedChipButtons.length < 2) {
-                                      _selectedChipButtons.clear();
-                                      _selectedChipButtons.add(e.id);
-                                    } else if (value == true && e.id == 1) {
-                                      _selectedChipButtons.clear();
-                                      _selectedChipButtons.add(1);
-                                    } else if (value == false &&
-                                        _selectedChipButtons.length < 2) {
-                                      _selectedChipButtons.remove(e.id);
-                                      _selectedChipButtons.add(1);
-                                    } else if (value == false) {
-                                      _selectedChipButtons.remove(e.id);
-                                    } else if (value == true) {
-                                      _selectedChipButtons.add(e.id);
-                                    }
-                                  });
-                                },
-                                selected: _selectedChipButtons.contains(e.id),
                               ),
-                            ),
-                          )
-                          .toList(),
+                            )
+                            .toList(),
+                      ),
                     ),
                   ),
                 ),
@@ -260,79 +379,19 @@ class _LandingState extends State<Landing> {
                             const SizedBox(
                               height: 10,
                             ),
-                            GridView.count(
-                              childAspectRatio: 4,
-                              primary: false,
-                              crossAxisSpacing: 10,
-                              mainAxisSpacing: 10,
-                              crossAxisCount: 4,
-                              shrinkWrap: true,
-                              children: const <Widget>[
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                              ],
+                            SizedBox(
+                              width: width,
+                              child: Wrap(
+                                alignment: WrapAlignment.spaceBetween,
+                                children: <Widget>[
+                                  for (final item in Landing._appItems)
+                                    AppItem(
+                                      name: item.name,
+                                      rating: item.rating,
+                                      category: item.category,
+                                    ),
+                                ],
+                              ),
                             ),
                           ],
                         ),
@@ -373,78 +432,15 @@ class _LandingState extends State<Landing> {
                             const SizedBox(
                               height: 10,
                             ),
-                            GridView.count(
-                              childAspectRatio: 4,
-                              primary: false,
-                              crossAxisSpacing: 10,
-                              mainAxisSpacing: 10,
-                              crossAxisCount: 4,
-                              shrinkWrap: true,
-                              children: const <Widget>[
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
+                            Wrap(
+                              spacing: width / 80,
+                              children: <Widget>[
+                                for (final item in Landing._appItems)
+                                  AppItem(
+                                    name: item.name,
+                                    rating: item.rating,
+                                    category: item.category,
+                                  ),
                               ],
                             ),
                           ],
@@ -487,78 +483,15 @@ class _LandingState extends State<Landing> {
                             const SizedBox(
                               height: 10,
                             ),
-                            GridView.count(
-                              childAspectRatio: 4,
-                              primary: false,
-                              crossAxisSpacing: 10,
-                              mainAxisSpacing: 10,
-                              crossAxisCount: 4,
-                              shrinkWrap: true,
-                              children: const <Widget>[
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
-                                AppItem(
-                                  name: 'Application',
-                                  rating: 5.0,
-                                  category: [
-                                    'Tools',
-                                    'Development',
-                                  ],
-                                ),
+                            Wrap(
+                              spacing: width / 80,
+                              children: <Widget>[
+                                for (final item in Landing._appItems)
+                                  AppItem(
+                                    name: item.name,
+                                    rating: item.rating,
+                                    category: item.category,
+                                  ),
                               ],
                             ),
                           ],

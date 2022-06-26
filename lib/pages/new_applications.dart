@@ -14,8 +14,108 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+import 'package:app_store/models/buttons/app_item_model.dart';
 import 'package:app_store/widgets/cards/app_item.dart';
 import 'package:flutter/material.dart';
+
+final _appItems = <AppItemModel>[
+  AppItemModel(
+    name: 'Application',
+    rating: 5.0,
+    category: [
+      'Tools',
+      'Development',
+    ],
+  ),
+  AppItemModel(
+    name: 'Application',
+    rating: 5.0,
+    category: [
+      'Tools',
+      'Development',
+    ],
+  ),
+  AppItemModel(
+    name: 'Application',
+    rating: 5.0,
+    category: [
+      'Tools',
+      'Development',
+    ],
+  ),
+  AppItemModel(
+    name: 'Application',
+    rating: 5.0,
+    category: [
+      'Tools',
+      'Development',
+    ],
+  ),
+  AppItemModel(
+    name: 'Application',
+    rating: 5.0,
+    category: [
+      'Tools',
+      'Development',
+    ],
+  ),
+  AppItemModel(
+    name: 'Application',
+    rating: 5.0,
+    category: [
+      'Tools',
+      'Development',
+    ],
+  ),
+  AppItemModel(
+    name: 'Application',
+    rating: 5.0,
+    category: [
+      'Tools',
+      'Development',
+    ],
+  ),
+  AppItemModel(
+    name: 'Application',
+    rating: 5.0,
+    category: [
+      'Tools',
+      'Development',
+    ],
+  ),
+  AppItemModel(
+    name: 'Application',
+    rating: 5.0,
+    category: [
+      'Tools',
+      'Development',
+    ],
+  ),
+  AppItemModel(
+    name: 'Application',
+    rating: 5.0,
+    category: [
+      'Tools',
+      'Development',
+    ],
+  ),
+  AppItemModel(
+    name: 'Application',
+    rating: 5.0,
+    category: [
+      'Tools',
+      'Development',
+    ],
+  ),
+  AppItemModel(
+    name: 'Application',
+    rating: 5.0,
+    category: [
+      'Tools',
+      'Development',
+    ],
+  ),
+];
 
 class NewApplications extends StatelessWidget {
   const NewApplications(
@@ -23,10 +123,14 @@ class NewApplications extends StatelessWidget {
     this.scrollToTop, {
     Key? key,
   }) : super(key: key);
+
   final void Function(int) onAddButtonTapped;
   final void Function() scrollToTop;
+
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    final width = size.width;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -60,94 +164,15 @@ class NewApplications extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
-        GridView.count(
-          childAspectRatio: 4,
-          primary: false,
-          crossAxisSpacing: 10,
-          mainAxisSpacing: 10,
-          crossAxisCount: 4,
-          shrinkWrap: true,
-          children: const <Widget>[
-            AppItem(
-              name: 'Application',
-              rating: 5.0,
-              category: ['Tools', 'Development'],
-            ),
-            AppItem(
-              name: 'Application',
-              rating: 5.0,
-              category: ['Tools', 'Development'],
-            ),
-            AppItem(
-              name: 'Application',
-              rating: 5.0,
-              category: ['Tools', 'Development'],
-            ),
-            AppItem(
-              name: 'Application',
-              rating: 5.0,
-              category: ['Tools', 'Development'],
-            ),
-            AppItem(
-              name: 'Application',
-              rating: 5.0,
-              category: ['Tools', 'Development'],
-            ),
-            AppItem(
-              name: 'Application',
-              rating: 5.0,
-              category: ['Tools', 'Development'],
-            ),
-            AppItem(
-              name: 'Application',
-              rating: 5.0,
-              category: ['Tools', 'Development'],
-            ),
-            AppItem(
-              name: 'Application',
-              rating: 5.0,
-              category: ['Tools', 'Development'],
-            ),
-            AppItem(
-              name: 'Application',
-              rating: 5.0,
-              category: ['Tools', 'Development'],
-            ),
-            AppItem(
-              name: 'Application',
-              rating: 5.0,
-              category: ['Tools', 'Development'],
-            ),
-            AppItem(
-              name: 'Application',
-              rating: 5.0,
-              category: ['Tools', 'Development'],
-            ),
-            AppItem(
-              name: 'Application',
-              rating: 5.0,
-              category: ['Tools', 'Development'],
-            ),
-            AppItem(
-              name: 'Application',
-              rating: 5.0,
-              category: ['Tools', 'Development'],
-            ),
-            AppItem(
-              name: 'Application',
-              rating: 5.0,
-              category: ['Tools', 'Development'],
-            ),
-            AppItem(
-              name: 'Application',
-              rating: 5.0,
-              category: ['Tools', 'Development'],
-            ),
-            AppItem(
-              name: 'Application',
-              rating: 5.0,
-              category: ['Tools', 'Development'],
-            ),
+        Wrap(
+          spacing: width / 80,
+          children: <Widget>[
+            for (final item in _appItems)
+              AppItem(
+                name: item.name,
+                rating: item.rating,
+                category: item.category,
+              ),
           ],
         ),
       ],

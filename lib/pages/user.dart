@@ -36,11 +36,14 @@ class User extends StatelessWidget {
       ),
       body: ScrollConfiguration(
         behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
-        child: const SingleChildScrollView(
+        child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 40),
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 40),
             child: Center(
-              child: Text('Coming soon.'),
+              child: Text(
+                'Coming soon.',
+                style: Theme.of(context).textTheme.headline2,
+              ),
             ),
           ),
         ),

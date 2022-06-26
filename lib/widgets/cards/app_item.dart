@@ -17,20 +17,27 @@ limitations under the License.
 import 'package:flutter/material.dart';
 
 class AppItem extends StatelessWidget {
+  final String name;
+  final double rating;
+  final List<String> category;
+
   const AppItem({
-    this.name,
-    this.rating,
-    this.category,
+    required this.name,
+    required this.rating,
+    required this.category,
     Key? key,
   }) : super(key: key);
 
-  final String? name;
-  final List<String>? category;
-  final double? rating;
-
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    final size = MediaQuery.of(context).size;
+    final height = size.height;
+    return Container(
+      height: 85,
+      width: 210,
+      margin: EdgeInsets.only(
+        bottom: height / 70,
+      ),
       child: InkWell(
         splashColor: Theme.of(context).primaryColor,
         borderRadius: BorderRadius.circular(15),
@@ -55,17 +62,17 @@ class AppItem extends StatelessWidget {
               spacing: 3,
               children: <Widget>[
                 Text(
-                  name!,
+                  name,
                   style: Theme.of(context).textTheme.headline2,
                 ),
                 Text(
-                  category!.map((e) => e).join(' • '),
+                  category.map((e) => e).join(' • '),
                   style: Theme.of(context).textTheme.subtitle2,
                 ),
                 Row(
                   children: [
                     Text(
-                      '$rating',
+                      rating.toString(),
                       style: Theme.of(context).textTheme.subtitle2,
                     ),
                     const SizedBox(
