@@ -14,8 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import 'package:app_store/models/buttons/app_item_model.dart';
 import 'package:app_store/models/buttons/chip_button_model.dart';
+import 'package:app_store/models/cards/app_item_model.dart';
 import 'package:app_store/pages/featured_applications.dart';
 import 'package:app_store/pages/new_applications.dart';
 import 'package:app_store/pages/trending_applications.dart';

@@ -14,9 +14,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import 'package:app_store/models/buttons/app_category_model.dart';
-import 'package:app_store/models/buttons/app_item_model.dart';
-import 'package:app_store/models/buttons/app_review_model.dart';
+import 'package:app_store/models/cards/app_category_model.dart';
+import 'package:app_store/models/cards/app_item_model.dart';
+import 'package:app_store/models/text/app_review_model.dart';
 import 'package:app_store/widgets/cards/app_category_item.dart';
 import 'package:app_store/widgets/cards/app_item.dart';
 import 'package:app_store/widgets/text/app_review_item.dart';
