@@ -312,6 +312,10 @@ class _LandingState extends State<Landing> {
                                     } else if (value == true && e.id == 1) {
                                       _selectedChipButtons.clear();
                                       _selectedChipButtons.add(1);
+                                    } else if (value == true &&
+                                        _selectedChipButtons.length == 12) {
+                                      _selectedChipButtons.clear();
+                                      _selectedChipButtons.add(1);
                                     } else if (value == false &&
                                         _selectedChipButtons.length < 2) {
                                       _selectedChipButtons.remove(e.id);
