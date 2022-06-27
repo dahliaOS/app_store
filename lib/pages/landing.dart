@@ -266,73 +266,68 @@ class _LandingState extends State<Landing> {
                       .copyWith(scrollbars: false),
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
-                    child: Expanded(
-                      child: Wrap(
-                        spacing: width / 80,
-                        children: Landing._chipButtons
-                            .map(
-                              (e) => Container(
-                                constraints:
-                                    const BoxConstraints(maxHeight: 80),
-                                child: ChoiceChip(
-                                  materialTapTargetSize:
-                                      MaterialTapTargetSize.shrinkWrap,
-                                  label: Text(
-                                    e.name,
-                                    style: TextStyle(
-                                      color: _selectedChipButtons.contains(e.id)
-                                          ? Colors.white
-                                          : null,
-                                    ),
-                                  ),
-                                  avatar: Icon(
-                                    e.icon,
-                                    size: 20,
+                    child: Wrap(
+                      spacing: width / 80,
+                      children: Landing._chipButtons
+                          .map(
+                            (e) => Container(
+                              constraints: const BoxConstraints(maxHeight: 80),
+                              child: ChoiceChip(
+                                materialTapTargetSize:
+                                    MaterialTapTargetSize.shrinkWrap,
+                                label: Text(
+                                  e.name,
+                                  style: TextStyle(
                                     color: _selectedChipButtons.contains(e.id)
                                         ? Colors.white
-                                        : Theme.of(context).iconTheme.color,
+                                        : null,
                                   ),
-                                  labelPadding:
-                                      Theme.of(context).chipTheme.labelPadding,
-                                  elevation:
-                                      Theme.of(context).chipTheme.elevation,
-                                  backgroundColor: Theme.of(context)
-                                      .chipTheme
-                                      .backgroundColor,
-                                  labelStyle:
-                                      Theme.of(context).textTheme.subtitle2,
-                                  pressElevation: Theme.of(context)
-                                      .chipTheme
-                                      .pressElevation,
-                                  selectedColor:
-                                      Theme.of(context).chipTheme.selectedColor,
-                                  onSelected: (value) {
-                                    setState(() {
-                                      if (value == true &&
-                                          _selectedChipButtons.contains(1) &&
-                                          _selectedChipButtons.length < 2) {
-                                        _selectedChipButtons.clear();
-                                        _selectedChipButtons.add(e.id);
-                                      } else if (value == true && e.id == 1) {
-                                        _selectedChipButtons.clear();
-                                        _selectedChipButtons.add(1);
-                                      } else if (value == false &&
-                                          _selectedChipButtons.length < 2) {
-                                        _selectedChipButtons.remove(e.id);
-                                        _selectedChipButtons.add(1);
-                                      } else if (value == false) {
-                                        _selectedChipButtons.remove(e.id);
-                                      } else if (value == true) {
-                                        _selectedChipButtons.add(e.id);
-                                      }
-                                    });
-                                  },
-                                  selected: _selectedChipButtons.contains(e.id),
                                 ),
+                                avatar: Icon(
+                                  e.icon,
+                                  size: 20,
+                                  color: _selectedChipButtons.contains(e.id)
+                                      ? Colors.white
+                                      : Theme.of(context).iconTheme.color,
+                                ),
+                                labelPadding:
+                                    Theme.of(context).chipTheme.labelPadding,
+                                elevation:
+                                    Theme.of(context).chipTheme.elevation,
+                                backgroundColor:
+                                    Theme.of(context).chipTheme.backgroundColor,
+                                labelStyle:
+                                    Theme.of(context).textTheme.subtitle2,
+                                pressElevation:
+                                    Theme.of(context).chipTheme.pressElevation,
+                                selectedColor:
+                                    Theme.of(context).chipTheme.selectedColor,
+                                onSelected: (value) {
+                                  setState(() {
+                                    if (value == true &&
+                                        _selectedChipButtons.contains(1) &&
+                                        _selectedChipButtons.length < 2) {
+                                      _selectedChipButtons.clear();
+                                      _selectedChipButtons.add(e.id);
+                                    } else if (value == true && e.id == 1) {
+                                      _selectedChipButtons.clear();
+                                      _selectedChipButtons.add(1);
+                                    } else if (value == false &&
+                                        _selectedChipButtons.length < 2) {
+                                      _selectedChipButtons.remove(e.id);
+                                      _selectedChipButtons.add(1);
+                                    } else if (value == false) {
+                                      _selectedChipButtons.remove(e.id);
+                                    } else if (value == true) {
+                                      _selectedChipButtons.add(e.id);
+                                    }
+                                  });
+                                },
+                                selected: _selectedChipButtons.contains(e.id),
                               ),
-                            )
-                            .toList(),
-                      ),
+                            ),
+                          )
+                          .toList(),
                     ),
                   ),
                 ),
@@ -379,19 +374,16 @@ class _LandingState extends State<Landing> {
                             const SizedBox(
                               height: 10,
                             ),
-                            SizedBox(
-                              width: width,
-                              child: Wrap(
-                                alignment: WrapAlignment.spaceBetween,
-                                children: <Widget>[
-                                  for (final item in Landing._appItems)
-                                    AppItem(
-                                      name: item.name,
-                                      rating: item.rating,
-                                      category: item.category,
-                                    ),
-                                ],
-                              ),
+                            Wrap(
+                              spacing: width / 80,
+                              children: <Widget>[
+                                for (final item in Landing._appItems)
+                                  AppItem(
+                                    name: item.name,
+                                    rating: item.rating,
+                                    category: item.category,
+                                  ),
+                              ],
                             ),
                           ],
                         ),

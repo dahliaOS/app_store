@@ -577,19 +577,16 @@ class AppPage extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                    SizedBox(
-                      width: width,
-                      child: Wrap(
-                        alignment: WrapAlignment.spaceBetween,
-                        children: <Widget>[
-                          for (final item in _appItems)
-                            AppItem(
-                              name: item.name,
-                              rating: item.rating,
-                              category: item.category,
-                            ),
-                        ],
-                      ),
+                    Wrap(
+                      spacing: width / 80,
+                      children: <Widget>[
+                        for (final item in _appItems)
+                          AppItem(
+                            name: item.name,
+                            rating: item.rating,
+                            category: item.category,
+                          ),
+                      ],
                     ),
                   ],
                 )
