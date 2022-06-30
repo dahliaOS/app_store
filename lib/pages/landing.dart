@@ -19,6 +19,7 @@ import 'package:app_store/models/cards/app_item_model.dart';
 import 'package:app_store/pages/featured_applications.dart';
 import 'package:app_store/pages/new_applications.dart';
 import 'package:app_store/pages/trending_applications.dart';
+import 'package:app_store/services/locales/locale_strings.g.dart';
 import 'package:app_store/widgets/buttons/icon_button.dart';
 import 'package:app_store/widgets/cards/app_item.dart';
 import 'package:app_store/widgets/text_fields/search_bar.dart';
@@ -30,72 +31,72 @@ class Landing extends StatefulWidget {
 
   static final _chipButtons = <ChipButtonModel>[
     ChipButtonModel(
-      name: 'All',
+      name: LocaleStrings.category.all,
       icon: Icons.apps,
       id: 1,
     ),
     ChipButtonModel(
-      name: 'Design',
+      name: LocaleStrings.category.design,
       icon: Icons.design_services,
       id: 2,
     ),
     ChipButtonModel(
-      name: 'Games',
+      name: LocaleStrings.category.games,
       icon: Icons.games,
       id: 3,
     ),
     ChipButtonModel(
-      name: 'Entertainment',
+      name: LocaleStrings.category.entertainment,
       icon: Icons.movie,
       id: 4,
     ),
     ChipButtonModel(
-      name: 'Development',
+      name: LocaleStrings.category.development,
       icon: Icons.developer_mode,
       id: 5,
     ),
     ChipButtonModel(
-      name: 'Music',
+      name: LocaleStrings.category.music,
       icon: Icons.audiotrack,
       id: 6,
     ),
     ChipButtonModel(
-      name: 'Productivity',
+      name: LocaleStrings.category.productivity,
       icon: Icons.work,
       id: 7,
     ),
     ChipButtonModel(
-      name: 'Tools',
+      name: LocaleStrings.category.tools,
       icon: Icons.developer_board,
       id: 8,
     ),
     ChipButtonModel(
-      name: 'Finance',
+      name: LocaleStrings.category.finance,
       icon: Icons.money,
       id: 9,
     ),
     ChipButtonModel(
-      name: 'Health and well-being',
+      name: LocaleStrings.category.healthAndWellBeing,
       icon: Icons.health_and_safety,
       id: 10,
     ),
     ChipButtonModel(
-      name: 'Education',
+      name: LocaleStrings.category.education,
       icon: Icons.cast_for_education,
       id: 11,
     ),
     ChipButtonModel(
-      name: 'Fitness',
+      name: LocaleStrings.category.fitness,
       icon: Icons.fitness_center,
       id: 12,
     ),
     ChipButtonModel(
-      name: 'Communication',
+      name: LocaleStrings.category.communication,
       icon: Icons.comment,
       id: 13,
     ),
     ChipButtonModel(
-      name: 'Business',
+      name: LocaleStrings.category.business,
       icon: Icons.business,
       id: 14,
     ),
@@ -103,99 +104,99 @@ class Landing extends StatefulWidget {
 
   static final _appItems = <AppItemModel>[
     AppItemModel(
-      name: 'Application',
+      name: LocaleStrings.appPage.name,
       rating: 5.0,
       category: [
-        'Tools',
-        'Development',
+        LocaleStrings.category.tools,
+        LocaleStrings.category.development,
       ],
     ),
     AppItemModel(
-      name: 'Application',
+      name: LocaleStrings.appPage.name,
       rating: 5.0,
       category: [
-        'Tools',
-        'Development',
+        LocaleStrings.category.tools,
+        LocaleStrings.category.development,
       ],
     ),
     AppItemModel(
-      name: 'Application',
+      name: LocaleStrings.appPage.name,
       rating: 5.0,
       category: [
-        'Tools',
-        'Development',
+        LocaleStrings.category.tools,
+        LocaleStrings.category.development,
       ],
     ),
     AppItemModel(
-      name: 'Application',
+      name: LocaleStrings.appPage.name,
       rating: 5.0,
       category: [
-        'Tools',
-        'Development',
+        LocaleStrings.category.tools,
+        LocaleStrings.category.development,
       ],
     ),
     AppItemModel(
-      name: 'Application',
+      name: LocaleStrings.appPage.name,
       rating: 5.0,
       category: [
-        'Tools',
-        'Development',
+        LocaleStrings.category.tools,
+        LocaleStrings.category.development,
       ],
     ),
     AppItemModel(
-      name: 'Application',
+      name: LocaleStrings.appPage.name,
       rating: 5.0,
       category: [
-        'Tools',
-        'Development',
+        LocaleStrings.category.tools,
+        LocaleStrings.category.development,
       ],
     ),
     AppItemModel(
-      name: 'Application',
+      name: LocaleStrings.appPage.name,
       rating: 5.0,
       category: [
-        'Tools',
-        'Development',
+        LocaleStrings.category.tools,
+        LocaleStrings.category.development,
       ],
     ),
     AppItemModel(
-      name: 'Application',
+      name: LocaleStrings.appPage.name,
       rating: 5.0,
       category: [
-        'Tools',
-        'Development',
+        LocaleStrings.category.tools,
+        LocaleStrings.category.development,
       ],
     ),
     AppItemModel(
-      name: 'Application',
+      name: LocaleStrings.appPage.name,
       rating: 5.0,
       category: [
-        'Tools',
-        'Development',
+        LocaleStrings.category.tools,
+        LocaleStrings.category.development,
       ],
     ),
     AppItemModel(
-      name: 'Application',
+      name: LocaleStrings.appPage.name,
       rating: 5.0,
       category: [
-        'Tools',
-        'Development',
+        LocaleStrings.category.tools,
+        LocaleStrings.category.development,
       ],
     ),
     AppItemModel(
-      name: 'Application',
+      name: LocaleStrings.appPage.name,
       rating: 5.0,
       category: [
-        'Tools',
-        'Development',
+        LocaleStrings.category.tools,
+        LocaleStrings.category.development,
       ],
     ),
     AppItemModel(
-      name: 'Application',
+      name: LocaleStrings.appPage.name,
       rating: 5.0,
       category: [
-        'Tools',
-        'Development',
+        LocaleStrings.category.tools,
+        LocaleStrings.category.development,
       ],
     ),
   ];
@@ -219,12 +220,7 @@ class _LandingState extends State<Landing> {
         child: SingleChildScrollView(
           controller: _scrollController,
           child: Padding(
-            padding: const EdgeInsets.only(
-              right: 40,
-              left: 40,
-              top: 30,
-              bottom: 30,
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 30),
             child: Column(
               children: <Widget>[
                 SizedBox(
@@ -232,8 +228,8 @@ class _LandingState extends State<Landing> {
                   child: Wrap(
                     alignment: WrapAlignment.spaceBetween,
                     children: <Widget>[
-                      const SearchBar(
-                        hint: 'Search applications...',
+                      SearchBar(
+                        hint: LocaleStrings.searchbar.hint,
                         icon: Icons.search,
                       ),
                       Wrap(
@@ -309,11 +305,9 @@ class _LandingState extends State<Landing> {
                                         _selectedChipButtons.length < 2) {
                                       _selectedChipButtons.clear();
                                       _selectedChipButtons.add(e.id);
-                                    } else if (value == true && e.id == 1) {
-                                      _selectedChipButtons.clear();
-                                      _selectedChipButtons.add(1);
-                                    } else if (value == true &&
-                                        _selectedChipButtons.length == 12) {
+                                    } else if (value == true && e.id == 1 ||
+                                        value == true &&
+                                            _selectedChipButtons.length == 12) {
                                       _selectedChipButtons.clear();
                                       _selectedChipButtons.add(1);
                                     } else if (value == false &&
@@ -354,7 +348,7 @@ class _LandingState extends State<Landing> {
                                   width: 10,
                                 ),
                                 Text(
-                                  'Trending',
+                                  LocaleStrings.topic.trending,
                                   style: Theme.of(context).textTheme.headline2,
                                 ),
                                 IconButton(
@@ -371,7 +365,7 @@ class _LandingState extends State<Landing> {
                                   focusColor: Theme.of(context).focusColor,
                                   highlightColor:
                                       Theme.of(context).highlightColor,
-                                  tooltip: 'Show all trending applications',
+                                  tooltip: LocaleStrings.topic.trendingHint,
                                 )
                               ],
                             ),
@@ -404,7 +398,7 @@ class _LandingState extends State<Landing> {
                                   width: 10,
                                 ),
                                 Text(
-                                  'Featured',
+                                  LocaleStrings.topic.featured,
                                   style: Theme.of(context).textTheme.headline2,
                                 ),
                                 IconButton(
@@ -421,7 +415,7 @@ class _LandingState extends State<Landing> {
                                   focusColor: Theme.of(context).focusColor,
                                   highlightColor:
                                       Theme.of(context).highlightColor,
-                                  tooltip: 'Show all featured applications',
+                                  tooltip: LocaleStrings.topic.featuredHint,
                                 )
                               ],
                             ),
@@ -454,7 +448,7 @@ class _LandingState extends State<Landing> {
                                   width: 10,
                                 ),
                                 Text(
-                                  'New',
+                                  LocaleStrings.topic.newTopic,
                                   style: Theme.of(context).textTheme.headline2,
                                 ),
                                 IconButton(
@@ -471,8 +465,7 @@ class _LandingState extends State<Landing> {
                                   focusColor: Theme.of(context).focusColor,
                                   highlightColor:
                                       Theme.of(context).highlightColor,
-                                  tooltip:
-                                      'Show all recently added applications',
+                                  tooltip: LocaleStrings.topic.newHint,
                                 )
                               ],
                             ),

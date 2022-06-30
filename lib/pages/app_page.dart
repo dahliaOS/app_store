@@ -17,6 +17,7 @@ limitations under the License.
 import 'package:app_store/models/cards/app_category_model.dart';
 import 'package:app_store/models/cards/app_item_model.dart';
 import 'package:app_store/models/text/app_review_model.dart';
+import 'package:app_store/services/locales/locale_strings.g.dart';
 import 'package:app_store/widgets/cards/app_category_item.dart';
 import 'package:app_store/widgets/cards/app_item.dart';
 import 'package:app_store/widgets/text/app_review_item.dart';
@@ -24,99 +25,99 @@ import 'package:flutter/material.dart';
 
 final _appItems = <AppItemModel>[
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
 ];
@@ -132,37 +133,37 @@ final _reviewItems = <ReviewItemModel>[
 final _categoryItems = <AppCategoryItemModel>[
   AppCategoryItemModel(
     name: 'Marin Heđeš',
-    tooltip: 'Developer',
+    tooltip: LocaleStrings.appPage.informationDeveloperHint,
     icon: Icons.person,
   ),
   AppCategoryItemModel(
     name: 'Flutter, Dart',
-    tooltip: 'Technology',
+    tooltip: LocaleStrings.appPage.informationTechnologyHint,
     icon: Icons.code,
   ),
   AppCategoryItemModel(
     name: '#1',
-    tooltip: 'Trending position',
+    tooltip: LocaleStrings.appPage.informationTrendingHint,
     icon: Icons.leaderboard,
   ),
   AppCategoryItemModel(
-    name: 'English',
-    tooltip: 'Locale',
+    name: LocaleStrings.appPage.informationLocale,
+    tooltip: LocaleStrings.appPage.informationLocaleHint,
     icon: Icons.language,
   ),
   AppCategoryItemModel(
     name: '20MB',
-    tooltip: 'Size',
+    tooltip: LocaleStrings.appPage.informationSizeHint,
     icon: Icons.sd_storage,
   ),
   AppCategoryItemModel(
-    name: 'FOSS',
-    tooltip: 'Source',
+    name: LocaleStrings.appPage.informationSource,
+    tooltip: LocaleStrings.appPage.informationSourceHint,
     icon: Icons.source,
   ),
   AppCategoryItemModel(
     name: '12+',
-    tooltip: 'Age appropriateness',
+    tooltip: LocaleStrings.appPage.informationAgeAppropriatnessHint,
     icon: Icons.child_care,
   ),
 ];
@@ -192,12 +193,7 @@ class AppPage extends StatelessWidget {
         behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(
-              right: 40,
-              left: 40,
-              top: 30,
-              bottom: 30,
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 30),
             child: Column(
               children: <Widget>[
                 SizedBox(
@@ -219,17 +215,17 @@ class AppPage extends StatelessWidget {
                             spacing: 7,
                             children: <Widget>[
                               Text(
-                                'Application',
+                                LocaleStrings.appPage.name,
                                 style: Theme.of(context).textTheme.headline1,
                               ),
                               Text(
-                                'Description',
+                                LocaleStrings.appPage.shortDescription,
                                 style: Theme.of(context).textTheme.subtitle1,
                               ),
                               Container(
                                 margin: const EdgeInsets.only(bottom: 20),
                                 child: Text(
-                                  'Category',
+                                  LocaleStrings.appPage.category,
                                   style: Theme.of(context).textTheme.subtitle1,
                                 ),
                               ),
@@ -267,7 +263,8 @@ class AppPage extends StatelessWidget {
                                                 CrossAxisAlignment.start,
                                             children: <Widget>[
                                               Text(
-                                                'Are you sure you want to install?',
+                                                LocaleStrings.appPage
+                                                    .downloadDialogTitle,
                                                 style: Theme.of(context)
                                                     .textTheme
                                                     .headline1,
@@ -277,7 +274,8 @@ class AppPage extends StatelessWidget {
                                                 height: 10,
                                               ),
                                               Text(
-                                                'This application can do unspeakable things to you while you sleep. But possibly worst of all, its developer does not know much about the application he built himself. May God save us.',
+                                                LocaleStrings.appPage
+                                                    .downloadDialogDescription,
                                                 style: Theme.of(context)
                                                     .textTheme
                                                     .subtitle1,
@@ -292,7 +290,10 @@ class AppPage extends StatelessWidget {
                                                     onPressed: () {
                                                       Navigator.pop(context);
                                                     },
-                                                    child: const Text('Yes'),
+                                                    child: Text(
+                                                      LocaleStrings.appPage
+                                                          .downloadDialogConfirmInstallation,
+                                                    ),
                                                   ),
                                                   const SizedBox(
                                                     width: 10,
@@ -301,7 +302,10 @@ class AppPage extends StatelessWidget {
                                                     onPressed: () {
                                                       Navigator.pop(context);
                                                     },
-                                                    child: const Text('No'),
+                                                    child: Text(
+                                                      LocaleStrings.appPage
+                                                          .downloadDialogCancelInstallation,
+                                                    ),
                                                   )
                                                 ],
                                               ),
@@ -315,18 +319,18 @@ class AppPage extends StatelessWidget {
                               },
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
-                                children: const <Widget>[
-                                  Icon(
+                                children: <Widget>[
+                                  const Icon(
                                     Icons.download,
                                     color: Colors.white,
                                     size: 18,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 5,
                                   ),
                                   Text(
-                                    'Download',
-                                    style: TextStyle(color: Colors.white),
+                                    LocaleStrings.appPage.download,
+                                    style: const TextStyle(color: Colors.white),
                                   ),
                                 ],
                               ),
@@ -361,7 +365,8 @@ class AppPage extends StatelessWidget {
                                               CrossAxisAlignment.start,
                                           children: <Widget>[
                                             Text(
-                                              'Donate to application developer',
+                                              LocaleStrings
+                                                  .appPage.donateDialogTitle,
                                               style: Theme.of(context)
                                                   .textTheme
                                                   .headline1,
@@ -371,7 +376,8 @@ class AppPage extends StatelessWidget {
                                               height: 10,
                                             ),
                                             Text(
-                                              'If you wish to support the development of the application, please click on the donations links below where you can donate an amount you wish.',
+                                              LocaleStrings.appPage
+                                                  .donateDialogDescription,
                                               style: Theme.of(context)
                                                   .textTheme
                                                   .subtitle1,
@@ -408,7 +414,10 @@ class AppPage extends StatelessWidget {
                                                   onPressed: () {
                                                     Navigator.pop(context);
                                                   },
-                                                  child: const Text('Close'),
+                                                  child: Text(
+                                                    LocaleStrings.appPage
+                                                        .donateDialogClose,
+                                                  ),
                                                 )
                                               ],
                                             ),
@@ -422,18 +431,19 @@ class AppPage extends StatelessWidget {
                             },
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: const <Widget>[
-                                Icon(
+                              children: <Widget>[
+                                const Icon(
                                   Icons.payment,
                                   color: Colors.deepOrange,
                                   size: 18,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 5,
                                 ),
                                 Text(
-                                  'Donate',
-                                  style: TextStyle(color: Colors.deepOrange),
+                                  LocaleStrings.appPage.donate,
+                                  style:
+                                      const TextStyle(color: Colors.deepOrange),
                                 ),
                               ],
                             ),
@@ -473,7 +483,7 @@ class AppPage extends StatelessWidget {
                           width: 10,
                         ),
                         Text(
-                          'Information',
+                          LocaleStrings.appPage.longDescriptionTitle,
                           style: Theme.of(context).textTheme.headline2,
                         )
                       ],
@@ -482,7 +492,7 @@ class AppPage extends StatelessWidget {
                       height: 20,
                     ),
                     Text(
-                      'Insert application description here.',
+                      LocaleStrings.appPage.longDescriptionContent,
                       style: Theme.of(context).textTheme.subtitle2,
                       overflow: TextOverflow.clip,
                     )
@@ -501,7 +511,7 @@ class AppPage extends StatelessWidget {
                           width: 10,
                         ),
                         Text(
-                          'Images',
+                          LocaleStrings.appPage.images,
                           style: Theme.of(context).textTheme.headline2,
                         )
                       ],
@@ -542,34 +552,17 @@ class AppPage extends StatelessWidget {
                 const SizedBox(
                   height: 50,
                 ),
-                SizedBox(
-                  width: width,
-                  child: Wrap(
-                    alignment: WrapAlignment.spaceBetween,
-                    children: <Widget>[
-                      for (final item in _reviewItems)
-                        ReviewItem(
-                          name: item.name,
-                          comment: item.comment,
-                          rating: item.rating,
-                        ),
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 50,
-                ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Row(
                       children: <Widget>[
-                        const Icon(Icons.control_point_duplicate),
+                        const Icon(Icons.reviews),
                         const SizedBox(
                           width: 10,
                         ),
                         Text(
-                          'Similar applications',
+                          LocaleStrings.appPage.reviews,
                           style: Theme.of(context).textTheme.headline2,
                         )
                       ],
@@ -577,19 +570,56 @@ class AppPage extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                    Wrap(
-                      spacing: width / 80,
-                      children: <Widget>[
-                        for (final item in _appItems)
-                          AppItem(
-                            name: item.name,
-                            rating: item.rating,
-                            category: item.category,
-                          ),
-                      ],
+                    SizedBox(
+                      width: width,
+                      child: Wrap(
+                        alignment: WrapAlignment.spaceBetween,
+                        children: <Widget>[
+                          for (final item in _reviewItems)
+                            ReviewItem(
+                              name: item.name,
+                              comment: item.comment,
+                              rating: item.rating,
+                            ),
+                        ],
+                      ),
                     ),
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Row(
+                          children: <Widget>[
+                            const Icon(Icons.control_point_duplicate),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              LocaleStrings.appPage.similarApplications,
+                              style: Theme.of(context).textTheme.headline2,
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Wrap(
+                          spacing: width / 80,
+                          children: <Widget>[
+                            for (final item in _appItems)
+                              AppItem(
+                                name: item.name,
+                                rating: item.rating,
+                                category: item.category,
+                              ),
+                          ],
+                        ),
+                      ],
+                    )
                   ],
-                )
+                ),
               ],
             ),
           ),

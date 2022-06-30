@@ -15,104 +15,105 @@ limitations under the License.
 */
 
 import 'package:app_store/models/cards/app_item_model.dart';
+import 'package:app_store/services/locales/locale_strings.g.dart';
 import 'package:app_store/widgets/cards/app_item.dart';
 import 'package:flutter/material.dart';
 
 final _appItems = <AppItemModel>[
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
   AppItemModel(
-    name: 'Application',
+    name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      'Tools',
-      'Development',
+      LocaleStrings.category.tools,
+      LocaleStrings.category.development,
     ],
   ),
 ];
@@ -141,7 +142,7 @@ class TrendingApplications extends StatelessWidget {
               width: 10,
             ),
             Text(
-              'Trending',
+              LocaleStrings.topic.trending,
               style: Theme.of(context).textTheme.headline2,
             ),
             IconButton(
@@ -157,7 +158,7 @@ class TrendingApplications extends StatelessWidget {
               splashColor: Theme.of(context).splashColor,
               focusColor: Theme.of(context).focusColor,
               highlightColor: Theme.of(context).highlightColor,
-              tooltip: 'Show all categories',
+              tooltip: LocaleStrings.topic.showAll,
             )
           ],
         ),

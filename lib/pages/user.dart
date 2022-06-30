@@ -38,7 +38,7 @@ class User extends StatelessWidget {
         behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 40),
+            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 30),
             child: Center(
               child: Text(
                 'Coming soon.',

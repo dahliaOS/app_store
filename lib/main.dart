@@ -19,28 +19,35 @@ import 'package:app_store/pages/landing.dart';
 import 'package:app_store/pages/settings.dart';
 import 'package:app_store/pages/user.dart';
 import 'package:app_store/providers/theme_provider.dart';
+import 'package:app_store/services/locales/generated_asset_loader.g.dart';
+import 'package:app_store/services/locales/locales.g.dart';
 import 'package:app_store/theme/theme.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const AppStore());
-}
-
-class AppStore extends StatelessWidget {
-  const AppStore({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider<ThemeProvider>.value(
-          value: ThemeProvider(lightTheme, false),
-        ),
-      ],
-      child: const AppStoreHome(),
-    );
-  }
+  WidgetsFlutterBinding.ensureInitialized();
+  EasyLocalization.ensureInitialized();
+  runApp(
+    EasyLocalization(
+      supportedLocales: Locales.supported,
+      fallbackLocale: const Locale("en", "US"),
+      assetLoader: GeneratedAssetLoader(),
+      useFallbackTranslations: true,
+      path: "assets/locales",
+      startLocale: const Locale("en", "US"),
+      saveLocale: false,
+      child: MultiProvider(
+        providers: [
+          ChangeNotifierProvider<ThemeProvider>.value(
+            value: ThemeProvider(lightTheme, false),
+          ),
+        ],
+        child: const AppStoreHome(),
+      ),
+    ),
+  );
 }
 
 class AppStoreHome extends StatelessWidget {
@@ -51,6 +58,9 @@ class AppStoreHome extends StatelessWidget {
     return MaterialApp(
       title: 'App Store',
       theme: theme(context),
+      locale: context.locale,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {

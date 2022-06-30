@@ -15,7 +15,12 @@ limitations under the License.
 */
 
 import 'package:app_store/providers/theme_provider.dart';
+import 'package:app_store/services/locales/locale_strings.g.dart';
+import 'package:app_store/services/locales/locales.g.dart';
+import 'package:app_store/services/locales/native_names.dart';
 import 'package:app_store/theme/theme.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flag/flag.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -25,6 +30,8 @@ class Settings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeProvider _themeprovider = Provider.of<ThemeProvider>(context);
+    final size = MediaQuery.of(context).size;
+    final width = size.width;
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -40,13 +47,12 @@ class Settings extends StatelessWidget {
       ),
       body: Center(
         child: Padding(
-          padding:
-              const EdgeInsets.only(left: 70, right: 70, top: 30, bottom: 30),
+          padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                'Theme mode',
+                LocaleStrings.settings.themeMode,
                 style: Theme.of(context).textTheme.headline2,
               ),
               const SizedBox(
@@ -54,11 +60,11 @@ class Settings extends StatelessWidget {
               ),
               SwitchListTile(
                 title: Text(
-                  'Dark mode',
+                  LocaleStrings.settings.darkMode,
                   style: Theme.of(context).textTheme.headline2,
                 ),
                 subtitle: Text(
-                  'Turn on dark mode',
+                  LocaleStrings.settings.darkModeDescription,
                   style: Theme.of(context).textTheme.subtitle2,
                 ),
                 shape: Theme.of(context).listTileTheme.shape,
@@ -77,6 +83,61 @@ class Settings extends StatelessWidget {
                 },
                 value: _themeprovider.getThemeSwitched(),
               ),
+              const SizedBox(
+                height: 20,
+              ),
+              Text(
+                LocaleStrings.settings.locale,
+                style: Theme.of(context).textTheme.headline2,
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Wrap(
+                spacing: width / 80,
+                children: [
+                  for (final item in Locales.supported)
+                    Wrap(
+                      spacing: 5,
+                      direction: Axis.vertical,
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      children: [
+                        SizedBox(
+                          width: 80,
+                          height: 80,
+                          child: Card(
+                            clipBehavior: Clip.antiAlias,
+                            child: InkWell(
+                              onTap: () => context.setLocale(item),
+                              splashColor: Theme.of(context).primaryColor,
+                              child: Flag.fromString(
+                                item.languageCode.replaceAll("en", "gb"),
+                                replacement: const Icon(Icons.language),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Text(
+                          localeNativeNames[item.languageCode] ??
+                              "Language code not found",
+                          style: Theme.of(context).textTheme.headline2,
+                        ),
+                        Text(
+                          item.toLanguageTag(),
+                          style: Theme.of(context).textTheme.subtitle2,
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 10),
+                          child: Text(
+                            "${Locales.stringData[item.toLanguageTag()]} / ${Locales.stringData[context.fallbackLocale!.toLanguageTag()]}",
+                            style: Theme.of(context).textTheme.subtitle2,
+                          ),
+                        ),
+                      ],
+                    ),
+                ],
+              )
             ],
           ),
         ),
