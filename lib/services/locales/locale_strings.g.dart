@@ -46,22 +46,30 @@ class _$AppPageLocaleStrings {
   String get category => "app_page.category".tr();
   String get download => "app_page.download".tr();
   String get downloadDialogTitle => "app_page.download_dialog_title".tr();
-  String get downloadDialogDescription => "app_page.download_dialog_description".tr();
-  String get downloadDialogConfirmInstallation => "app_page.download_dialog_confirm_installation".tr();
-  String get downloadDialogCancelInstallation => "app_page.download_dialog_cancel_installation".tr();
+  String get downloadDialogDescription =>
+      "app_page.download_dialog_description".tr();
+  String get downloadDialogConfirmInstallation =>
+      "app_page.download_dialog_confirm_installation".tr();
+  String get downloadDialogCancelInstallation =>
+      "app_page.download_dialog_cancel_installation".tr();
   String get donate => "app_page.donate".tr();
   String get donateDialogTitle => "app_page.donate_dialog_title".tr();
-  String get donateDialogDescription => "app_page.donate_dialog_description".tr();
+  String get donateDialogDescription =>
+      "app_page.donate_dialog_description".tr();
   String get donateDialogClose => "app_page.donate_dialog_close".tr();
-  String get informationDeveloperHint => "app_page.information_developer_hint".tr();
-  String get informationTechnologyHint => "app_page.information_technology_hint".tr();
-  String get informationTrendingHint => "app_page.information_trending_hint".tr();
+  String get informationDeveloperHint =>
+      "app_page.information_developer_hint".tr();
+  String get informationTechnologyHint =>
+      "app_page.information_technology_hint".tr();
+  String get informationTrendingHint =>
+      "app_page.information_trending_hint".tr();
   String get informationLocale => "app_page.information_locale".tr();
   String get informationLocaleHint => "app_page.information_locale_hint".tr();
   String get informationSizeHint => "app_page.information_size_hint".tr();
   String get informationSource => "app_page.information_source".tr();
   String get informationSourceHint => "app_page.information_source_hint".tr();
-  String get informationAgeAppropriatnessHint => "app_page.information_age_appropriatness_hint".tr();
+  String get informationAgeAppropriatnessHint =>
+      "app_page.information_age_appropriatness_hint".tr();
   String get longDescriptionTitle => "app_page.long_description_title".tr();
   String get longDescriptionContent => "app_page.long_description_content".tr();
   String get images => "app_page.images".tr();
@@ -81,4 +89,3 @@ class _$SettingsLocaleStrings {
 class _$SearchbarLocaleStrings {
   String get hint => "searchbar.hint".tr();
 }
-
