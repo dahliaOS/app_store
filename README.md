@@ -16,7 +16,7 @@ If you're wondering how to contribute to the project, please refer to [CONTRIBUT
 
 ## Translate
 
-If you're interested in translating Pangolin, click [here](https://github.com/dahliaOS/app_store/blob/main/CONTRIBUTING.md#translations) for more information on how to do so!
+If you're interested in translating App Store, click [here](https://github.com/dahliaOS/app_store/blob/main/CONTRIBUTING.md#translations) for more information on how to do so!
 
 ## License
 
