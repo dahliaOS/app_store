@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Category strings -->
-    <string name="category.all">All</string>
+    <string name="category.all">Alla</string>
     <string name="category.design">Design</string>
     <string name="category.games">Games</string>
     <string name="category.entertainment">Entertainment</string>
