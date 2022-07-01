@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Category strings -->
+    <string name="category.all">Kaikki</string>
+    <string name="category.design">Ulkoasu</string>
+    <string name="category.games">Pelit</string>
+    <string name="category.entertainment">Viihde</string>
+    <string name="category.development">Kehitys</string>
+    <string name="category.music">Musiikki</string>
+    <string name="category.productivity">Tuottavuus</string>
+    <string name="category.tools">Työkalut</string>
+    <string name="category.finance">Rahoitus</string>
+    <string name="category.health_and_well_being">Terveys ja hyvinvointi</string>
+    <string name="category.education">Koulutus</string>
+    <string name="category.fitness">Kuntosali</string>
+    <string name="category.communication">Viestintä</string>
+    <string name="category.business">Liiketoiminta</string>
+    <!-- Applications topic strings -->
+    <string name="topic.show_all">Näytä kaikki kategoriat</string>
+    <string name="topic.trending">Nousussa</string>
+    <string name="topic.trending_hint">Näytä kaikki trendikäs sovellukset</string>
+    <string name="topic.featured">Suositellut</string>
+    <string name="topic.featured_hint">Näytä kaikki nostetut sovellukset</string>
+    <string name="topic.newTopic">Uusi</string>
+    <string name="topic.new_hint">Näytä kaikki äskettäin lisätyt sovellukset</string>
+    <!-- Application page strings -->
+    <string name="app_page.name">Sovellus</string>
+    <string name="app_page.short_description">Kuvaus</string>
+    <string name="app_page.category">Kategoria</string>
+    <string name="app_page.download">Lataa</string>
+    <string name="app_page.download_dialog_title">Oletko varma, että haluat asentaa?</string>
+    <string name="app_page.download_dialog_description">Jos olet varma, että haluat asentaa tämän sovelluksen painamalla Kyllä, muuten paina nro.</string>
+    <string name="app_page.download_dialog_confirm_installation">Kyllä</string>
+    <string name="app_page.download_dialog_cancel_installation">Ei</string>
+    <string name="app_page.donate">Lahjoita</string>
+    <string name="app_page.donate_dialog_title">Lahjoita sovelluksen kehittäjälle</string>
+    <string name="app_page.donate_dialog_description">Jos haluat tukea sovelluksen kehittämistä, klikkaa alla olevia lahjoituksen linkkejä.</string>
+    <string name="app_page.donate_dialog_close">Sulje</string>
+    <string name="app_page.information_developer_hint">Kehittäjä</string>
+    <string name="app_page.information_technology_hint">Teknologia</string>
+    <string name="app_page.information_trending_hint">Nousu sijainti</string>
+    <string name="app_page.information_locale">Englanti</string>
+    <string name="app_page.information_locale_hint">Lokaatio</string>
+    <string name="app_page.information_size_hint">Koko</string>
+    <string name="app_page.information_source">FOSS</string>
+    <string name="app_page.information_source_hint">Lähde</string>
+    <string name="app_page.information_age_appropriatness_hint">Ikä tarkoituksenmukaisuus</string>
+    <string name="app_page.long_description_title">Kuvaus</string>
+    <string name="app_page.long_description_content">Lisää sovelluksen kuvaus tähän.</string>
+    <string name="app_page.images">Kuvat</string>
+    <string name="app_page.reviews">Arvostelut</string>
+    <string name="app_page.similar_applications">Vastaavat sovellukset</string>
+    <!-- Settings strings -->
+    <string name="settings.theme_mode">Teeman tila</string>
+    <string name="settings.dark_mode">Tumma tila</string>
+    <string name="settings.dark_mode_description">Ota tumma tila käyttöön</string>
+    <string name="settings.locale">Lokaatio</string>
+    <string name="settings.locale_title">Lokaatio</string>
+    <string name="settings.locale_description">Muuta lokaatiota</string>
+    <!-- Search bar strings -->
+    <string name="searchbar.hint">Hae sovelluksia</string>
+</resources>
