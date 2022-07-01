@@ -44,14 +44,14 @@ void main() {
             value: ThemeProvider(lightTheme, false),
           ),
         ],
-        child: const AppStoreHome(),
+        child: const AppStore(),
       ),
     ),
   );
 }
 
-class AppStoreHome extends StatelessWidget {
-  const AppStoreHome({Key? key}) : super(key: key);
+class AppStore extends StatelessWidget {
+  const AppStore({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
