@@ -34,7 +34,7 @@
     <string name="app_page.download_dialog_cancel_installation">Ne</string>
     <string name="app_page.donate">Donirajte</string>
     <string name="app_page.donate_dialog_title">Donirajte razvojnom programeru aplikacije</string>
-     <string name="app_page.donate_dialog_description">Ako želite podržati razvoj aplikacije, kliknite na linkove za donacije u nastavku.</string>
+    <string name="app_page.donate_dialog_description">Ako želite podržati razvoj aplikacije, kliknite na linkove za donacije u nastavku.</string>
     <string name="app_page.donate_dialog_close">Zatvori</string>
     <string name="app_page.information_developer_hint">Razvojni programer</string>
     <string name="app_page.information_technology_hint">Tehnologija</string>

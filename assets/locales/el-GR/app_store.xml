@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Category strings -->
+    <string name="category.all">Όλα</string>
+    <string name="category.design">Σχεδιασμός</string>
+    <string name="category.games">Παιχνίδια</string>
+    <string name="category.entertainment">Ψυχαγωγία</string>
+    <string name="category.development">Ανάπτυξη</string>
+    <string name="category.music">Μουσική</string>
+    <string name="category.productivity">Παραγωγικότητα</string>
+    <string name="category.tools">Εργαλεία</string>
+    <string name="category.finance">Οικονομικά</string>
+    <string name="category.health_and_well_being">Υγεία και ευεξία</string>
+    <string name="category.education">Εκπαίδευση</string>
+    <string name="category.fitness">Γυμναστήριο</string>
+    <string name="category.communication">Επικοινωνία</string>
+    <string name="category.business">Επιχείρηση</string>
+    <!-- Applications topic strings -->
+    <string name="topic.show_all">Εμφάνιση όλων των κατηγοριών</string>
+    <string name="topic.trending">Δημοφιλή</string>
+    <string name="topic.trending_hint">Εμφάνιση όλων των trending εφαρμογών</string>
+    <string name="topic.featured">Προτεινόμενα</string>
+    <string name="topic.featured_hint">Εμφάνιση όλων των προτεινόμενων εφαρμογών</string>
+    <string name="topic.newTopic">Νέο</string>
+    <string name="topic.new_hint">Εμφάνιση όλων των εφαρμογών που προστέθηκαν πρόσφατα</string>
+    <!-- Application page strings -->
+    <string name="app_page.name">Εφαρμογή</string>
+    <string name="app_page.short_description">Περιγραφή</string>
+    <string name="app_page.category">Κατηγορία</string>
+    <string name="app_page.download">Λήψη</string>
+    <string name="app_page.download_dialog_title">Είστε βέβαιοι ότι θέλετε να εγκαταστήσετε?</string>
+    <string name="app_page.download_dialog_description">Εάν είστε σίγουροι ότι θέλετε να εγκαταστήσετε αυτήν την εφαρμογή πατήστε Ναι, αλλιώς πατήστε Νο.</string>
+    <string name="app_page.download_dialog_confirm_installation">Ναι</string>
+    <string name="app_page.download_dialog_cancel_installation">Όχι</string>
+    <string name="app_page.donate">Δωρεά</string>
+    <string name="app_page.donate_dialog_title">Δωρεά στον προγραμματιστή της εφαρμογής</string>
+    <string name="app_page.donate_dialog_description">Αν θέλετε να υποστηρίξετε την ανάπτυξη της εφαρμογής, κάντε κλικ στους παρακάτω συνδέσμους δωρεάς.</string>
+    <string name="app_page.donate_dialog_close">Κλείσιμο</string>
+    <string name="app_page.information_developer_hint">Προγραμματιστής</string>
+    <string name="app_page.information_technology_hint">Τεχνολογία</string>
+    <string name="app_page.information_trending_hint">Ανερχόμενη θέση</string>
+    <string name="app_page.information_locale">Αγγλικά</string>
+    <string name="app_page.information_locale_hint">Τοπική</string>
+    <string name="app_page.information_size_hint">Μέγεθος</string>
+    <string name="app_page.information_source">FOSS</string>
+    <string name="app_page.information_source_hint">Πηγή</string>
+    <string name="app_page.information_age_appropriatness_hint">Ικανότητα ηλικίας</string>
+    <string name="app_page.long_description_title">Περιγραφή</string>
+    <string name="app_page.long_description_content">Εισάγετε εδώ την περιγραφή της εφαρμογής.</string>
+    <string name="app_page.images">Εικόνες</string>
+    <string name="app_page.reviews">Κριτικές</string>
+    <string name="app_page.similar_applications">Παρόμοιες εφαρμογές</string>
+    <!-- Settings strings -->
+    <string name="settings.theme_mode">Λειτουργία θέματος</string>
+    <string name="settings.dark_mode">Σκοτεινή λειτουργία</string>
+    <string name="settings.dark_mode_description">Ενεργοποίηση σκοτεινής λειτουργίας</string>
+    <string name="settings.locale">Τοπική</string>
+    <string name="settings.locale_title">Τοπική</string>
+    <string name="settings.locale_description">Αλλαγή της γλώσσας</string>
+    <!-- Search bar strings -->
+    <string name="searchbar.hint">Αναζήτηση εφαρμογών</string>
+</resources>
