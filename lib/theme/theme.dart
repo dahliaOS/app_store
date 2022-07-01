@@ -26,6 +26,13 @@ final ThemeData darkTheme = ThemeData(
   highlightColor: Colors.deepOrangeAccent,
   focusColor: Colors.deepOrangeAccent,
   splashColor: Colors.deepOrangeAccent,
+  snackBarTheme: const SnackBarThemeData(
+    backgroundColor: Colors.white10,
+    elevation: 0,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(15)),
+    ),
+  ),
   textTheme: const TextTheme(
     button: TextStyle(
       color: Colors.white,
@@ -225,6 +232,13 @@ final ThemeData lightTheme = ThemeData(
   highlightColor: Colors.deepOrangeAccent,
   focusColor: Colors.deepOrangeAccent,
   splashColor: Colors.deepOrangeAccent,
+  snackBarTheme: SnackBarThemeData(
+    backgroundColor: Colors.grey.shade200,
+    elevation: 0,
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(15)),
+    ),
+  ),
   textTheme: const TextTheme(
     button: TextStyle(
       color: Colors.white,

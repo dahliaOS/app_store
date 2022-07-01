@@ -14,6 +14,10 @@
 
 If you're wondering how to contribute to the project, please refer to [CONTRIBUTING.md](CONTRIBUTING.md)
 
+## Translate
+
+If you're interested in translating Pangolin, click [here](https://github.com/dahliaOS/app_store/blob/main/CONTRIBUTING.md#translations) for more information on how to do so!
+
 ## License
 
 <p align="left">
