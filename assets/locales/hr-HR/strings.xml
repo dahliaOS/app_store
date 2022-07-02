@@ -46,7 +46,7 @@
     <string name="app_page.information_source_hint">Izvor</string>
     <string name="app_page.information_age_appropriatness_hint">Prikladnost dobi</string>
     <string name="app_page.long_description_title">Opis</string>
-    <string name="app_page.long_description_content">Ovdje umetnite opis aplikacije.</string>
+    <string name="app_page.long_description_content">Ovdje unesite opis aplikacije.</string>
     <string name="app_page.images">Slike</string>
     <string name="app_page.reviews">Recenzije</string>
     <string name="app_page.similar_applications">Slične aplikacije</string>
