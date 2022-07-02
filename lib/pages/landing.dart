@@ -19,7 +19,7 @@ import 'package:app_store/models/cards/app_item_model.dart';
 import 'package:app_store/pages/featured_applications.dart';
 import 'package:app_store/pages/new_applications.dart';
 import 'package:app_store/pages/trending_applications.dart';
-import 'package:app_store/services/locales/locale_strings.g.dart';
+import 'package:app_store/providers/locale.dart';
 import 'package:app_store/widgets/buttons/icon_button.dart';
 import 'package:app_store/widgets/cards/app_item.dart';
 import 'package:app_store/widgets/text_fields/search_bar.dart';
@@ -29,189 +29,189 @@ import 'package:flutter/material.dart';
 class Landing extends StatefulWidget {
   const Landing({Key? key}) : super(key: key);
 
-  static final _chipButtons = <ChipButtonModel>[
-    ChipButtonModel(
-      name: LocaleStrings.category.all,
-      icon: Icons.apps,
-      id: 1,
-    ),
-    ChipButtonModel(
-      name: LocaleStrings.category.design,
-      icon: Icons.design_services,
-      id: 2,
-    ),
-    ChipButtonModel(
-      name: LocaleStrings.category.games,
-      icon: Icons.games,
-      id: 3,
-    ),
-    ChipButtonModel(
-      name: LocaleStrings.category.entertainment,
-      icon: Icons.movie,
-      id: 4,
-    ),
-    ChipButtonModel(
-      name: LocaleStrings.category.development,
-      icon: Icons.developer_mode,
-      id: 5,
-    ),
-    ChipButtonModel(
-      name: LocaleStrings.category.music,
-      icon: Icons.audiotrack,
-      id: 6,
-    ),
-    ChipButtonModel(
-      name: LocaleStrings.category.productivity,
-      icon: Icons.work,
-      id: 7,
-    ),
-    ChipButtonModel(
-      name: LocaleStrings.category.tools,
-      icon: Icons.developer_board,
-      id: 8,
-    ),
-    ChipButtonModel(
-      name: LocaleStrings.category.finance,
-      icon: Icons.money,
-      id: 9,
-    ),
-    ChipButtonModel(
-      name: LocaleStrings.category.healthAndWellBeing,
-      icon: Icons.health_and_safety,
-      id: 10,
-    ),
-    ChipButtonModel(
-      name: LocaleStrings.category.education,
-      icon: Icons.cast_for_education,
-      id: 11,
-    ),
-    ChipButtonModel(
-      name: LocaleStrings.category.fitness,
-      icon: Icons.fitness_center,
-      id: 12,
-    ),
-    ChipButtonModel(
-      name: LocaleStrings.category.communication,
-      icon: Icons.comment,
-      id: 13,
-    ),
-    ChipButtonModel(
-      name: LocaleStrings.category.business,
-      icon: Icons.business,
-      id: 14,
-    ),
-  ];
+  static List<ChipButtonModel> get _chipButtons => <ChipButtonModel>[
+        ChipButtonModel(
+          name: strings.category.all,
+          icon: Icons.apps,
+          id: 1,
+        ),
+        ChipButtonModel(
+          name: strings.category.design,
+          icon: Icons.design_services,
+          id: 2,
+        ),
+        ChipButtonModel(
+          name: strings.category.games,
+          icon: Icons.games,
+          id: 3,
+        ),
+        ChipButtonModel(
+          name: strings.category.entertainment,
+          icon: Icons.movie,
+          id: 4,
+        ),
+        ChipButtonModel(
+          name: strings.category.development,
+          icon: Icons.developer_mode,
+          id: 5,
+        ),
+        ChipButtonModel(
+          name: strings.category.music,
+          icon: Icons.audiotrack,
+          id: 6,
+        ),
+        ChipButtonModel(
+          name: strings.category.productivity,
+          icon: Icons.work,
+          id: 7,
+        ),
+        ChipButtonModel(
+          name: strings.category.tools,
+          icon: Icons.developer_board,
+          id: 8,
+        ),
+        ChipButtonModel(
+          name: strings.category.finance,
+          icon: Icons.money,
+          id: 9,
+        ),
+        ChipButtonModel(
+          name: strings.category.healthAndWellBeing,
+          icon: Icons.health_and_safety,
+          id: 10,
+        ),
+        ChipButtonModel(
+          name: strings.category.education,
+          icon: Icons.cast_for_education,
+          id: 11,
+        ),
+        ChipButtonModel(
+          name: strings.category.fitness,
+          icon: Icons.fitness_center,
+          id: 12,
+        ),
+        ChipButtonModel(
+          name: strings.category.communication,
+          icon: Icons.comment,
+          id: 13,
+        ),
+        ChipButtonModel(
+          name: strings.category.business,
+          icon: Icons.business,
+          id: 14,
+        ),
+      ];
 
-  static final _appItems = <AppItemModel>[
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.design,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.games,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.entertainment,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.development,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.music,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.productivity,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.finance,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.healthAndWellBeing,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.education,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.fitness,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.communication,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.business,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.games,
-        LocaleStrings.category.entertainment,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.tools,
-        LocaleStrings.category.development,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.finance,
-        LocaleStrings.category.productivity,
-      ],
-    ),
-  ];
+  static List<AppItemModel> get _appItems => <AppItemModel>[
+        AppItemModel(
+          name: strings.appPage.name,
+          rating: 5.0,
+          category: [
+            strings.category.design,
+          ],
+        ),
+        AppItemModel(
+          name: strings.appPage.name,
+          rating: 5.0,
+          category: [
+            strings.category.games,
+          ],
+        ),
+        AppItemModel(
+          name: strings.appPage.name,
+          rating: 5.0,
+          category: [
+            strings.category.entertainment,
+          ],
+        ),
+        AppItemModel(
+          name: strings.appPage.name,
+          rating: 5.0,
+          category: [
+            strings.category.development,
+          ],
+        ),
+        AppItemModel(
+          name: strings.appPage.name,
+          rating: 5.0,
+          category: [
+            strings.category.music,
+          ],
+        ),
+        AppItemModel(
+          name: strings.appPage.name,
+          rating: 5.0,
+          category: [
+            strings.category.productivity,
+          ],
+        ),
+        AppItemModel(
+          name: strings.appPage.name,
+          rating: 5.0,
+          category: [
+            strings.category.finance,
+          ],
+        ),
+        AppItemModel(
+          name: strings.appPage.name,
+          rating: 5.0,
+          category: [
+            strings.category.healthAndWellBeing,
+          ],
+        ),
+        AppItemModel(
+          name: strings.appPage.name,
+          rating: 5.0,
+          category: [
+            strings.category.education,
+          ],
+        ),
+        AppItemModel(
+          name: strings.appPage.name,
+          rating: 5.0,
+          category: [
+            strings.category.fitness,
+          ],
+        ),
+        AppItemModel(
+          name: strings.appPage.name,
+          rating: 5.0,
+          category: [
+            strings.category.communication,
+          ],
+        ),
+        AppItemModel(
+          name: strings.appPage.name,
+          rating: 5.0,
+          category: [
+            strings.category.business,
+          ],
+        ),
+        AppItemModel(
+          name: strings.appPage.name,
+          rating: 5.0,
+          category: [
+            strings.category.games,
+            strings.category.entertainment,
+          ],
+        ),
+        AppItemModel(
+          name: strings.appPage.name,
+          rating: 5.0,
+          category: [
+            strings.category.tools,
+            strings.category.development,
+          ],
+        ),
+        AppItemModel(
+          name: strings.appPage.name,
+          rating: 5.0,
+          category: [
+            strings.category.finance,
+            strings.category.productivity,
+          ],
+        ),
+      ];
 
   @override
   State<Landing> createState() => _LandingState();
@@ -241,7 +241,7 @@ class _LandingState extends State<Landing> {
                     alignment: WrapAlignment.spaceBetween,
                     children: <Widget>[
                       SearchBar(
-                        hint: LocaleStrings.searchbar.hint,
+                        hint: strings.searchbar.hint,
                         icon: Icons.search,
                       ),
                       Wrap(
@@ -360,7 +360,7 @@ class _LandingState extends State<Landing> {
                                   width: 10,
                                 ),
                                 Text(
-                                  LocaleStrings.topic.trending,
+                                  strings.topic.trending,
                                   style: Theme.of(context).textTheme.headline2,
                                 ),
                                 IconButton(
@@ -377,7 +377,7 @@ class _LandingState extends State<Landing> {
                                   focusColor: Theme.of(context).focusColor,
                                   highlightColor:
                                       Theme.of(context).highlightColor,
-                                  tooltip: LocaleStrings.topic.trendingHint,
+                                  tooltip: strings.topic.trendingHint,
                                 )
                               ],
                             ),
@@ -410,7 +410,7 @@ class _LandingState extends State<Landing> {
                                   width: 10,
                                 ),
                                 Text(
-                                  LocaleStrings.topic.featured,
+                                  strings.topic.featured,
                                   style: Theme.of(context).textTheme.headline2,
                                 ),
                                 IconButton(
@@ -427,7 +427,7 @@ class _LandingState extends State<Landing> {
                                   focusColor: Theme.of(context).focusColor,
                                   highlightColor:
                                       Theme.of(context).highlightColor,
-                                  tooltip: LocaleStrings.topic.featuredHint,
+                                  tooltip: strings.topic.featuredHint,
                                 )
                               ],
                             ),
@@ -460,7 +460,7 @@ class _LandingState extends State<Landing> {
                                   width: 10,
                                 ),
                                 Text(
-                                  LocaleStrings.topic.newTopic,
+                                  strings.topic.newTopic,
                                   style: Theme.of(context).textTheme.headline2,
                                 ),
                                 IconButton(
@@ -477,7 +477,7 @@ class _LandingState extends State<Landing> {
                                   focusColor: Theme.of(context).focusColor,
                                   highlightColor:
                                       Theme.of(context).highlightColor,
-                                  tooltip: LocaleStrings.topic.newHint,
+                                  tooltip: strings.topic.newHint,
                                 )
                               ],
                             ),

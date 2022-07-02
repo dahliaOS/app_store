@@ -14,14 +14,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+import 'package:app_store/providers/locale.dart';
 import 'package:app_store/providers/theme_provider.dart';
-import 'package:app_store/services/locales/locale_strings.g.dart';
-import 'package:app_store/services/locales/locales.g.dart';
 import 'package:app_store/services/locales/native_names.dart';
 import 'package:app_store/theme/theme.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:yatl_flutter/yatl_flutter.dart';
 
 class Settings extends StatelessWidget {
   const Settings({Key? key}) : super(key: key);
@@ -54,7 +53,7 @@ class Settings extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    LocaleStrings.settings.themeMode,
+                    strings.settings.themeMode,
                     style: Theme.of(context).textTheme.headline2,
                   ),
                   const SizedBox(
@@ -62,11 +61,11 @@ class Settings extends StatelessWidget {
                   ),
                   SwitchListTile(
                     title: Text(
-                      LocaleStrings.settings.darkMode,
+                      strings.settings.darkMode,
                       style: Theme.of(context).textTheme.headline2,
                     ),
                     subtitle: Text(
-                      LocaleStrings.settings.darkModeDescription,
+                      strings.settings.darkModeDescription,
                       style: Theme.of(context).textTheme.subtitle2,
                     ),
                     shape: Theme.of(context).listTileTheme.shape,
@@ -90,7 +89,7 @@ class Settings extends StatelessWidget {
                     height: 20,
                   ),
                   Text(
-                    LocaleStrings.settings.locale,
+                    strings.settings.locale,
                     style: Theme.of(context).textTheme.headline2,
                   ),
                   const SizedBox(
@@ -104,11 +103,11 @@ class Settings extends StatelessWidget {
                       expandedAlignment: Alignment.center,
                       expandedCrossAxisAlignment: CrossAxisAlignment.start,
                       title: Text(
-                        LocaleStrings.settings.localeTitle,
+                        strings.settings.localeTitle,
                         style: Theme.of(context).textTheme.headline2,
                       ),
                       subtitle: Text(
-                        LocaleStrings.settings.localeDescription,
+                        strings.settings.localeDescription,
                         style: Theme.of(context).textTheme.subtitle2,
                       ),
                       leading: Icon(
@@ -120,7 +119,7 @@ class Settings extends StatelessWidget {
                         Wrap(
                           spacing: width / 83,
                           children: [
-                            for (final item in Locales.supported)
+                            for (final item in locales.supportedLocales)
                               Wrap(
                                 spacing: 5,
                                 direction: Axis.vertical,
@@ -132,7 +131,7 @@ class Settings extends StatelessWidget {
                                     child: InkWell(
                                       borderRadius: BorderRadius.circular(15),
                                       onTap: () {
-                                        context.setLocale(item);
+                                        context.locale = item.toFlutterLocale();
                                         final snackBar = SnackBar(
                                           clipBehavior: Clip.antiAlias,
                                           content: Text(
@@ -188,7 +187,7 @@ class Settings extends StatelessWidget {
                                   Container(
                                     margin: const EdgeInsets.only(bottom: 10),
                                     child: Text(
-                                      "${Locales.stringData[item.toLanguageTag()]} / ${Locales.stringData[context.fallbackLocale!.toLanguageTag()]}",
+                                      "${locales.progressData[item.toLanguageTag()]} / ${locales.progressData[context.fallbackLocale.toLanguageTag()]}",
                                       style:
                                           Theme.of(context).textTheme.subtitle2,
                                     ),

@@ -15,120 +15,120 @@ limitations under the License.
 */
 
 import 'package:app_store/models/cards/app_item_model.dart';
-import 'package:app_store/services/locales/locale_strings.g.dart';
+import 'package:app_store/providers/locale.dart';
 import 'package:app_store/widgets/cards/app_item.dart';
 import 'package:flutter/material.dart';
 
-final _appItems = <AppItemModel>[
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.design,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.games,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.entertainment,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.music,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.productivity,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.finance,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.healthAndWellBeing,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.education,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.fitness,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.communication,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.business,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.games,
-      LocaleStrings.category.entertainment,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.finance,
-      LocaleStrings.category.productivity,
-    ],
-  ),
-];
+List<AppItemModel> get _appItems => <AppItemModel>[
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.design,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.games,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.entertainment,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.development,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.music,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.productivity,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.finance,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.healthAndWellBeing,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.education,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.fitness,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.communication,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.business,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.games,
+          strings.category.entertainment,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.tools,
+          strings.category.development,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.finance,
+          strings.category.productivity,
+        ],
+      ),
+    ];
 
 class FeaturedApplications extends StatelessWidget {
   const FeaturedApplications(
@@ -154,7 +154,7 @@ class FeaturedApplications extends StatelessWidget {
               width: 10,
             ),
             Text(
-              LocaleStrings.topic.featured,
+              strings.topic.featured,
               style: Theme.of(context).textTheme.headline2,
             ),
             IconButton(
@@ -170,7 +170,7 @@ class FeaturedApplications extends StatelessWidget {
               splashColor: Theme.of(context).splashColor,
               focusColor: Theme.of(context).focusColor,
               highlightColor: Theme.of(context).highlightColor,
-              tooltip: LocaleStrings.topic.showAll,
+              tooltip: strings.topic.showAll,
             )
           ],
         ),

@@ -11,6 +11,8 @@ linter:
     implementation_imports: false
     use_build_context_synchronously: false
 
-# analyzer:
-#  exclude:
-#    - lib/generated_plugin_registrant.dart
+analyzer:
+  exclude:
+    - lib/**/*.g.dart
+    - lib/generated/**/*.dart
+    - lib/generated_plugin_registrant.dart

@@ -65,10 +65,11 @@ class AppItem extends StatelessWidget {
                   name,
                   style: Theme.of(context).textTheme.headline2,
                 ),
-                Text(
-                  category.map((e) => e).join(' • '),
-                  style: Theme.of(context).textTheme.subtitle2,
-                ),
+                for (final item in category)
+                  Text(
+                    item,
+                    style: Theme.of(context).textTheme.subtitle2,
+                  ),
                 Row(
                   children: [
                     Text(

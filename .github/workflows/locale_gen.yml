@@ -15,11 +15,9 @@ jobs:
         name: Prepare Flutter SDK
       - run: flutter channel dev
         name: Switch Flutter channel
-      - run: flutter pub get
+      - run: flutter pub get && flutter pub upgrade
         name: Get dependencies
-      - run: dart bin/locale_gen/locale_gen.dart
+      - run: flutter pub run build_runner build
         name: Generate translations
-      - run: flutter format .
-        name: Format the code
       - run: git config user.name "dahliaOS-Bot" && git config user.email dahliaosofficial@gmail.com && git commit -am "Generated locales" && git push
         name: Push translations

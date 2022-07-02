@@ -17,110 +17,110 @@ limitations under the License.
 import 'package:app_store/models/cards/app_category_model.dart';
 import 'package:app_store/models/cards/app_item_model.dart';
 import 'package:app_store/models/text/app_review_model.dart';
-import 'package:app_store/services/locales/locale_strings.g.dart';
+import 'package:app_store/providers/locale.dart';
 import 'package:app_store/widgets/cards/app_category_item.dart';
 import 'package:app_store/widgets/cards/app_item.dart';
 import 'package:app_store/widgets/text/app_review_item.dart';
 import 'package:flutter/material.dart';
 
-final _appItems = <AppItemModel>[
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-];
+List<AppItemModel> get _appItems => <AppItemModel>[
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.tools,
+          strings.category.development,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.tools,
+          strings.category.development,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.tools,
+          strings.category.development,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.tools,
+          strings.category.development,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.tools,
+          strings.category.development,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.tools,
+          strings.category.development,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.tools,
+          strings.category.development,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.tools,
+          strings.category.development,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.tools,
+          strings.category.development,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.tools,
+          strings.category.development,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.tools,
+          strings.category.development,
+        ],
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5.0,
+        category: [
+          strings.category.tools,
+          strings.category.development,
+        ],
+      ),
+    ];
 
 final _reviewItems = <ReviewItemModel>[
   ReviewItemModel(name: 'Marin Heđeš', comment: 'Good app.', rating: 4),
@@ -130,43 +130,43 @@ final _reviewItems = <ReviewItemModel>[
   ReviewItemModel(name: 'Camden Bruce', comment: 'Splendid.', rating: 5),
 ];
 
-final _categoryItems = <AppCategoryItemModel>[
-  AppCategoryItemModel(
-    name: 'Marin Heđeš',
-    tooltip: LocaleStrings.appPage.informationDeveloperHint,
-    icon: Icons.person,
-  ),
-  AppCategoryItemModel(
-    name: 'Flutter, Dart',
-    tooltip: LocaleStrings.appPage.informationTechnologyHint,
-    icon: Icons.code,
-  ),
-  AppCategoryItemModel(
-    name: '#1',
-    tooltip: LocaleStrings.appPage.informationTrendingHint,
-    icon: Icons.leaderboard,
-  ),
-  AppCategoryItemModel(
-    name: LocaleStrings.appPage.informationLocale,
-    tooltip: LocaleStrings.appPage.informationLocaleHint,
-    icon: Icons.language,
-  ),
-  AppCategoryItemModel(
-    name: '20MB',
-    tooltip: LocaleStrings.appPage.informationSizeHint,
-    icon: Icons.sd_storage,
-  ),
-  AppCategoryItemModel(
-    name: LocaleStrings.appPage.informationSource,
-    tooltip: LocaleStrings.appPage.informationSourceHint,
-    icon: Icons.source,
-  ),
-  AppCategoryItemModel(
-    name: '12+',
-    tooltip: LocaleStrings.appPage.informationAgeAppropriatnessHint,
-    icon: Icons.child_care,
-  ),
-];
+List<AppCategoryItemModel> get _categoryItems => <AppCategoryItemModel>[
+      AppCategoryItemModel(
+        name: 'Marin Heđeš',
+        tooltip: strings.appPage.informationDeveloperHint,
+        icon: Icons.person,
+      ),
+      AppCategoryItemModel(
+        name: 'Flutter, Dart',
+        tooltip: strings.appPage.informationTechnologyHint,
+        icon: Icons.code,
+      ),
+      AppCategoryItemModel(
+        name: '#1',
+        tooltip: strings.appPage.informationTrendingHint,
+        icon: Icons.leaderboard,
+      ),
+      AppCategoryItemModel(
+        name: strings.appPage.informationLocale,
+        tooltip: strings.appPage.informationLocaleHint,
+        icon: Icons.language,
+      ),
+      AppCategoryItemModel(
+        name: '20MB',
+        tooltip: strings.appPage.informationSizeHint,
+        icon: Icons.sd_storage,
+      ),
+      AppCategoryItemModel(
+        name: strings.appPage.informationSource,
+        tooltip: strings.appPage.informationSourceHint,
+        icon: Icons.source,
+      ),
+      AppCategoryItemModel(
+        name: '12+',
+        tooltip: strings.appPage.informationAgeAppropriatnessHint,
+        icon: Icons.child_care,
+      ),
+    ];
 
 class AppPage extends StatelessWidget {
   const AppPage({Key? key}) : super(key: key);
@@ -215,17 +215,17 @@ class AppPage extends StatelessWidget {
                             spacing: 7,
                             children: <Widget>[
                               Text(
-                                LocaleStrings.appPage.name,
+                                strings.appPage.name,
                                 style: Theme.of(context).textTheme.headline1,
                               ),
                               Text(
-                                LocaleStrings.appPage.shortDescription,
+                                strings.appPage.shortDescription,
                                 style: Theme.of(context).textTheme.subtitle1,
                               ),
                               Container(
                                 margin: const EdgeInsets.only(bottom: 20),
                                 child: Text(
-                                  LocaleStrings.appPage.category,
+                                  strings.appPage.category,
                                   style: Theme.of(context).textTheme.subtitle1,
                                 ),
                               ),
@@ -263,7 +263,7 @@ class AppPage extends StatelessWidget {
                                                 CrossAxisAlignment.start,
                                             children: <Widget>[
                                               Text(
-                                                LocaleStrings.appPage
+                                                strings.appPage
                                                     .downloadDialogTitle,
                                                 style: Theme.of(context)
                                                     .textTheme
@@ -274,7 +274,7 @@ class AppPage extends StatelessWidget {
                                                 height: 10,
                                               ),
                                               Text(
-                                                LocaleStrings.appPage
+                                                strings.appPage
                                                     .downloadDialogDescription,
                                                 style: Theme.of(context)
                                                     .textTheme
@@ -291,7 +291,7 @@ class AppPage extends StatelessWidget {
                                                       Navigator.pop(context);
                                                     },
                                                     child: Text(
-                                                      LocaleStrings.appPage
+                                                      strings.appPage
                                                           .downloadDialogConfirmInstallation,
                                                     ),
                                                   ),
@@ -303,7 +303,7 @@ class AppPage extends StatelessWidget {
                                                       Navigator.pop(context);
                                                     },
                                                     child: Text(
-                                                      LocaleStrings.appPage
+                                                      strings.appPage
                                                           .downloadDialogCancelInstallation,
                                                     ),
                                                   )
@@ -329,7 +329,7 @@ class AppPage extends StatelessWidget {
                                     width: 5,
                                   ),
                                   Text(
-                                    LocaleStrings.appPage.download,
+                                    strings.appPage.download,
                                     style: const TextStyle(color: Colors.white),
                                   ),
                                 ],
@@ -365,8 +365,7 @@ class AppPage extends StatelessWidget {
                                               CrossAxisAlignment.start,
                                           children: <Widget>[
                                             Text(
-                                              LocaleStrings
-                                                  .appPage.donateDialogTitle,
+                                              strings.appPage.donateDialogTitle,
                                               style: Theme.of(context)
                                                   .textTheme
                                                   .headline1,
@@ -376,7 +375,7 @@ class AppPage extends StatelessWidget {
                                               height: 10,
                                             ),
                                             Text(
-                                              LocaleStrings.appPage
+                                              strings.appPage
                                                   .donateDialogDescription,
                                               style: Theme.of(context)
                                                   .textTheme
@@ -415,7 +414,7 @@ class AppPage extends StatelessWidget {
                                                     Navigator.pop(context);
                                                   },
                                                   child: Text(
-                                                    LocaleStrings.appPage
+                                                    strings.appPage
                                                         .donateDialogClose,
                                                   ),
                                                 )
@@ -441,7 +440,7 @@ class AppPage extends StatelessWidget {
                                   width: 5,
                                 ),
                                 Text(
-                                  LocaleStrings.appPage.donate,
+                                  strings.appPage.donate,
                                   style:
                                       const TextStyle(color: Colors.deepOrange),
                                 ),
@@ -483,7 +482,7 @@ class AppPage extends StatelessWidget {
                           width: 10,
                         ),
                         Text(
-                          LocaleStrings.appPage.longDescriptionTitle,
+                          strings.appPage.longDescriptionTitle,
                           style: Theme.of(context).textTheme.headline2,
                         )
                       ],
@@ -492,7 +491,7 @@ class AppPage extends StatelessWidget {
                       height: 20,
                     ),
                     Text(
-                      LocaleStrings.appPage.longDescriptionContent,
+                      strings.appPage.longDescriptionContent,
                       style: Theme.of(context).textTheme.subtitle2,
                       overflow: TextOverflow.clip,
                     )
@@ -511,7 +510,7 @@ class AppPage extends StatelessWidget {
                           width: 10,
                         ),
                         Text(
-                          LocaleStrings.appPage.images,
+                          strings.appPage.images,
                           style: Theme.of(context).textTheme.headline2,
                         )
                       ],
@@ -562,7 +561,7 @@ class AppPage extends StatelessWidget {
                           width: 10,
                         ),
                         Text(
-                          LocaleStrings.appPage.reviews,
+                          strings.appPage.reviews,
                           style: Theme.of(context).textTheme.headline2,
                         )
                       ],
@@ -597,7 +596,7 @@ class AppPage extends StatelessWidget {
                               width: 10,
                             ),
                             Text(
-                              LocaleStrings.appPage.similarApplications,
+                              strings.appPage.similarApplications,
                               style: Theme.of(context).textTheme.headline2,
                             )
                           ],

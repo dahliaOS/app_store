@@ -18,26 +18,24 @@ import 'package:app_store/pages/app_page.dart';
 import 'package:app_store/pages/landing.dart';
 import 'package:app_store/pages/settings.dart';
 import 'package:app_store/pages/user.dart';
+import 'package:app_store/providers/locale.dart';
 import 'package:app_store/providers/theme_provider.dart';
-import 'package:app_store/services/locales/generated_asset_loader.g.dart';
-import 'package:app_store/services/locales/locales.g.dart';
 import 'package:app_store/theme/theme.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import "package:intl/locale.dart" as intl;
 import 'package:provider/provider.dart';
+import 'package:yatl_flutter/yatl_flutter.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  EasyLocalization.ensureInitialized();
+  await initProviders();
   runApp(
-    EasyLocalization(
-      supportedLocales: Locales.supported,
-      fallbackLocale: const Locale("en", "US"),
-      assetLoader: GeneratedAssetLoader(),
-      useFallbackTranslations: true,
-      path: "assets/locales",
-      startLocale: const Locale("en", "US"),
-      saveLocale: false,
+    YatlApp(
+      core: yatl,
+      getLocale: () =>
+          intl.Locale.tryParse(preferences.locale ?? "")?.toFlutterLocale(),
+      setLocale: (locale) => preferences.locale = locale?.toString(),
       child: MultiProvider(
         providers: [
           ChangeNotifierProvider<ThemeProvider>.value(
@@ -58,9 +56,14 @@ class AppStore extends StatelessWidget {
     return MaterialApp(
       title: 'App Store',
       theme: theme(context),
-      locale: context.locale,
-      localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
+      locale: context.locale,
+      localizationsDelegates: [
+        GlobalWidgetsLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        context.localizationsDelegate,
+      ],
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
