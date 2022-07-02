@@ -36,12 +36,8 @@ Future<void> main() async {
       getLocale: () =>
           intl.Locale.tryParse(preferences.locale ?? "")?.toFlutterLocale(),
       setLocale: (locale) => preferences.locale = locale?.toString(),
-      child: MultiProvider(
-        providers: [
-          ChangeNotifierProvider<ThemeProvider>.value(
-            value: ThemeProvider(lightTheme, false),
-          ),
-        ],
+      child: ChangeNotifierProvider(
+        create: (context) => ThemeProvider(lightTheme, false),
         child: const AppStore(),
       ),
     ),
