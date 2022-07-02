@@ -16,8 +16,8 @@ limitations under the License.
 
 import 'package:app_store/providers/locale.dart';
 import 'package:app_store/providers/theme_provider.dart';
-import 'package:app_store/services/locales/native_names.dart';
 import 'package:app_store/theme/theme.dart';
+import 'package:app_store/utils/native_names.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:yatl_flutter/yatl_flutter.dart';
