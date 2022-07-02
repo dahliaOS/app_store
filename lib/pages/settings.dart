@@ -19,7 +19,6 @@ import 'package:app_store/services/locales/locale_strings.g.dart';
 import 'package:app_store/services/locales/locales.g.dart';
 import 'package:app_store/services/locales/native_names.dart';
 import 'package:app_store/theme/theme.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -130,43 +129,47 @@ class Settings extends StatelessWidget {
                                   SizedBox(
                                     width: 80,
                                     height: 80,
-                                    child: Card(
-                                      clipBehavior: Clip.antiAlias,
-                                      child: InkWell(
-                                        onTap: () {
-                                          context.setLocale(item);
-                                          final snackBar = SnackBar(
-                                            clipBehavior: Clip.antiAlias,
-                                            content: Text(
-                                              'Locale successfully set to ${localeNativeNames[item.languageCode]} (${item.toLanguageTag()})',
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .headline2,
+                                    child: InkWell(
+                                      borderRadius: BorderRadius.circular(15),
+                                      onTap: () {
+                                        context.setLocale(item);
+                                        final snackBar = SnackBar(
+                                          clipBehavior: Clip.antiAlias,
+                                          content: Text(
+                                            'Locale successfully set to ${localeNativeNames[item.languageCode]} (${item.toLanguageTag()})',
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .headline2,
+                                          ),
+                                          behavior: SnackBarBehavior.floating,
+                                          width: 400,
+                                          duration: const Duration(seconds: 1),
+                                          action: SnackBarAction(
+                                            textColor: Theme.of(context)
+                                                .textTheme
+                                                .subtitle2!
+                                                .color,
+                                            label: 'Close',
+                                            onPressed: () {},
+                                          ),
+                                        );
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(snackBar);
+                                      },
+                                      splashColor:
+                                          Theme.of(context).primaryColor,
+                                      child: Center(
+                                        child: Text(
+                                          item.countryCode!.replaceAllMapped(
+                                            RegExp('[A-Z]'),
+                                            (match) => String.fromCharCode(
+                                              match.group(0)!.codeUnitAt(0) +
+                                                  127397,
                                             ),
-                                            behavior: SnackBarBehavior.floating,
-                                            width: 400,
-                                            duration:
-                                                const Duration(seconds: 2),
-                                            action: SnackBarAction(
-                                              textColor: Theme.of(context)
-                                                  .textTheme
-                                                  .subtitle2!
-                                                  .color,
-                                              label: 'Close',
-                                              onPressed: () {},
-                                            ),
-                                          );
-                                          ScaffoldMessenger.of(context)
-                                              .showSnackBar(snackBar);
-                                        },
-                                        splashColor:
-                                            Theme.of(context).primaryColor,
-                                        child: CachedNetworkImage(
-                                          fit: BoxFit.cover,
-                                          placeholder: (context, url) =>
-                                              const Icon(Icons.language),
-                                          imageUrl:
-                                              'https://countryflagsapi.com/png/${item.countryCode!.toLowerCase()}',
+                                          ),
+                                          style: const TextStyle(
+                                            fontSize: 50,
+                                          ),
                                         ),
                                       ),
                                     ),

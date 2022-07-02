@@ -24,8 +24,92 @@ final _appItems = <AppItemModel>[
     name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      LocaleStrings.category.tools,
+      LocaleStrings.category.design,
+    ],
+  ),
+  AppItemModel(
+    name: LocaleStrings.appPage.name,
+    rating: 5.0,
+    category: [
+      LocaleStrings.category.games,
+    ],
+  ),
+  AppItemModel(
+    name: LocaleStrings.appPage.name,
+    rating: 5.0,
+    category: [
+      LocaleStrings.category.entertainment,
+    ],
+  ),
+  AppItemModel(
+    name: LocaleStrings.appPage.name,
+    rating: 5.0,
+    category: [
       LocaleStrings.category.development,
+    ],
+  ),
+  AppItemModel(
+    name: LocaleStrings.appPage.name,
+    rating: 5.0,
+    category: [
+      LocaleStrings.category.music,
+    ],
+  ),
+  AppItemModel(
+    name: LocaleStrings.appPage.name,
+    rating: 5.0,
+    category: [
+      LocaleStrings.category.productivity,
+    ],
+  ),
+  AppItemModel(
+    name: LocaleStrings.appPage.name,
+    rating: 5.0,
+    category: [
+      LocaleStrings.category.finance,
+    ],
+  ),
+  AppItemModel(
+    name: LocaleStrings.appPage.name,
+    rating: 5.0,
+    category: [
+      LocaleStrings.category.healthAndWellBeing,
+    ],
+  ),
+  AppItemModel(
+    name: LocaleStrings.appPage.name,
+    rating: 5.0,
+    category: [
+      LocaleStrings.category.education,
+    ],
+  ),
+  AppItemModel(
+    name: LocaleStrings.appPage.name,
+    rating: 5.0,
+    category: [
+      LocaleStrings.category.fitness,
+    ],
+  ),
+  AppItemModel(
+    name: LocaleStrings.appPage.name,
+    rating: 5.0,
+    category: [
+      LocaleStrings.category.communication,
+    ],
+  ),
+  AppItemModel(
+    name: LocaleStrings.appPage.name,
+    rating: 5.0,
+    category: [
+      LocaleStrings.category.business,
+    ],
+  ),
+  AppItemModel(
+    name: LocaleStrings.appPage.name,
+    rating: 5.0,
+    category: [
+      LocaleStrings.category.games,
+      LocaleStrings.category.entertainment,
     ],
   ),
   AppItemModel(
@@ -40,80 +124,8 @@ final _appItems = <AppItemModel>[
     name: LocaleStrings.appPage.name,
     rating: 5.0,
     category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
-    ],
-  ),
-  AppItemModel(
-    name: LocaleStrings.appPage.name,
-    rating: 5.0,
-    category: [
-      LocaleStrings.category.tools,
-      LocaleStrings.category.development,
+      LocaleStrings.category.finance,
+      LocaleStrings.category.productivity,
     ],
   ),
 ];

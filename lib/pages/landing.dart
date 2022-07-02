@@ -107,8 +107,92 @@ class Landing extends StatefulWidget {
       name: LocaleStrings.appPage.name,
       rating: 5.0,
       category: [
-        LocaleStrings.category.tools,
+        LocaleStrings.category.design,
+      ],
+    ),
+    AppItemModel(
+      name: LocaleStrings.appPage.name,
+      rating: 5.0,
+      category: [
+        LocaleStrings.category.games,
+      ],
+    ),
+    AppItemModel(
+      name: LocaleStrings.appPage.name,
+      rating: 5.0,
+      category: [
+        LocaleStrings.category.entertainment,
+      ],
+    ),
+    AppItemModel(
+      name: LocaleStrings.appPage.name,
+      rating: 5.0,
+      category: [
         LocaleStrings.category.development,
+      ],
+    ),
+    AppItemModel(
+      name: LocaleStrings.appPage.name,
+      rating: 5.0,
+      category: [
+        LocaleStrings.category.music,
+      ],
+    ),
+    AppItemModel(
+      name: LocaleStrings.appPage.name,
+      rating: 5.0,
+      category: [
+        LocaleStrings.category.productivity,
+      ],
+    ),
+    AppItemModel(
+      name: LocaleStrings.appPage.name,
+      rating: 5.0,
+      category: [
+        LocaleStrings.category.finance,
+      ],
+    ),
+    AppItemModel(
+      name: LocaleStrings.appPage.name,
+      rating: 5.0,
+      category: [
+        LocaleStrings.category.healthAndWellBeing,
+      ],
+    ),
+    AppItemModel(
+      name: LocaleStrings.appPage.name,
+      rating: 5.0,
+      category: [
+        LocaleStrings.category.education,
+      ],
+    ),
+    AppItemModel(
+      name: LocaleStrings.appPage.name,
+      rating: 5.0,
+      category: [
+        LocaleStrings.category.fitness,
+      ],
+    ),
+    AppItemModel(
+      name: LocaleStrings.appPage.name,
+      rating: 5.0,
+      category: [
+        LocaleStrings.category.communication,
+      ],
+    ),
+    AppItemModel(
+      name: LocaleStrings.appPage.name,
+      rating: 5.0,
+      category: [
+        LocaleStrings.category.business,
+      ],
+    ),
+    AppItemModel(
+      name: LocaleStrings.appPage.name,
+      rating: 5.0,
+      category: [
+        LocaleStrings.category.games,
+        LocaleStrings.category.entertainment,
       ],
     ),
     AppItemModel(
@@ -123,80 +207,8 @@ class Landing extends StatefulWidget {
       name: LocaleStrings.appPage.name,
       rating: 5.0,
       category: [
-        LocaleStrings.category.tools,
-        LocaleStrings.category.development,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.tools,
-        LocaleStrings.category.development,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.tools,
-        LocaleStrings.category.development,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.tools,
-        LocaleStrings.category.development,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.tools,
-        LocaleStrings.category.development,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.tools,
-        LocaleStrings.category.development,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.tools,
-        LocaleStrings.category.development,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.tools,
-        LocaleStrings.category.development,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.tools,
-        LocaleStrings.category.development,
-      ],
-    ),
-    AppItemModel(
-      name: LocaleStrings.appPage.name,
-      rating: 5.0,
-      category: [
-        LocaleStrings.category.tools,
-        LocaleStrings.category.development,
+        LocaleStrings.category.finance,
+        LocaleStrings.category.productivity,
       ],
     ),
   ];
@@ -208,7 +220,7 @@ class Landing extends StatefulWidget {
 class _LandingState extends State<Landing> {
   final PageController _pageController = PageController();
   final ScrollController _scrollController = ScrollController();
-  final Set _selectedChipButtons = {1};
+  final Set _selectedChipButtons = <int>{1};
 
   @override
   Widget build(BuildContext context) {
