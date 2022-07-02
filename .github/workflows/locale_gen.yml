@@ -19,5 +19,5 @@ jobs:
         name: Get dependencies
       - run: flutter pub run build_runner build
         name: Generate translations
-      - run: git config user.name "dahliaOS-Bot" && git config user.email dahliaosofficial@gmail.com && git commit -am "Generated locales" && git push
+      - run: git config user.name "dahliaOS-Bot" && git config user.email dahliaosofficial@gmail.com && git add lib/generated && git commit -am "Generated locales" && git push
         name: Push translations
