@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Category strings -->
+    <string name="category.all">Alla</string>
+    <string name="category.design">Design</string>
+    <string name="category.games">Spel</string>
+    <string name="category.entertainment">Underhållning</string>
+    <string name="category.development">Utveckling</string>
+    <string name="category.music">Musik</string>
+    <string name="category.productivity">Produktivitet</string>
+    <string name="category.tools">Verktyg</string>
+    <string name="category.finance">Finans</string>
+    <string name="category.health_and_well_being">Hälsa och välbefinnande</string>
+    <string name="category.education">Utbildning</string>
+    <string name="category.fitness">Fitness</string>
+    <string name="category.communication">Kommunikation</string>
+    <string name="category.business">Företag</string>
+    <!-- Applications topic strings -->
+    <string name="topic.show_all">Visa alla kategorier</string>
+    <string name="topic.trending">Trendande</string>
+    <string name="topic.trending_hint">Visa alla trendande program</string>
+    <string name="topic.featured">Utvalda</string>
+    <string name="topic.featured_hint">Visa alla utvalda program</string>
+    <string name="topic.newTopic">Ny</string>
+    <string name="topic.new_hint">Visa alla nyligen tillagda program</string>
+    <!-- Application page strings -->
+    <string name="app_page.name">Applikation</string>
+    <string name="app_page.short_description">Beskrivning</string>
+    <string name="app_page.category">Kategori</string>
+    <string name="app_page.download">Hämta</string>
+    <string name="app_page.download_dialog_title">Är du säker du vill installera?</string>
+    <string name="app_page.download_dialog_description">Om du är säker på att du vill installera detta program tryck Ja, annars tryck på Nej.</string>
+    <string name="app_page.download_dialog_confirm_installation">Ja</string>
+    <string name="app_page.download_dialog_cancel_installation">Nej</string>
+    <string name="app_page.donate">Donera</string>
+    <string name="app_page.donate_dialog_title">Donera till applikationsutvecklare</string>
+    <string name="app_page.donate_dialog_description">Om du vill stödja utvecklingen av ansökan, klicka på donationslänkarna nedan.</string>
+    <string name="app_page.donate_dialog_close">Stäng</string>
+    <string name="app_page.information_developer_hint">Utvecklare</string>
+    <string name="app_page.information_technology_hint">Teknik</string>
+    <string name="app_page.information_trending_hint">Trendande position</string>
+    <string name="app_page.information_locale">Engelska</string>
+    <string name="app_page.information_locale_hint">Lokalt</string>
+    <string name="app_page.information_size_hint">Storlek</string>
+    <string name="app_page.information_source">FOSS</string>
+    <string name="app_page.information_source_hint">Källa</string>
+    <string name="app_page.information_age_appropriatness_hint">Ålder lämplighet</string>
+    <string name="app_page.long_description_title">Beskrivning</string>
+    <string name="app_page.long_description_content">Infoga applikationsbeskrivning här.</string>
+    <string name="app_page.images">Bilder</string>
+    <string name="app_page.reviews">Recensioner</string>
+    <string name="app_page.similar_applications">Liknande applikationer</string>
+    <!-- Settings strings -->
+    <string name="settings.theme_mode">Tema läge</string>
+    <string name="settings.dark_mode">Mörkt läge</string>
+    <string name="settings.dark_mode_description">Slå på mörkt läge</string>
+    <string name="settings.locale">Lokalt</string>
+    <string name="settings.locale_title">Lokalt</string>
+    <string name="settings.locale_description">Ändra språk</string>
+    <!-- Search bar strings -->
+    <string name="searchbar.hint">Sök applikationer</string>
+</resources>
