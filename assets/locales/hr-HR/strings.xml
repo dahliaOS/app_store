@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Category strings -->
+    <string name="category.all">Sve</string>
+    <string name="category.design">Dizajn</string>
+    <string name="category.games">Igre</string>
+    <string name="category.entertainment">Zabava</string>
+    <string name="category.development">Razvoj</string>
+    <string name="category.music">Glazba</string>
+    <string name="category.productivity">Produktivnost</string>
+    <string name="category.tools">Alati</string>
+    <string name="category.finance">Financije</string>
+    <string name="category.health_and_well_being">Zdravlje i dobrobit</string>
+    <string name="category.education">Obrazovanje</string>
+    <string name="category.fitness">Fitness</string>
+    <string name="category.communication">Komunikacija</string>
+    <string name="category.business">Posao</string>
+    <!-- Applications topic strings -->
+    <string name="topic.show_all">Prikaži sve kategorije</string>
+    <string name="topic.trending">U trendu</string>
+    <string name="topic.trending_hint">Prikaži sve popularne aplikacije</string>
+    <string name="topic.featured">Istaknuto</string>
+    <string name="topic.featured_hint">Prikaži sve istaknute aplikacije</string>
+    <string name="topic.newTopic">Novo</string>
+    <string name="topic.new_hint">Prikaži sve nedavno dodane aplikacije</string>
+    <!-- Application page strings -->
+    <string name="app_page.name">Aplikacija</string>
+    <string name="app_page.short_description">Opis</string>
+    <string name="app_page.category">Kategorija</string>
+    <string name="app_page.download">Preuzmi</string>
+    <string name="app_page.download_dialog_title">Jeste li sigurni da želite instalirati?</string>
+    <string name="app_page.download_dialog_description">Ako ste sigurni da želite instalirati ovu aplikaciju pritisnite Da, u suprotnom pritisnite Ne.</string>
+    <string name="app_page.download_dialog_confirm_installation">Da</string>
+    <string name="app_page.download_dialog_cancel_installation">Ne</string>
+    <string name="app_page.donate">Donirajte</string>
+    <string name="app_page.donate_dialog_title">Donirajte razvojnom programeru aplikacije</string>
+    <string name="app_page.donate_dialog_description">Ako želite podržati razvoj aplikacije, kliknite na linkove za donacije u nastavku.</string>
+    <string name="app_page.donate_dialog_close">Zatvori</string>
+    <string name="app_page.information_developer_hint">Razvojni programer</string>
+    <string name="app_page.information_technology_hint">Tehnologija</string>
+    <string name="app_page.information_trending_hint">Pozicija u trendu</string>
+    <string name="app_page.information_locale">Engleski</string>
+    <string name="app_page.information_locale_hint">Jezik</string>
+    <string name="app_page.information_size_hint">Veličina</string>
+    <string name="app_page.information_source">FOSS</string>
+    <string name="app_page.information_source_hint">Izvor</string>
+    <string name="app_page.information_age_appropriatness_hint">Prikladnost dobi</string>
+    <string name="app_page.long_description_title">Opis</string>
+    <string name="app_page.long_description_content">Ovdje umetnite opis aplikacije.</string>
+    <string name="app_page.images">Slike</string>
+    <string name="app_page.reviews">Recenzije</string>
+    <string name="app_page.similar_applications">Slične aplikacije</string>
+    <!-- Settings strings -->
+    <string name="settings.theme_mode">Način teme</string>
+    <string name="settings.dark_mode">Tamni način rada</string>
+    <string name="settings.dark_mode_description">Uključite tamni način rada</string>
+    <string name="settings.locale">Jezik</string>
+    <string name="settings.locale_title">Jezik</string>
+    <string name="settings.locale_description">Promijenite jezik</string>
+    <!-- Search bar strings -->
+    <string name="searchbar.hint">Pretraži aplikacije</string>
+</resources>

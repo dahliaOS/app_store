@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Category strings -->
+    <string name="category.all">Alle</string>
+    <string name="category.design">Design</string>
+    <string name="category.games">Spil</string>
+    <string name="category.entertainment">Underholdning</string>
+    <string name="category.development">Udvikling</string>
+    <string name="category.music">Musik</string>
+    <string name="category.productivity">Produktivitet</string>
+    <string name="category.tools">Værktøjer</string>
+    <string name="category.finance">Finans</string>
+    <string name="category.health_and_well_being">Sundhed og trivsel</string>
+    <string name="category.education">Uddannelse</string>
+    <string name="category.fitness">Fitness</string>
+    <string name="category.communication">Kommunikation</string>
+    <string name="category.business">Forretning</string>
+    <!-- Applications topic strings -->
+    <string name="topic.show_all">Vis alle kategorier</string>
+    <string name="topic.trending">Populære</string>
+    <string name="topic.trending_hint">Vis alle aktuelle programmer</string>
+    <string name="topic.featured">Fremhævet</string>
+    <string name="topic.featured_hint">Vis alle fremhævede programmer</string>
+    <string name="topic.newTopic">Ny</string>
+    <string name="topic.new_hint">Vis alle nyligt tilføjede programmer</string>
+    <!-- Application page strings -->
+    <string name="app_page.name">Anvendelse</string>
+    <string name="app_page.short_description">Varebeskrivelse</string>
+    <string name="app_page.category">Kategori</string>
+    <string name="app_page.download">Hent</string>
+    <string name="app_page.download_dialog_title">Er du sikker på du vil installere?</string>
+    <string name="app_page.download_dialog_description">Hvis du er sikker på, at du vil installere dette program, tryk på Ja, ellers tryk på Nej.</string>
+    <string name="app_page.download_dialog_confirm_installation">Ja</string>
+    <string name="app_page.download_dialog_cancel_installation">Nej</string>
+    <string name="app_page.donate">Donér</string>
+    <string name="app_page.donate_dialog_title">Donér til programudvikleren</string>
+    <string name="app_page.donate_dialog_description">Hvis du ønsker at støtte udviklingen af ansøgningen, skal du klikke på nedenstående donationslinks.</string>
+    <string name="app_page.donate_dialog_close">Luk</string>
+    <string name="app_page.information_developer_hint">Udvikler</string>
+    <string name="app_page.information_technology_hint">Teknologi</string>
+    <string name="app_page.information_trending_hint">Populære position</string>
+    <string name="app_page.information_locale">Engelsk</string>
+    <string name="app_page.information_locale_hint">Landestandard</string>
+    <string name="app_page.information_size_hint">Størrelse</string>
+    <string name="app_page.information_source">FOSS</string>
+    <string name="app_page.information_source_hint">Kilde</string>
+    <string name="app_page.information_age_appropriatness_hint">Alders egnethed</string>
+    <string name="app_page.long_description_title">Varebeskrivelse</string>
+    <string name="app_page.long_description_content">Indsæt programbeskrivelse her.</string>
+    <string name="app_page.images">Billeder</string>
+    <string name="app_page.reviews">Anmeldelser</string>
+    <string name="app_page.similar_applications">Lignende programmer</string>
+    <!-- Settings strings -->
+    <string name="settings.theme_mode">Tema tilstand</string>
+    <string name="settings.dark_mode">Mørk tilstand</string>
+    <string name="settings.dark_mode_description">Slå mørk tilstand til</string>
+    <string name="settings.locale">Landestandard</string>
+    <string name="settings.locale_title">Landestandard</string>
+    <string name="settings.locale_description">Skift landestandard</string>
+    <!-- Search bar strings -->
+    <string name="searchbar.hint">Søg efter programmer</string>
+</resources>
