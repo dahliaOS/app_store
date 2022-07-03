@@ -36,20 +36,29 @@ Future<void> main() async {
       getLocale: () =>
           intl.Locale.tryParse(preferences.locale ?? "")?.toFlutterLocale(),
       setLocale: (locale) => preferences.locale = locale?.toString(),
-      child: MultiProvider(
-        providers: [
-          ChangeNotifierProvider<ThemeProvider>.value(
-            value: ThemeProvider(lightTheme, false),
-          ),
-        ],
-        child: const AppStore(),
-      ),
+      child: const AppStore(),
     ),
   );
 }
 
 class AppStore extends StatelessWidget {
   const AppStore({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<ThemeProvider>.value(
+          value: ThemeProvider(lightTheme, false),
+        ),
+      ],
+      child: const AppStoreHome(),
+    );
+  }
+}
+
+class AppStoreHome extends StatelessWidget {
+  const AppStoreHome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
