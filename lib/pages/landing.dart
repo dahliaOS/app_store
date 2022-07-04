@@ -19,7 +19,7 @@ import 'package:app_store/models/cards/app_item_model.dart';
 import 'package:app_store/pages/featured_applications.dart';
 import 'package:app_store/pages/new_applications.dart';
 import 'package:app_store/pages/trending_applications.dart';
-import 'package:app_store/providers/locale.dart';
+import 'package:app_store/providers/locale_provider.dart';
 import 'package:app_store/widgets/buttons/icon_button.dart';
 import 'package:app_store/widgets/cards/app_item.dart';
 import 'package:app_store/widgets/text_fields/search_bar.dart';

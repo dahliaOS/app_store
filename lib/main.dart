@@ -18,7 +18,7 @@ import 'package:app_store/pages/app_page.dart';
 import 'package:app_store/pages/landing.dart';
 import 'package:app_store/pages/settings.dart';
 import 'package:app_store/pages/user.dart';
-import 'package:app_store/providers/locale.dart';
+import 'package:app_store/providers/locale_provider.dart';
 import 'package:app_store/providers/theme_provider.dart';
 import 'package:app_store/theme/theme.dart';
 import 'package:flutter/material.dart';

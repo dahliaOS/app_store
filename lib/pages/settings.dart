@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import 'package:app_store/providers/locale.dart';
+import 'package:app_store/providers/locale_provider.dart';
 import 'package:app_store/providers/theme_provider.dart';
 import 'package:app_store/theme/theme.dart';
 import 'package:app_store/utils/native_names.dart';

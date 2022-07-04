@@ -17,7 +17,7 @@ limitations under the License.
 import 'package:app_store/models/cards/app_category_model.dart';
 import 'package:app_store/models/cards/app_item_model.dart';
 import 'package:app_store/models/text/app_review_model.dart';
-import 'package:app_store/providers/locale.dart';
+import 'package:app_store/providers/locale_provider.dart';
 import 'package:app_store/widgets/cards/app_category_item.dart';
 import 'package:app_store/widgets/cards/app_item.dart';
 import 'package:app_store/widgets/text/app_review_item.dart';
