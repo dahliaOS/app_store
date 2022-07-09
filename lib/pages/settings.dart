@@ -78,7 +78,7 @@ class Settings extends StatelessWidget {
                       size: 30,
                     ),
                     onChanged: (bool value) {
-                      _themeprovider.setThemeSwitched(value);
+                      _themeprovider.setThemeSwitched(value: value);
                       _themeprovider.getThemeSwitched()
                           ? _themeprovider.setTheme(darkTheme)
                           : _themeprovider.setTheme(lightTheme);

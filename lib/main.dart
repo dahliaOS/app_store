@@ -39,7 +39,8 @@ Future<void> main() async {
       child: MultiProvider(
         providers: [
           ChangeNotifierProvider<ThemeProvider>.value(
-            value: ThemeProvider(lightTheme, false),
+            value: ThemeProvider(themeData: lightTheme, themeSwitched: false),
+          ),
           ),
         ],
         child: const AppStore(),

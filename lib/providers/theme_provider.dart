@@ -18,21 +18,21 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class ThemeProvider with ChangeNotifier {
-  ThemeData _themeData;
-  bool _themeSwitched;
+  ThemeData themeData;
+  bool themeSwitched;
 
-  ThemeProvider(this._themeData, this._themeSwitched);
+  ThemeProvider({required this.themeData, required this.themeSwitched});
 
-  ThemeData getTheme() => _themeData;
-  bool getThemeSwitched() => _themeSwitched;
+  ThemeData getTheme() => themeData;
+  bool getThemeSwitched() => themeSwitched;
 
-  Future<void> setTheme(ThemeData themeData) async {
-    _themeData = themeData;
+  Future<void> setTheme(ThemeData value) async {
+    themeData = value;
     return notifyListeners();
   }
 
-  Future<void> setThemeSwitched(bool themeSwitched) async {
-    _themeSwitched = themeSwitched;
+  Future<void> setThemeSwitched({required bool value}) async {
+    themeSwitched = value;
     return notifyListeners();
   }
 }
