@@ -15,13 +15,13 @@ limitations under the License.
 */
 
 class ReviewItemModel {
-  final String name;
-  final String comment;
-  final int rating;
-
   ReviewItemModel({
     required this.name,
     required this.comment,
     required this.rating,
   });
+
+  final String name;
+  final String comment;
+  final int rating;
 }

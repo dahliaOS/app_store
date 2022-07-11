@@ -19,197 +19,102 @@ import 'package:app_store/models/cards/app_item_model.dart';
 import 'package:app_store/pages/featured_applications.dart';
 import 'package:app_store/pages/new_applications.dart';
 import 'package:app_store/pages/trending_applications.dart';
+import 'package:app_store/providers/filter_provider.dart';
 import 'package:app_store/providers/locale_provider.dart';
 import 'package:app_store/widgets/buttons/icon_button.dart';
 import 'package:app_store/widgets/cards/app_item.dart';
 import 'package:app_store/widgets/text_fields/search_bar.dart';
 import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Landing extends StatefulWidget {
-  const Landing({Key? key}) : super(key: key);
+  const Landing({super.key});
 
   static List<ChipButtonModel> get _chipButtons => <ChipButtonModel>[
         ChipButtonModel(
           name: strings.category.all,
           icon: Icons.apps,
           id: 1,
+          category: AppCategory.all,
         ),
         ChipButtonModel(
           name: strings.category.design,
           icon: Icons.design_services,
           id: 2,
+          category: AppCategory.design,
         ),
         ChipButtonModel(
           name: strings.category.games,
           icon: Icons.games,
           id: 3,
+          category: AppCategory.games,
         ),
         ChipButtonModel(
           name: strings.category.entertainment,
           icon: Icons.movie,
           id: 4,
+          category: AppCategory.entertainment,
         ),
         ChipButtonModel(
           name: strings.category.development,
           icon: Icons.developer_mode,
           id: 5,
+          category: AppCategory.development,
         ),
         ChipButtonModel(
           name: strings.category.music,
           icon: Icons.audiotrack,
           id: 6,
+          category: AppCategory.music,
         ),
         ChipButtonModel(
           name: strings.category.productivity,
           icon: Icons.work,
           id: 7,
+          category: AppCategory.productivity,
         ),
         ChipButtonModel(
           name: strings.category.tools,
           icon: Icons.developer_board,
           id: 8,
+          category: AppCategory.tools,
         ),
         ChipButtonModel(
           name: strings.category.finance,
           icon: Icons.money,
           id: 9,
+          category: AppCategory.finance,
         ),
         ChipButtonModel(
           name: strings.category.healthAndWellBeing,
           icon: Icons.health_and_safety,
           id: 10,
+          category: AppCategory.healthAndWellBeing,
         ),
         ChipButtonModel(
           name: strings.category.education,
           icon: Icons.cast_for_education,
           id: 11,
+          category: AppCategory.education,
         ),
         ChipButtonModel(
           name: strings.category.fitness,
           icon: Icons.fitness_center,
           id: 12,
+          category: AppCategory.fitness,
         ),
         ChipButtonModel(
           name: strings.category.communication,
           icon: Icons.comment,
           id: 13,
+          category: AppCategory.communication,
         ),
         ChipButtonModel(
           name: strings.category.business,
           icon: Icons.business,
           id: 14,
-        ),
-      ];
-
-  static List<AppItemModel> get _appItems => <AppItemModel>[
-        AppItemModel(
-          name: strings.appPage.name,
-          rating: 5.0,
-          category: [
-            strings.category.design,
-          ],
-        ),
-        AppItemModel(
-          name: strings.appPage.name,
-          rating: 5.0,
-          category: [
-            strings.category.games,
-          ],
-        ),
-        AppItemModel(
-          name: strings.appPage.name,
-          rating: 5.0,
-          category: [
-            strings.category.entertainment,
-          ],
-        ),
-        AppItemModel(
-          name: strings.appPage.name,
-          rating: 5.0,
-          category: [
-            strings.category.development,
-          ],
-        ),
-        AppItemModel(
-          name: strings.appPage.name,
-          rating: 5.0,
-          category: [
-            strings.category.music,
-          ],
-        ),
-        AppItemModel(
-          name: strings.appPage.name,
-          rating: 5.0,
-          category: [
-            strings.category.productivity,
-          ],
-        ),
-        AppItemModel(
-          name: strings.appPage.name,
-          rating: 5.0,
-          category: [
-            strings.category.finance,
-          ],
-        ),
-        AppItemModel(
-          name: strings.appPage.name,
-          rating: 5.0,
-          category: [
-            strings.category.healthAndWellBeing,
-          ],
-        ),
-        AppItemModel(
-          name: strings.appPage.name,
-          rating: 5.0,
-          category: [
-            strings.category.education,
-          ],
-        ),
-        AppItemModel(
-          name: strings.appPage.name,
-          rating: 5.0,
-          category: [
-            strings.category.fitness,
-          ],
-        ),
-        AppItemModel(
-          name: strings.appPage.name,
-          rating: 5.0,
-          category: [
-            strings.category.communication,
-          ],
-        ),
-        AppItemModel(
-          name: strings.appPage.name,
-          rating: 5.0,
-          category: [
-            strings.category.business,
-          ],
-        ),
-        AppItemModel(
-          name: strings.appPage.name,
-          rating: 5.0,
-          category: [
-            strings.category.games,
-            strings.category.entertainment,
-          ],
-        ),
-        AppItemModel(
-          name: strings.appPage.name,
-          rating: 5.0,
-          category: [
-            strings.category.tools,
-            strings.category.development,
-          ],
-        ),
-        AppItemModel(
-          name: strings.appPage.name,
-          rating: 5.0,
-          category: [
-            strings.category.finance,
-            strings.category.productivity,
-          ],
+          category: AppCategory.business,
         ),
       ];
 
@@ -220,10 +125,11 @@ class Landing extends StatefulWidget {
 class _LandingState extends State<Landing> {
   final PageController _pageController = PageController();
   final ScrollController _scrollController = ScrollController();
-  final Set _selectedChipButtons = <int>{1};
+  final Set<int> _selectedChipButtons = <int>{1};
 
   @override
   Widget build(BuildContext context) {
+    final _filterprovider = Provider.of<FilterProvider>(context);
     final size = MediaQuery.of(context).size;
     final width = size.width;
     return Scaffold(
@@ -315,21 +221,33 @@ class _LandingState extends State<Landing> {
                                     if (value == true &&
                                         _selectedChipButtons.contains(1) &&
                                         _selectedChipButtons.length < 2) {
-                                      _selectedChipButtons.clear();
-                                      _selectedChipButtons.add(e.id);
-                                    } else if (value == true && e.id == 1 ||
-                                        value == true &&
-                                            _selectedChipButtons.length == 12) {
-                                      _selectedChipButtons.clear();
-                                      _selectedChipButtons.add(1);
+                                      _selectedChipButtons
+                                        ..remove(1)
+                                        ..add(e.id);
+                                      _filterprovider.retainInAppFilter(e);
+                                    } else if (value == true && e.id == 1) {
+                                      _selectedChipButtons
+                                        ..clear()
+                                        ..add(1);
+                                      _filterprovider.clearAddAllInFilter(e);
+                                    } else if (value == true &&
+                                        _selectedChipButtons.length == 12) {
+                                      _selectedChipButtons
+                                        ..clear()
+                                        ..add(1);
+                                      _filterprovider.addInAppFilter(e);
                                     } else if (value == false &&
                                         _selectedChipButtons.length < 2) {
-                                      _selectedChipButtons.remove(e.id);
-                                      _selectedChipButtons.add(1);
+                                      _selectedChipButtons
+                                        ..remove(e.id)
+                                        ..add(1);
+                                      _filterprovider.clearAddAllInFilter(e);
                                     } else if (value == false) {
                                       _selectedChipButtons.remove(e.id);
+                                      _filterprovider.removeInAppFilter(e);
                                     } else if (value == true) {
                                       _selectedChipButtons.add(e.id);
+                                      _filterprovider.addInAppFilter(e);
                                     }
                                   });
                                 },
@@ -387,11 +305,13 @@ class _LandingState extends State<Landing> {
                             Wrap(
                               spacing: width / 80,
                               children: <Widget>[
-                                for (final item in Landing._appItems)
+                                for (final item
+                                    in _filterprovider.getAppFilter())
                                   AppItem(
                                     name: item.name,
                                     rating: item.rating,
-                                    category: item.category,
+                                    categoryName: item.categoryName,
+                                    categories: item.categories,
                                   ),
                               ],
                             ),
@@ -437,11 +357,13 @@ class _LandingState extends State<Landing> {
                             Wrap(
                               spacing: width / 80,
                               children: <Widget>[
-                                for (final item in Landing._appItems)
+                                for (final item
+                                    in _filterprovider.getAppFilter())
                                   AppItem(
                                     name: item.name,
                                     rating: item.rating,
-                                    category: item.category,
+                                    categoryName: item.categoryName,
+                                    categories: item.categories,
                                   ),
                               ],
                             ),
@@ -487,11 +409,13 @@ class _LandingState extends State<Landing> {
                             Wrap(
                               spacing: width / 80,
                               children: <Widget>[
-                                for (final item in Landing._appItems)
+                                for (final item
+                                    in _filterprovider.getAppFilter())
                                   AppItem(
                                     name: item.name,
                                     rating: item.rating,
-                                    category: item.category,
+                                    categoryName: item.categoryName,
+                                    categories: item.categories,
                                   ),
                               ],
                             ),

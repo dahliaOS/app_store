@@ -26,99 +26,126 @@ import 'package:flutter/material.dart';
 List<AppItemModel> get _appItems => <AppItemModel>[
       AppItemModel(
         name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.tools,
-          strings.category.development,
+        rating: 5,
+        categoryName: [
+          strings.category.design,
         ],
+        categories: const {AppCategory.design},
       ),
       AppItemModel(
         name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.tools,
-          strings.category.development,
+        rating: 5,
+        categoryName: [
+          strings.category.games,
         ],
+        categories: const {AppCategory.games},
       ),
       AppItemModel(
         name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.tools,
-          strings.category.development,
+        rating: 5,
+        categoryName: [
+          strings.category.entertainment,
         ],
+        categories: const {AppCategory.entertainment},
       ),
       AppItemModel(
         name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.tools,
+        rating: 5,
+        categoryName: [
           strings.category.development,
         ],
+        categories: const {AppCategory.development},
       ),
       AppItemModel(
         name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.tools,
-          strings.category.development,
+        rating: 5,
+        categoryName: [
+          strings.category.music,
         ],
+        categories: const {AppCategory.music},
       ),
       AppItemModel(
         name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.tools,
-          strings.category.development,
+        rating: 5,
+        categoryName: [
+          strings.category.productivity,
         ],
+        categories: const {AppCategory.productivity},
       ),
       AppItemModel(
         name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.tools,
-          strings.category.development,
+        rating: 5,
+        categoryName: [
+          strings.category.finance,
         ],
+        categories: const {AppCategory.finance},
       ),
       AppItemModel(
         name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.tools,
-          strings.category.development,
+        rating: 5,
+        categoryName: [
+          strings.category.healthAndWellBeing,
         ],
+        categories: const {AppCategory.healthAndWellBeing},
       ),
       AppItemModel(
         name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.tools,
-          strings.category.development,
+        rating: 5,
+        categoryName: [
+          strings.category.education,
         ],
+        categories: const {AppCategory.education},
       ),
       AppItemModel(
         name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.tools,
-          strings.category.development,
+        rating: 5,
+        categoryName: [
+          strings.category.fitness,
         ],
+        categories: const {AppCategory.fitness},
       ),
       AppItemModel(
         name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.tools,
-          strings.category.development,
+        rating: 5,
+        categoryName: [
+          strings.category.communication,
         ],
+        categories: const {AppCategory.communication},
       ),
       AppItemModel(
         name: strings.appPage.name,
-        rating: 5.0,
-        category: [
+        rating: 5,
+        categoryName: [
+          strings.category.business,
+        ],
+        categories: const {AppCategory.business},
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5,
+        categoryName: [
+          strings.category.games,
+          strings.category.entertainment,
+        ],
+        categories: const {AppCategory.games, AppCategory.entertainment},
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5,
+        categoryName: [
           strings.category.tools,
           strings.category.development,
         ],
+        categories: const {AppCategory.tools, AppCategory.development},
+      ),
+      AppItemModel(
+        name: strings.appPage.name,
+        rating: 5,
+        categoryName: [
+          strings.category.finance,
+          strings.category.productivity,
+        ],
+        categories: const {AppCategory.finance, AppCategory.productivity},
       ),
     ];
 
@@ -169,7 +196,7 @@ List<AppCategoryItemModel> get _categoryItems => <AppCategoryItemModel>[
     ];
 
 class AppPage extends StatelessWidget {
-  const AppPage({Key? key}) : super(key: key);
+  const AppPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -242,7 +269,7 @@ class AppPage extends StatelessWidget {
                             margin: const EdgeInsets.only(bottom: 20),
                             child: ElevatedButton(
                               onPressed: () {
-                                showDialog(
+                                showDialog<Dialog>(
                                   context: context,
                                   builder: (BuildContext context) {
                                     return Dialog(
@@ -341,7 +368,7 @@ class AppPage extends StatelessWidget {
                           ),
                           OutlinedButton(
                             onPressed: () {
-                              showDialog(
+                              showDialog<Dialog>(
                                 context: context,
                                 builder: (BuildContext context) {
                                   return Dialog(
@@ -611,7 +638,8 @@ class AppPage extends StatelessWidget {
                               AppItem(
                                 name: item.name,
                                 rating: item.rating,
-                                category: item.category,
+                                categoryName: item.categoryName,
+                                categories: item.categories,
                               ),
                           ],
                         ),

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 class AppCategoryItem extends StatelessWidget {
-  final String name;
-  final String tooltip;
-  final IconData icon;
-
   const AppCategoryItem({
     required this.name,
     required this.tooltip,
     required this.icon,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
+
+  final String name;
+  final String tooltip;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {

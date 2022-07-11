@@ -14,19 +14,22 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+import 'package:app_store/models/cards/app_item_model.dart';
 import 'package:flutter/material.dart';
 
 class AppItem extends StatelessWidget {
-  final String name;
-  final double rating;
-  final List<String> category;
-
   const AppItem({
     required this.name,
     required this.rating,
-    required this.category,
-    Key? key,
-  }) : super(key: key);
+    required this.categoryName,
+    required this.categories,
+    super.key,
+  });
+
+  final String name;
+  final double rating;
+  final List<String> categoryName;
+  final Set<AppCategory> categories;
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +68,7 @@ class AppItem extends StatelessWidget {
                   name,
                   style: Theme.of(context).textTheme.headline2,
                 ),
-                for (final item in category)
+                for (final item in categoryName)
                   Text(
                     item,
                     style: Theme.of(context).textTheme.subtitle2,

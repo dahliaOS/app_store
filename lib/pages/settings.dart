@@ -23,11 +23,11 @@ import 'package:provider/provider.dart';
 import 'package:yatl_flutter/yatl_flutter.dart';
 
 class Settings extends StatelessWidget {
-  const Settings({Key? key}) : super(key: key);
+  const Settings({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final ThemeProvider _themeprovider = Provider.of<ThemeProvider>(context);
+    final _themeprovider = Provider.of<ThemeProvider>(context);
     final size = MediaQuery.of(context).size;
     final width = size.width;
     return Scaffold(
@@ -175,7 +175,7 @@ class Settings extends StatelessWidget {
                                   ),
                                   Text(
                                     localeNativeNames[item.languageCode] ??
-                                        "Language code not found",
+                                        'Language code not found',
                                     style:
                                         Theme.of(context).textTheme.headline2,
                                   ),
@@ -187,7 +187,7 @@ class Settings extends StatelessWidget {
                                   Container(
                                     margin: const EdgeInsets.only(bottom: 10),
                                     child: Text(
-                                      "${locales.progressData[item.toLanguageTag()]} / ${locales.progressData[context.fallbackLocale.toLanguageTag()]}",
+                                      '${locales.progressData[item.toLanguageTag()]} / ${locales.progressData[context.fallbackLocale.toLanguageTag()]}',
                                       style:
                                           Theme.of(context).textTheme.subtitle2,
                                     ),

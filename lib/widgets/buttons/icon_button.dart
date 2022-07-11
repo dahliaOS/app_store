@@ -17,14 +17,14 @@ limitations under the License.
 import 'package:flutter/material.dart';
 
 class MyIconButton extends StatelessWidget {
-  final IconData? icon;
-  final VoidCallback? onPressed;
-
   const MyIconButton({
     this.icon,
     this.onPressed,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
+
+  final IconData? icon;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {

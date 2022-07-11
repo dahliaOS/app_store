@@ -17,16 +17,16 @@ limitations under the License.
 import 'package:flutter/material.dart';
 
 class ReviewItem extends StatelessWidget {
-  final String name;
-  final String comment;
-  final int rating;
-
   const ReviewItem({
     required this.name,
     required this.comment,
     required this.rating,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
+
+  final String name;
+  final String comment;
+  final int rating;
 
   @override
   Widget build(BuildContext context) {

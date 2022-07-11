@@ -20,8 +20,8 @@ class SearchBar extends StatelessWidget {
   const SearchBar({
     this.hint,
     this.icon,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final String? hint;
   final IconData? icon;
@@ -36,7 +36,7 @@ class SearchBar extends StatelessWidget {
         style: Theme.of(context).textTheme.subtitle2,
         decoration: InputDecoration(
           isDense: true,
-          contentPadding: const EdgeInsets.fromLTRB(5.0, 1.0, 5.0, 1.0),
+          contentPadding: const EdgeInsets.fromLTRB(5, 1, 5, 1),
           prefixIcon: Icon(icon),
           prefixIconColor:
               Theme.of(context).inputDecorationTheme.prefixIconColor,

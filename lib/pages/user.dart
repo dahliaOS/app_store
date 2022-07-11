@@ -17,7 +17,7 @@ limitations under the License.
 import 'package:flutter/material.dart';
 
 class User extends StatelessWidget {
-  const User({Key? key}) : super(key: key);
+  const User({super.key});
 
   @override
   Widget build(BuildContext context) {

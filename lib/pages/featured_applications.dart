@@ -14,134 +14,25 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import 'package:app_store/models/cards/app_item_model.dart';
+import 'package:app_store/providers/filter_provider.dart';
 import 'package:app_store/providers/locale_provider.dart';
 import 'package:app_store/widgets/cards/app_item.dart';
 import 'package:flutter/material.dart';
-
-List<AppItemModel> get _appItems => <AppItemModel>[
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.design,
-        ],
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.games,
-        ],
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.entertainment,
-        ],
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.development,
-        ],
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.music,
-        ],
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.productivity,
-        ],
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.finance,
-        ],
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.healthAndWellBeing,
-        ],
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.education,
-        ],
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.fitness,
-        ],
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.communication,
-        ],
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.business,
-        ],
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.games,
-          strings.category.entertainment,
-        ],
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.tools,
-          strings.category.development,
-        ],
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5.0,
-        category: [
-          strings.category.finance,
-          strings.category.productivity,
-        ],
-      ),
-    ];
+import 'package:provider/provider.dart';
 
 class FeaturedApplications extends StatelessWidget {
   const FeaturedApplications(
     this.loadPage,
     this.scrollToTop, {
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final void Function(int) loadPage;
   final void Function() scrollToTop;
 
   @override
   Widget build(BuildContext context) {
+    final _filterprovider = Provider.of<FilterProvider>(context);
     final size = MediaQuery.of(context).size;
     final width = size.width;
     return Column(
@@ -180,11 +71,12 @@ class FeaturedApplications extends StatelessWidget {
         Wrap(
           spacing: width / 80,
           children: <Widget>[
-            for (final item in _appItems)
+            for (final item in _filterprovider.getAppFilter())
               AppItem(
                 name: item.name,
                 rating: item.rating,
-                category: item.category,
+                categoryName: item.categoryName,
+                categories: item.categories,
               ),
           ],
         ),

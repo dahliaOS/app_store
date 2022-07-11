@@ -14,14 +14,50 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-class AppItemModel {
-  final String name;
-  final double rating;
-  final List<String> category;
+import 'package:flutter/foundation.dart';
 
-  AppItemModel({
+@immutable
+class AppItemModel {
+  const AppItemModel({
     required this.name,
     required this.rating,
-    required this.category,
+    required this.categoryName,
+    required this.categories,
   });
+
+  final String name;
+  final double rating;
+  final List<String> categoryName;
+  final Set<AppCategory> categories;
+
+  @override
+  int get hashCode => Object.hash(name, rating, categoryName, categories);
+
+  @override
+  bool operator ==(Object other) {
+    if (other is AppItemModel) {
+      return name == other.name &&
+          rating == other.rating &&
+          listEquals(categoryName, other.categoryName) &&
+          setEquals(categories, other.categories);
+    }
+    return false;
+  }
+}
+
+enum AppCategory {
+  all,
+  design,
+  games,
+  entertainment,
+  development,
+  music,
+  productivity,
+  tools,
+  finance,
+  healthAndWellBeing,
+  education,
+  fitness,
+  communication,
+  business
 }

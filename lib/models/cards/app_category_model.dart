@@ -17,13 +17,13 @@ limitations under the License.
 import 'package:flutter/material.dart';
 
 class AppCategoryItemModel {
-  final String name;
-  final String tooltip;
-  final IconData icon;
-
   AppCategoryItemModel({
     required this.name,
     required this.tooltip,
     required this.icon,
   });
+
+  final String name;
+  final String tooltip;
+  final IconData icon;
 }

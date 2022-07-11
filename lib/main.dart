@@ -18,29 +18,33 @@ import 'package:app_store/pages/app_page.dart';
 import 'package:app_store/pages/landing.dart';
 import 'package:app_store/pages/settings.dart';
 import 'package:app_store/pages/user.dart';
+import 'package:app_store/providers/filter_provider.dart';
 import 'package:app_store/providers/locale_provider.dart';
 import 'package:app_store/providers/theme_provider.dart';
 import 'package:app_store/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import "package:intl/locale.dart" as intl;
+import 'package:intl/locale.dart' as intl;
 import 'package:provider/provider.dart';
 import 'package:yatl_flutter/yatl_flutter.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initProviders();
+  await yatl.init();
   runApp(
     YatlApp(
       core: yatl,
       getLocale: () =>
-          intl.Locale.tryParse(preferences.locale ?? "")?.toFlutterLocale(),
+          intl.Locale.tryParse(preferences.locale ?? '')?.toFlutterLocale(),
       setLocale: (locale) => preferences.locale = locale?.toString(),
       child: MultiProvider(
         providers: [
           ChangeNotifierProvider<ThemeProvider>.value(
             value: ThemeProvider(themeData: lightTheme, themeSwitched: false),
           ),
+          ChangeNotifierProvider<FilterProvider>.value(
+            value: FilterProvider(appItems.toSet()),
           ),
         ],
         child: const AppStore(),
@@ -50,7 +54,7 @@ Future<void> main() async {
 }
 
 class AppStore extends StatelessWidget {
-  const AppStore({Key? key}) : super(key: key);
+  const AppStore({super.key});
 
   @override
   Widget build(BuildContext context) {

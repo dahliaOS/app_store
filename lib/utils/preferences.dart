@@ -17,15 +17,14 @@ limitations under the License.
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AppPreferences {
+  const AppPreferences(this.prefs);
   final SharedPreferences prefs;
 
-  const AppPreferences(this.prefs);
-
   String? get locale {
-    return prefs.getString("locale");
+    return prefs.getString('locale');
   }
 
   set locale(String? value) {
-    prefs.setString("locale", value!);
+    prefs.setString('locale', value!);
   }
 }
