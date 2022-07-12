@@ -15,139 +15,14 @@ limitations under the License.
 */
 
 import 'package:app_store/models/cards/app_category_model.dart';
-import 'package:app_store/models/cards/app_item_model.dart';
 import 'package:app_store/models/text/app_review_model.dart';
+import 'package:app_store/providers/filter_provider.dart';
 import 'package:app_store/providers/locale_provider.dart';
 import 'package:app_store/widgets/cards/app_category_item.dart';
 import 'package:app_store/widgets/cards/app_item.dart';
 import 'package:app_store/widgets/text/app_review_item.dart';
 import 'package:flutter/material.dart';
-
-List<AppItemModel> get _appItems => <AppItemModel>[
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5,
-        categoryName: [
-          strings.category.design,
-        ],
-        categories: const {AppCategory.design},
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5,
-        categoryName: [
-          strings.category.games,
-        ],
-        categories: const {AppCategory.games},
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5,
-        categoryName: [
-          strings.category.entertainment,
-        ],
-        categories: const {AppCategory.entertainment},
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5,
-        categoryName: [
-          strings.category.development,
-        ],
-        categories: const {AppCategory.development},
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5,
-        categoryName: [
-          strings.category.music,
-        ],
-        categories: const {AppCategory.music},
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5,
-        categoryName: [
-          strings.category.productivity,
-        ],
-        categories: const {AppCategory.productivity},
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5,
-        categoryName: [
-          strings.category.finance,
-        ],
-        categories: const {AppCategory.finance},
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5,
-        categoryName: [
-          strings.category.healthAndWellBeing,
-        ],
-        categories: const {AppCategory.healthAndWellBeing},
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5,
-        categoryName: [
-          strings.category.education,
-        ],
-        categories: const {AppCategory.education},
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5,
-        categoryName: [
-          strings.category.fitness,
-        ],
-        categories: const {AppCategory.fitness},
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5,
-        categoryName: [
-          strings.category.communication,
-        ],
-        categories: const {AppCategory.communication},
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5,
-        categoryName: [
-          strings.category.business,
-        ],
-        categories: const {AppCategory.business},
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5,
-        categoryName: [
-          strings.category.games,
-          strings.category.entertainment,
-        ],
-        categories: const {AppCategory.games, AppCategory.entertainment},
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5,
-        categoryName: [
-          strings.category.tools,
-          strings.category.development,
-        ],
-        categories: const {AppCategory.tools, AppCategory.development},
-      ),
-      AppItemModel(
-        name: strings.appPage.name,
-        rating: 5,
-        categoryName: [
-          strings.category.finance,
-          strings.category.productivity,
-        ],
-        categories: const {AppCategory.finance, AppCategory.productivity},
-      ),
-    ];
+import 'package:provider/provider.dart';
 
 final _reviewItems = <ReviewItemModel>[
   ReviewItemModel(name: 'Marin Heđeš', comment: 'Good app.', rating: 4),
@@ -200,6 +75,7 @@ class AppPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _filterprovider = Provider.of<FilterProvider>(context);
     final size = MediaQuery.of(context).size;
     final width = size.width;
     final height = size.height;
@@ -634,12 +510,15 @@ class AppPage extends StatelessWidget {
                         Wrap(
                           spacing: width / 80,
                           children: <Widget>[
-                            for (final item in _appItems)
+                            for (final item in _filterprovider.getAppFilter())
                               AppItem(
                                 name: item.name,
                                 rating: item.rating,
                                 categoryName: item.categoryName,
                                 categories: item.categories,
+                                id: item.id,
+                                icon: item.icon,
+                                version: item.version,
                               ),
                           ],
                         ),

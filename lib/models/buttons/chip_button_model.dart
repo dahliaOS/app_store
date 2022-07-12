@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import 'package:app_store/models/cards/app_item_model.dart';
+import 'package:app_store/models/app/app_item_model.dart';
 import 'package:flutter/material.dart';
 
 class ChipButtonModel {

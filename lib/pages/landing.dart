@@ -14,16 +14,18 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+import 'package:app_store/models/app/app_item_model.dart';
 import 'package:app_store/models/buttons/chip_button_model.dart';
-import 'package:app_store/models/cards/app_item_model.dart';
 import 'package:app_store/pages/featured_applications.dart';
 import 'package:app_store/pages/new_applications.dart';
 import 'package:app_store/pages/trending_applications.dart';
+import 'package:app_store/pages/updates.dart';
 import 'package:app_store/providers/filter_provider.dart';
 import 'package:app_store/providers/locale_provider.dart';
 import 'package:app_store/widgets/buttons/icon_button.dart';
 import 'package:app_store/widgets/cards/app_item.dart';
 import 'package:app_store/widgets/text_fields/search_bar.dart';
+import 'package:badges/badges.dart';
 import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -152,11 +154,22 @@ class _LandingState extends State<Landing> {
                       ),
                       Wrap(
                         children: [
-                          MyIconButton(
-                            icon: Icons.person,
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/user');
-                            },
+                          Badge(
+                            badgeContent: Text(
+                              needsUpdate.length.toString(),
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                              ),
+                            ),
+                            badgeColor: Theme.of(context).iconTheme.color!,
+                            elevation: 0,
+                            child: MyIconButton(
+                              icon: Icons.upgrade,
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/updates');
+                              },
+                            ),
                           ),
                           const SizedBox(
                             width: 10,
@@ -312,6 +325,9 @@ class _LandingState extends State<Landing> {
                                     rating: item.rating,
                                     categoryName: item.categoryName,
                                     categories: item.categories,
+                                    id: item.id,
+                                    icon: item.icon,
+                                    version: item.version,
                                   ),
                               ],
                             ),
@@ -364,6 +380,9 @@ class _LandingState extends State<Landing> {
                                     rating: item.rating,
                                     categoryName: item.categoryName,
                                     categories: item.categories,
+                                    id: item.id,
+                                    icon: item.icon,
+                                    version: item.version,
                                   ),
                               ],
                             ),
@@ -416,6 +435,9 @@ class _LandingState extends State<Landing> {
                                     rating: item.rating,
                                     categoryName: item.categoryName,
                                     categories: item.categories,
+                                    id: item.id,
+                                    icon: item.icon,
+                                    version: item.version,
                                   ),
                               ],
                             ),

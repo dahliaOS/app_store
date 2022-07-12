@@ -17,7 +17,7 @@ limitations under the License.
 import 'package:app_store/pages/app_page.dart';
 import 'package:app_store/pages/landing.dart';
 import 'package:app_store/pages/settings.dart';
-import 'package:app_store/pages/user.dart';
+import 'package:app_store/pages/updates.dart';
 import 'package:app_store/providers/filter_provider.dart';
 import 'package:app_store/providers/locale_provider.dart';
 import 'package:app_store/providers/theme_provider.dart';
@@ -73,7 +73,7 @@ class AppStore extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const Landing(),
-        '/user': (context) => const User(),
+        '/updates': (context) => const Updates(),
         '/settings': (context) => const Settings(),
         '/app_page': (context) => const AppPage(),
       },

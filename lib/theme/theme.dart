@@ -17,6 +17,7 @@ limitations under the License.
 import 'package:flutter/material.dart';
 
 final ThemeData darkTheme = ThemeData(
+  useMaterial3: true,
   hoverColor: Colors.white24,
   primaryColor: Colors.deepOrange,
   backgroundColor: Colors.white10,
@@ -223,6 +224,7 @@ final ThemeData darkTheme = ThemeData(
 );
 
 final ThemeData lightTheme = ThemeData(
+  useMaterial3: true,
   hoverColor: Colors.grey.shade400,
   primaryColor: Colors.deepOrange,
   backgroundColor: Colors.grey.shade200,

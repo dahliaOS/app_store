@@ -15,6 +15,8 @@ limitations under the License.
 */
 
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:pub_semver/pub_semver.dart';
 
 @immutable
 class AppItemModel {
@@ -23,15 +25,22 @@ class AppItemModel {
     required this.rating,
     required this.categoryName,
     required this.categories,
+    required this.id,
+    required this.icon,
+    required this.version,
   });
 
   final String name;
   final double rating;
   final List<String> categoryName;
   final Set<AppCategory> categories;
+  final int id;
+  final Image icon;
+  final Version version;
 
   @override
-  int get hashCode => Object.hash(name, rating, categoryName, categories);
+  int get hashCode =>
+      Object.hash(name, rating, categoryName, categories, id, icon, version);
 
   @override
   bool operator ==(Object other) {
@@ -39,7 +48,10 @@ class AppItemModel {
       return name == other.name &&
           rating == other.rating &&
           listEquals(categoryName, other.categoryName) &&
-          setEquals(categories, other.categories);
+          setEquals(categories, other.categories) &&
+          id == other.id &&
+          icon == other.icon &&
+          version == other.version;
     }
     return false;
   }

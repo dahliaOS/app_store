@@ -14,10 +14,11 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+import 'package:app_store/models/app/app_item_model.dart';
 import 'package:app_store/models/buttons/chip_button_model.dart';
-import 'package:app_store/models/cards/app_item_model.dart';
 import 'package:app_store/providers/locale_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:pub_semver/pub_semver.dart';
 
 List<AppItemModel> appItems = <AppItemModel>[
   AppItemModel(
@@ -27,6 +28,11 @@ List<AppItemModel> appItems = <AppItemModel>[
       strings.category.design,
     ],
     categories: const {AppCategory.design},
+    id: 1,
+    icon: Image.network(
+      'https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png',
+    ),
+    version: Version(1, 0, 0),
   ),
   AppItemModel(
     name: strings.appPage.name,
@@ -35,6 +41,11 @@ List<AppItemModel> appItems = <AppItemModel>[
       strings.category.games,
     ],
     categories: const {AppCategory.games},
+    id: 2,
+    icon: Image.network(
+      'https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png',
+    ),
+    version: Version(1, 0, 0),
   ),
   AppItemModel(
     name: strings.appPage.name,
@@ -43,6 +54,11 @@ List<AppItemModel> appItems = <AppItemModel>[
       strings.category.entertainment,
     ],
     categories: const {AppCategory.entertainment},
+    id: 3,
+    icon: Image.network(
+      'https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png',
+    ),
+    version: Version(1, 0, 0),
   ),
   AppItemModel(
     name: strings.appPage.name,
@@ -51,6 +67,11 @@ List<AppItemModel> appItems = <AppItemModel>[
       strings.category.development,
     ],
     categories: const {AppCategory.development},
+    id: 4,
+    icon: Image.network(
+      'https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png',
+    ),
+    version: Version(1, 0, 0),
   ),
   AppItemModel(
     name: strings.appPage.name,
@@ -59,6 +80,11 @@ List<AppItemModel> appItems = <AppItemModel>[
       strings.category.music,
     ],
     categories: const {AppCategory.music},
+    id: 5,
+    icon: Image.network(
+      'https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png',
+    ),
+    version: Version(1, 0, 0),
   ),
   AppItemModel(
     name: strings.appPage.name,
@@ -67,6 +93,11 @@ List<AppItemModel> appItems = <AppItemModel>[
       strings.category.productivity,
     ],
     categories: const {AppCategory.productivity},
+    id: 6,
+    icon: Image.network(
+      'https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png',
+    ),
+    version: Version(1, 0, 0),
   ),
   AppItemModel(
     name: strings.appPage.name,
@@ -75,6 +106,11 @@ List<AppItemModel> appItems = <AppItemModel>[
       strings.category.finance,
     ],
     categories: const {AppCategory.finance},
+    id: 7,
+    icon: Image.network(
+      'https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png',
+    ),
+    version: Version(1, 0, 0),
   ),
   AppItemModel(
     name: strings.appPage.name,
@@ -83,6 +119,11 @@ List<AppItemModel> appItems = <AppItemModel>[
       strings.category.healthAndWellBeing,
     ],
     categories: const {AppCategory.healthAndWellBeing},
+    id: 8,
+    icon: Image.network(
+      'https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png',
+    ),
+    version: Version(1, 0, 0),
   ),
   AppItemModel(
     name: strings.appPage.name,
@@ -91,6 +132,11 @@ List<AppItemModel> appItems = <AppItemModel>[
       strings.category.education,
     ],
     categories: const {AppCategory.education},
+    id: 9,
+    icon: Image.network(
+      'https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png',
+    ),
+    version: Version(1, 0, 0),
   ),
   AppItemModel(
     name: strings.appPage.name,
@@ -99,6 +145,11 @@ List<AppItemModel> appItems = <AppItemModel>[
       strings.category.fitness,
     ],
     categories: const {AppCategory.fitness},
+    id: 10,
+    icon: Image.network(
+      'https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png',
+    ),
+    version: Version(1, 0, 0),
   ),
   AppItemModel(
     name: strings.appPage.name,
@@ -107,6 +158,11 @@ List<AppItemModel> appItems = <AppItemModel>[
       strings.category.communication,
     ],
     categories: const {AppCategory.communication},
+    id: 11,
+    icon: Image.network(
+      'https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png',
+    ),
+    version: Version(1, 0, 0),
   ),
   AppItemModel(
     name: strings.appPage.name,
@@ -115,6 +171,11 @@ List<AppItemModel> appItems = <AppItemModel>[
       strings.category.business,
     ],
     categories: const {AppCategory.business},
+    id: 12,
+    icon: Image.network(
+      'https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png',
+    ),
+    version: Version(1, 0, 0),
   ),
   AppItemModel(
     name: strings.appPage.name,
@@ -124,6 +185,11 @@ List<AppItemModel> appItems = <AppItemModel>[
       strings.category.entertainment,
     ],
     categories: const {AppCategory.games, AppCategory.entertainment},
+    id: 13,
+    icon: Image.network(
+      'https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png',
+    ),
+    version: Version(1, 0, 0),
   ),
   AppItemModel(
     name: strings.appPage.name,
@@ -133,6 +199,11 @@ List<AppItemModel> appItems = <AppItemModel>[
       strings.category.development,
     ],
     categories: const {AppCategory.tools, AppCategory.development},
+    id: 14,
+    icon: Image.network(
+      'https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png',
+    ),
+    version: Version(1, 0, 0),
   ),
   AppItemModel(
     name: strings.appPage.name,
@@ -142,6 +213,11 @@ List<AppItemModel> appItems = <AppItemModel>[
       strings.category.productivity,
     ],
     categories: const {AppCategory.finance, AppCategory.productivity},
+    id: 15,
+    icon: Image.network(
+      'https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png',
+    ),
+    version: Version(1, 0, 0),
   ),
 ];
 
