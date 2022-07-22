@@ -30,8 +30,6 @@ class gpu {
 }
 
 getID() async {
-  // open a json file
-
   // get OSid
   var os;
   var osid;
@@ -43,13 +41,12 @@ getID() async {
     arch = '64-bit';
   else if (core.first.architecture == 'AARCH64') arch = 'aarch64';
   String osMenuText = '$os $arch';
-
-  // product is GF108 [GeForce GT 730] for testing
   var product = gpu.product;
   var productid;
   var productIsMobile;
   var product_type;
 
+  // check if its a mobile series gpu
   if (product.substring(product.length - 1, product.length) == 'M' ||
       product.substring(product.length - 1, product.length) == 'm')
     productIsMobile = true;
@@ -158,8 +155,7 @@ getID() async {
   var menuArraysJsonFile = await get(address);
   var menuArrays = jsonDecode(menuArraysJsonFile.body.toString());
 
-  // if menutext is in the json file, return the id of the menu item
-
+  // if osMenuText is in the json file, return the id of the menu item
   for (var i = 0; i < menuArrays.length; i++) {
     if (menuArrays[i] != null) {
       for (var j = 0; j < menuArrays.length - 1; j++) {
@@ -170,6 +166,7 @@ getID() async {
     }
   }
 
+  // if product_type is in the json file, return the id of the menu item
   for (var i = 0; i < menuArrays.length; i++) {
     if (menuArrays[i] != null) {
       for (var j = 0; j < menuArrays[i].length - 1; j++) {
@@ -198,6 +195,7 @@ List getDriver() {
 }
 
 void main() {
+  // test the output
   print('download link: ${getDriver()[0]}');
   print('version: ${getDriver()[1]}');
 }
