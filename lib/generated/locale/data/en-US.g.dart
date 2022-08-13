@@ -63,7 +63,7 @@ class _$EnUSLocaleData extends LocaleData {
     "updates.title": "Updates",
     "updates.update_button": "Update",
     "updates.update_all_button": "Update all applications",
-    "updates.update_cancel_all_button": "Cancel all applications",
+    "updates.update_cancel_all_button": "Cancel all updates",
     "updates.update_available": "New update available",
     "updates.update_cancel_button": "Cancel",
   };
