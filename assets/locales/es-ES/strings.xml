@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Category strings -->
+    <string name="category.all">Todos</string>
+    <string name="category.design">Diseño</string>
+    <string name="category.games">Juegos</string>
+    <string name="category.entertainment">Empresarial</string>
+    <string name="category.development">Desarrollo</string>
+    <string name="category.music">Música</string>
+    <string name="category.productivity">Productividad</string>
+    <string name="category.tools">Herramientas</string>
+    <string name="category.finance">Finanzas</string>
+    <string name="category.health">Salud</string>
+    <string name="category.education">Educación</string>
+    <string name="category.fitness">Fitness</string>
+    <string name="category.communication">Comunicación</string>
+    <string name="category.business">Negocio</string>
+    <!-- Applications topic strings -->
+    <string name="topic.show_all">Mostrar todas las categorías</string>
+    <string name="topic.trending">Tendencias</string>
+    <string name="topic.trending_hint">Mostrar todas las aplicaciones tendentes</string>
+    <string name="topic.featured">Destacado</string>
+    <string name="topic.featured_hint">Mostrar todas las aplicaciones destacadas</string>
+    <string name="topic.newTopic">Nuevo</string>
+    <string name="topic.new_hint">Mostrar todas las aplicaciones añadidas recientemente</string>
+    <!-- Application page strings -->
+    <string name="app_page.download">Descargar</string>
+    <string name="app_page.download_dialog_title">¿Está seguro de que desea instalar?</string>
+    <string name="app_page.download_dialog_description">Si está seguro de que desea instalar esta aplicación, presione Sí, de lo contrario presione No.</string>
+    <string name="app_page.download_dialog_confirm_installation">Sí</string>
+    <string name="app_page.download_dialog_cancel_installation">Nu</string>
+    <string name="app_page.donate">Donar</string>
+    <string name="app_page.donate_dialog_title">Donar al desarrollador de aplicaciones</string>
+    <string name="app_page.donate_dialog_description">Si desea apoyar el desarrollo de la aplicación, por favor haga clic en los siguientes enlaces de donación.</string>
+    <string name="app_page.donate_dialog_close">Cerrar</string>
+    <string name="app_page.information_developer_hint">Desarrollador</string>
+    <string name="app_page.information_technology_hint">Tecnología</string>
+    <string name="app_page.information_trending_hint">Posición de tendencia</string>
+    <string name="app_page.information_locale_hint">Local</string>
+    <string name="app_page.information_size_hint">Tamaño</string>
+    <string name="app_page.information_source_hint">Fuente</string>
+    <string name="app_page.long_description_title">Descripción</string>
+    <string name="app_page.images">Imágenes</string>
+    <string name="app_page.reviews">Reseñas</string>
+    <string name="app_page.similar_applications">Aplicaciones similares</string>
+    <!-- Settings page strings -->
+    <string name="settings.title">Ajustes</string>
+    <string name="settings.theme_mode">Modo de tema</string>
+    <string name="settings.dark_mode">Modo oscuro</string>
+    <string name="settings.dark_mode_description">Activar modo oscuro</string>
+    <string name="settings.locale">Local</string>
+    <string name="settings.locale_title">Local</string>
+    <string name="settings.locale_description">Cambiar el idioma</string>
+    <!-- Search bar strings -->
+    <string name="searchbar.hint">Buscar aplicaciones</string>
+    <!-- Updates page strings -->
+    <string name="updates.title">Actualizaciones</string>
+    <string name="updates.update_button">Actualizar</string>
+    <string name="updates.update_all_button">Actualizar todas las aplicaciones</string>
+    <string name="updates.update_cancel_all_button">Cancelar todas las actualizaciones</string>
+    <string name="updates.update_available">Nueva actualización disponible</string>
+    <string name="updates.update_cancel_button">Cancelar</string>
+</resources>
