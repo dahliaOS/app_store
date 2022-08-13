@@ -31,7 +31,7 @@
     <string name="app_page.download_dialog_cancel_installation">No</string>
     <string name="app_page.donate">Donate</string>
     <string name="app_page.donate_dialog_title">Donate to the application developer</string>
-     <string name="app_page.donate_dialog_description">If you wish to support the development of the application, please click on the donation links below.</string>
+    <string name="app_page.donate_dialog_description">If you wish to support the development of the application, please click on the donation links below.</string>
     <string name="app_page.donate_dialog_close">Close</string>
     <string name="app_page.information_developer_hint">Developer</string>
     <string name="app_page.information_technology_hint">Technology</string>
@@ -57,7 +57,7 @@
     <string name="updates.title">Updates</string>
     <string name="updates.update_button">Update</string>
     <string name="updates.update_all_button">Update all applications</string>
-    <string name="updates.update_cancel_all_button">Cancel all applications</string>
+    <string name="updates.update_cancel_all_button">Cancel all updates</string>
     <string name="updates.update_available">New update available</string>
     <string name="updates.update_cancel_button">Cancel</string>
 </resources>
