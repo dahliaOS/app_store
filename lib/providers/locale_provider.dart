@@ -15,7 +15,6 @@ limitations under the License.
 */
 
 import 'package:app_store/generated/locale.dart';
-import 'package:app_store/generated/locale/strings.dart';
 import 'package:app_store/utils/preferences.dart';
 import 'package:intl/locale.dart';
 import 'package:shared_preferences/shared_preferences.dart';

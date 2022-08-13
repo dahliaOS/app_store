@@ -67,7 +67,7 @@ class _UpdatesState extends State<Updates> {
                       ),
                       TextButton(
                         style: ButtonStyle(
-                          fixedSize: MaterialStateProperty.all(
+                          minimumSize: MaterialStateProperty.all(
                             const Size(170, 36),
                           ),
                         ),
@@ -78,9 +78,13 @@ class _UpdatesState extends State<Updates> {
                                 : _isAppUpdating.addAll({1, 2, 3, 4, 5});
                           });
                         },
-                        child: _isAppUpdating.length == needsUpdate.length
-                            ? Text(strings.updates.updateCancelAllButton)
-                            : Text(strings.updates.updateAllButton),
+                        child: Text(
+                          _isAppUpdating.length == needsUpdate.length
+                              ? strings.updates.updateCancelAllButton
+                              : strings.updates.updateAllButton,
+                          overflow: TextOverflow.visible,
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                       Wrap(
                         runSpacing: 15,
@@ -98,7 +102,10 @@ class _UpdatesState extends State<Updates> {
                               ),
                               subtitle: Text(
                                 strings.updates.updateAvailable,
-                                style: Theme.of(context).textTheme.subtitle2,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodySmall!
+                                    .apply(color: Colors.black),
                               ),
                               trailing: TextButton(
                                 style: ButtonStyle(

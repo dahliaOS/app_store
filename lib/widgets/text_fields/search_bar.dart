@@ -33,7 +33,7 @@ class SearchBar extends StatelessWidget {
       height: 40,
       width: 250,
       child: TextField(
-        style: Theme.of(context).textTheme.subtitle2,
+        style: Theme.of(context).textTheme.bodyMedium,
         decoration: InputDecoration(
           isDense: true,
           contentPadding: const EdgeInsets.fromLTRB(5, 1, 5, 1),

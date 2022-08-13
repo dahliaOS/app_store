@@ -32,7 +32,10 @@ class AppCategoryItem extends StatelessWidget {
           ),
           Text(
             name,
-            style: Theme.of(context).textTheme.subtitle2,
+            style: Theme.of(context)
+                .textTheme
+                .bodySmall!
+                .apply(color: Colors.black),
           ),
         ],
       ),

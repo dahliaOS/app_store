@@ -435,7 +435,7 @@ class AppPage extends StatelessWidget {
                     ),
                     Text(
                       description,
-                      style: Theme.of(context).textTheme.subtitle2,
+                      style: Theme.of(context).textTheme.bodyMedium,
                       overflow: TextOverflow.clip,
                     )
                   ],
