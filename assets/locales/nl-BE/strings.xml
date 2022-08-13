@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Category strings -->
+    <string name="category.all">Allemaal</string>
+    <string name="category.design">Ontwerp</string>
+    <string name="category.games">Spellen</string>
+    <string name="category.entertainment">Vermaak</string>
+    <string name="category.development">Ontwikkeling</string>
+    <string name="category.music">Muziek</string>
+    <string name="category.productivity">Productiviteit</string>
+    <string name="category.tools">Hulpmiddelen</string>
+    <string name="category.finance">Financiële</string>
+    <string name="category.health">Gezondheid</string>
+    <string name="category.education">Opleiding</string>
+    <string name="category.fitness">Fitness</string>
+    <string name="category.communication">Communicatie</string>
+    <string name="category.business">Bedrijfsleven</string>
+    <!-- Applications topic strings -->
+    <string name="topic.show_all">Toon alle categorieën</string>
+    <string name="topic.trending">Populair</string>
+    <string name="topic.trending_hint">Toon alle populaire toepassingen</string>
+    <string name="topic.featured">Aanbevolen</string>
+    <string name="topic.featured_hint">Toon alle aanbevolen toepassingen</string>
+    <string name="topic.newTopic">Nieuw</string>
+    <string name="topic.new_hint">Alle recent toegevoegde toepassingen tonen</string>
+    <!-- Application page strings -->
+    <string name="app_page.download">downloaden</string>
+    <string name="app_page.download_dialog_title">Weet u zeker dat u wilt installeren?</string>
+    <string name="app_page.download_dialog_description">Als je zeker weet dat je deze applicatie wilt installeren, druk dan op Ja. Druk anders op Nee.</string>
+    <string name="app_page.download_dialog_confirm_installation">ja</string>
+    <string name="app_page.download_dialog_cancel_installation">Neen</string>
+    <string name="app_page.donate">Doneren</string>
+    <string name="app_page.donate_dialog_title">Doneer aan de ontwikkelaar van de applicatie</string>
+    <string name="app_page.donate_dialog_description">Als u de ontwikkeling van de applicatie wilt ondersteunen, klik dan op de donatie links hieronder.</string>
+    <string name="app_page.donate_dialog_close">Afsluiten</string>
+    <string name="app_page.information_developer_hint">Ontwikkelaar</string>
+    <string name="app_page.information_technology_hint">Technologie</string>
+    <string name="app_page.information_trending_hint">Populaire positie</string>
+    <string name="app_page.information_locale_hint">Lokalisatie</string>
+    <string name="app_page.information_size_hint">Grootte</string>
+    <string name="app_page.information_source_hint">Bron</string>
+    <string name="app_page.long_description_title">Beschrijving</string>
+    <string name="app_page.images">Afbeeldingen</string>
+    <string name="app_page.reviews">Beoordelingen</string>
+    <string name="app_page.similar_applications">Vergelijkbare toepassingen</string>
+    <!-- Settings page strings -->
+    <string name="settings.title">Instellingen</string>
+    <string name="settings.theme_mode">Thema modus</string>
+    <string name="settings.dark_mode">Donkere modus</string>
+    <string name="settings.dark_mode_description">Donkere modus inschakelen</string>
+    <string name="settings.locale">Lokalisatie</string>
+    <string name="settings.locale_title">Lokalisatie</string>
+    <string name="settings.locale_description">Verander de landinstelling</string>
+    <!-- Search bar strings -->
+    <string name="searchbar.hint">Apps doorzoeken</string>
+    <!-- Updates page strings -->
+    <string name="updates.title">Bijwerken</string>
+    <string name="updates.update_button">Vernieuwen</string>
+    <string name="updates.update_all_button">Alle toepassingen bijwerken</string>
+    <string name="updates.update_cancel_all_button">Alle updates annuleren</string>
+    <string name="updates.update_available">Nieuwe update beschikbaar</string>
+    <string name="updates.update_cancel_button">annuleren</string>
+</resources>
