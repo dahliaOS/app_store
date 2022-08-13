@@ -16,6 +16,7 @@ limitations under the License.
 
 import 'package:app_store/models/app/app_item_model.dart';
 import 'package:app_store/providers/filter_provider.dart';
+import 'package:app_store/providers/locale_provider.dart';
 import 'package:flutter/material.dart';
 
 class Updates extends StatefulWidget {
@@ -41,8 +42,8 @@ class _UpdatesState extends State<Updates> {
           },
           tooltip: MaterialLocalizations.of(context).backButtonTooltip,
         ),
-        title: const Text(
-          'Updates',
+        title: Text(
+          strings.updates.title,
         ),
       ),
       body: ScrollConfiguration(
@@ -61,7 +62,7 @@ class _UpdatesState extends State<Updates> {
                     crossAxisAlignment: WrapCrossAlignment.center,
                     children: <Widget>[
                       Text(
-                        'Updates',
+                        strings.updates.title,
                         style: Theme.of(context).textTheme.headline2,
                       ),
                       TextButton(
@@ -78,8 +79,8 @@ class _UpdatesState extends State<Updates> {
                           });
                         },
                         child: _isAppUpdating.length == needsUpdate.length
-                            ? const Text('Cancel all updates')
-                            : const Text('Update all applications'),
+                            ? Text(strings.updates.updateCancelAllButton)
+                            : Text(strings.updates.updateAllButton),
                       ),
                       Wrap(
                         runSpacing: 15,
@@ -96,7 +97,7 @@ class _UpdatesState extends State<Updates> {
                                 style: Theme.of(context).textTheme.headline2,
                               ),
                               subtitle: Text(
-                                'New update available',
+                                strings.updates.updateAvailable,
                                 style: Theme.of(context).textTheme.subtitle2,
                               ),
                               trailing: TextButton(
@@ -118,20 +119,23 @@ class _UpdatesState extends State<Updates> {
                                       ? Row(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
-                                          children: const <Widget>[
-                                            SizedBox(
+                                          children: <Widget>[
+                                            const SizedBox(
                                               height: 15,
                                               width: 15,
                                               child:
                                                   CircularProgressIndicator(),
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               width: 5,
                                             ),
-                                            Text('Cancel')
+                                            Text(
+                                              strings
+                                                  .updates.updateCancelButton,
+                                            )
                                           ],
                                         )
-                                      : const Text('Update'),
+                                      : Text(strings.updates.updateButton),
                                 ),
                               ),
                             )

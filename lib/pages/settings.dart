@@ -39,8 +39,8 @@ class Settings extends StatelessWidget {
           },
           tooltip: MaterialLocalizations.of(context).backButtonTooltip,
         ),
-        title: const Text(
-          'Settings',
+        title: Text(
+          strings.settings.title,
         ),
       ),
       body: ScrollConfiguration(

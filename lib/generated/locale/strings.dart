@@ -40,8 +40,8 @@ class CategoryLocaleStrings extends LocaleStrings {
     return core.translate("category.finance");
   }
 
-  String get healthAndWellBeing {
-    return core.translate("category.health_and_well_being");
+  String get health {
+    return core.translate("category.health");
   }
 
   String get education {
@@ -96,18 +96,6 @@ class TopicLocaleStrings extends LocaleStrings {
 class AppPageLocaleStrings extends LocaleStrings {
   const AppPageLocaleStrings._(YatlCore core) : super(core);
 
-  String get name {
-    return core.translate("app_page.name");
-  }
-
-  String get shortDescription {
-    return core.translate("app_page.short_description");
-  }
-
-  String get category {
-    return core.translate("app_page.category");
-  }
-
   String get download {
     return core.translate("app_page.download");
   }
@@ -156,10 +144,6 @@ class AppPageLocaleStrings extends LocaleStrings {
     return core.translate("app_page.information_trending_hint");
   }
 
-  String get informationLocale {
-    return core.translate("app_page.information_locale");
-  }
-
   String get informationLocaleHint {
     return core.translate("app_page.information_locale_hint");
   }
@@ -168,24 +152,12 @@ class AppPageLocaleStrings extends LocaleStrings {
     return core.translate("app_page.information_size_hint");
   }
 
-  String get informationSource {
-    return core.translate("app_page.information_source");
-  }
-
   String get informationSourceHint {
     return core.translate("app_page.information_source_hint");
   }
 
-  String get informationAgeAppropriatnessHint {
-    return core.translate("app_page.information_age_appropriatness_hint");
-  }
-
   String get longDescriptionTitle {
     return core.translate("app_page.long_description_title");
-  }
-
-  String get longDescriptionContent {
-    return core.translate("app_page.long_description_content");
   }
 
   String get images {
@@ -203,6 +175,10 @@ class AppPageLocaleStrings extends LocaleStrings {
 
 class SettingsLocaleStrings extends LocaleStrings {
   const SettingsLocaleStrings._(YatlCore core) : super(core);
+
+  String get title {
+    return core.translate("settings.title");
+  }
 
   String get themeMode {
     return core.translate("settings.theme_mode");
@@ -237,6 +213,34 @@ class SearchbarLocaleStrings extends LocaleStrings {
   }
 }
 
+class UpdatesLocaleStrings extends LocaleStrings {
+  const UpdatesLocaleStrings._(YatlCore core) : super(core);
+
+  String get title {
+    return core.translate("updates.title");
+  }
+
+  String get updateButton {
+    return core.translate("updates.update_button");
+  }
+
+  String get updateAllButton {
+    return core.translate("updates.update_all_button");
+  }
+
+  String get updateCancelAllButton {
+    return core.translate("updates.update_cancel_all_button");
+  }
+
+  String get updateAvailable {
+    return core.translate("updates.update_available");
+  }
+
+  String get updateCancelButton {
+    return core.translate("updates.update_cancel_button");
+  }
+}
+
 class GeneratedLocaleStrings extends LocaleStrings {
   GeneratedLocaleStrings(YatlCore core) : super(core);
 
@@ -249,4 +253,6 @@ class GeneratedLocaleStrings extends LocaleStrings {
   late final SettingsLocaleStrings settings = SettingsLocaleStrings._(core);
 
   late final SearchbarLocaleStrings searchbar = SearchbarLocaleStrings._(core);
+
+  late final UpdatesLocaleStrings updates = UpdatesLocaleStrings._(core);
 }

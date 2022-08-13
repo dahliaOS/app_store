@@ -15,6 +15,7 @@ limitations under the License.
 */
 
 import 'package:app_store/models/app/app_item_model.dart';
+import 'package:app_store/pages/app_page.dart';
 import 'package:flutter/material.dart';
 import 'package:pub_semver/pub_semver.dart';
 
@@ -22,47 +23,85 @@ class AppItem extends StatelessWidget {
   const AppItem({
     required this.name,
     required this.rating,
-    required this.categoryName,
     required this.categories,
     required this.id,
     required this.icon,
     required this.version,
+    required this.briefDescription,
+    required this.description,
+    required this.developers,
+    required this.technologies,
+    required this.locales,
+    required this.appSize,
+    required this.source,
+    required this.donationLinks,
     super.key,
   });
 
   final String name;
   final double rating;
-  final List<String> categoryName;
   final Set<AppCategory> categories;
   final int id;
   final Image icon;
   final Version version;
+  final String briefDescription;
+  final String description;
+  final List<String> developers;
+  final List<String> technologies;
+  final List<String> locales;
+  final int appSize;
+  final AppSources source;
+  final Map<String, String> donationLinks;
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final height = size.height;
     return Container(
-      height: 85,
-      width: 170,
+      constraints: const BoxConstraints(
+        minHeight: 85,
+        minWidth: 175,
+        maxHeight: 85,
+        maxWidth: 250,
+      ),
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(15)),
       ),
       clipBehavior: Clip.antiAlias,
-      margin: EdgeInsets.only(
-        bottom: height / 70,
+      margin: const EdgeInsets.only(
+        bottom: 30,
+        right: 10,
       ),
       child: Material(
         child: InkWell(
           splashColor: Theme.of(context).primaryColor,
           onTap: () {
-            Navigator.pushNamed(context, '/app_page');
+            Navigator.push<void>(
+              context,
+              MaterialPageRoute<void>(
+                builder: (BuildContext context) => AppPage(
+                  name: name,
+                  rating: rating,
+                  categories: categories,
+                  id: id,
+                  icon: icon,
+                  version: version,
+                  briefDescription: briefDescription,
+                  description: description,
+                  developers: developers,
+                  technologies: technologies,
+                  locales: locales,
+                  appSize: appSize,
+                  source: source,
+                  donationLinks: donationLinks,
+                ),
+              ),
+            );
           },
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               const SizedBox(
-                width: 5,
+                width: 15,
               ),
               SizedBox(
                 height: 50,
@@ -70,7 +109,7 @@ class AppItem extends StatelessWidget {
                 child: icon,
               ),
               const SizedBox(
-                width: 10,
+                width: 15,
               ),
               Wrap(
                 direction: Axis.vertical,
@@ -80,14 +119,11 @@ class AppItem extends StatelessWidget {
                     name,
                     style: Theme.of(context).textTheme.headline2,
                   ),
-                  for (final item in categoryName)
-                    SizedBox(
-                      width: 100,
-                      child: Text(
-                        item,
-                        style: Theme.of(context).textTheme.subtitle2,
-                        overflow: TextOverflow.clip,
-                      ),
+                  for (final item in categories)
+                    Text(
+                      AppCategory.translateString(item),
+                      style: Theme.of(context).textTheme.subtitle2,
+                      overflow: TextOverflow.clip,
                     ),
                   Row(
                     children: [
@@ -96,7 +132,7 @@ class AppItem extends StatelessWidget {
                         style: Theme.of(context).textTheme.subtitle2,
                       ),
                       const SizedBox(
-                        width: 1,
+                        width: 2,
                       ),
                       Icon(
                         Icons.star,
@@ -104,8 +140,11 @@ class AppItem extends StatelessWidget {
                         color: Theme.of(context).iconTheme.color,
                       ),
                     ],
-                  )
+                  ),
                 ],
+              ),
+              const SizedBox(
+                width: 15,
               ),
             ],
           ),
