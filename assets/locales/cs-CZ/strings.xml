@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Category strings -->
+    <string name="category.all">Vše</string>
+    <string name="category.design">Vzhled</string>
+    <string name="category.games">Hry</string>
+    <string name="category.entertainment">Zábava</string>
+    <string name="category.development">Rozvoj</string>
+    <string name="category.music">Hudba</string>
+    <string name="category.productivity">Průměrné prodejní ceny výrobního odvětví Unie účtované odběratelům v Unii, kteří nejsou ve spojení, se v posuzovaném období vyvíjely takto:</string>
+    <string name="category.tools">Nástroje a nářadí</string>
+    <string name="category.finance">Finanční prostředky</string>
+    <string name="category.health">Zdraví</string>
+    <string name="category.education">Vzdělávání</string>
+    <string name="category.fitness">Vhodnost</string>
+    <string name="category.communication">Komunikace</string>
+    <string name="category.business">Podniky</string>
+    <!-- Applications topic strings -->
+    <string name="topic.show_all">Zobrazit všechny kategorie</string>
+    <string name="topic.trending">Populární</string>
+    <string name="topic.trending_hint">Zobrazit všechny populární aplikace</string>
+    <string name="topic.featured">Doporučené</string>
+    <string name="topic.featured_hint">Zobrazit všechny doporučené aplikace</string>
+    <string name="topic.newTopic">Nové</string>
+    <string name="topic.new_hint">Zobrazit všechny nedávno přidané aplikace</string>
+    <!-- Application page strings -->
+    <string name="app_page.download">Stáhnout</string>
+    <string name="app_page.download_dialog_title">Jste si jisti, že chcete nainstalovat?</string>
+    <string name="app_page.download_dialog_description">Pokud jste si jisti, že chcete nainstalovat tuto aplikaci, stiskněte Ano, jinak stiskněte Ne.</string>
+    <string name="app_page.download_dialog_confirm_installation">Ano</string>
+    <string name="app_page.download_dialog_cancel_installation">Ne</string>
+    <string name="app_page.donate">Přispět</string>
+    <string name="app_page.donate_dialog_title">Přispějte vývojáři aplikace</string>
+    <string name="app_page.donate_dialog_description">Pokud chcete podpořit vývoj aplikace, klikněte prosím na níže uvedené odkazy.</string>
+    <string name="app_page.donate_dialog_close">Zavřít</string>
+    <string name="app_page.information_developer_hint">Vývojář</string>
+    <string name="app_page.information_technology_hint">Technologie</string>
+    <string name="app_page.information_trending_hint">Populární pozice</string>
+    <string name="app_page.information_locale_hint">Místní prostředí</string>
+    <string name="app_page.information_size_hint">Velikost</string>
+    <string name="app_page.information_source_hint">Zdroj</string>
+    <string name="app_page.long_description_title">L 343, 22.12.2009, s. 1).</string>
+    <string name="app_page.images">Obrázky</string>
+    <string name="app_page.reviews">Recenze</string>
+    <string name="app_page.similar_applications">Podobné aplikace</string>
+    <!-- Settings page strings -->
+    <string name="settings.title">Nastavení</string>
+    <string name="settings.theme_mode">Režim motivu</string>
+    <string name="settings.dark_mode">Tmavý režim</string>
+    <string name="settings.dark_mode_description">Zapnout tmavý režim</string>
+    <string name="settings.locale">Místní prostředí</string>
+    <string name="settings.locale_title">Místní prostředí</string>
+    <string name="settings.locale_description">Změnit národní prostředí</string>
+    <!-- Search bar strings -->
+    <string name="searchbar.hint">Hledat aplikace</string>
+    <!-- Updates page strings -->
+    <string name="updates.title">Aktualizace</string>
+    <string name="updates.update_button">Aktualizovat</string>
+    <string name="updates.update_all_button">Aktualizovat všechny aplikace</string>
+    <string name="updates.update_cancel_all_button">Zrušit všechny aplikace</string>
+    <string name="updates.update_available">K dispozici je nová aktualizace</string>
+    <string name="updates.update_cancel_button">Zrušit</string>
+</resources>

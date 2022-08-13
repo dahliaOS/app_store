@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Category strings -->
+    <string name="category.all">所有的</string>
+    <string name="category.design">设计</string>
+    <string name="category.games">游戏</string>
+    <string name="category.entertainment">娱乐活动</string>
+    <string name="category.development">贸易和发展会议</string>
+    <string name="category.music">音乐</string>
+    <string name="category.productivity">生产率：</string>
+    <string name="category.tools">工具</string>
+    <string name="category.finance">A. 财务</string>
+    <string name="category.health">保健</string>
+    <string name="category.education">教育</string>
+    <string name="category.fitness">健身力</string>
+    <string name="category.communication">通讯</string>
+    <string name="category.business">业务</string>
+    <!-- Applications topic strings -->
+    <string name="topic.show_all">显示所有类别</string>
+    <string name="topic.trending">热门主题</string>
+    <string name="topic.trending_hint">显示所有热门应用程序</string>
+    <string name="topic.featured">精选</string>
+    <string name="topic.featured_hint">显示所有精选应用</string>
+    <string name="topic.newTopic">新的</string>
+    <string name="topic.new_hint">显示所有最近添加的应用程序</string>
+    <!-- Application page strings -->
+    <string name="app_page.download">下载</string>
+    <string name="app_page.download_dialog_title">您确定要安装吗？</string>
+    <string name="app_page.download_dialog_description">如果您确定要安装此应用程序，请按“是”，否则按“是”。</string>
+    <string name="app_page.download_dialog_confirm_installation">否</string>
+    <string name="app_page.download_dialog_cancel_installation">否</string>
+    <string name="app_page.donate">捐助</string>
+    <string name="app_page.donate_dialog_title">捐赠给应用程序开发者</string>
+    <string name="app_page.donate_dialog_description">如果您希望支持应用程序的开发，请点击下面的捐赠链接。</string>
+    <string name="app_page.donate_dialog_close">关闭</string>
+    <string name="app_page.information_developer_hint">开发者</string>
+    <string name="app_page.information_technology_hint">技术</string>
+    <string name="app_page.information_trending_hint">热门位置</string>
+    <string name="app_page.information_locale_hint">区域设置</string>
+    <string name="app_page.information_size_hint">大小</string>
+    <string name="app_page.information_source_hint">来源</string>
+    <string name="app_page.long_description_title">描述</string>
+    <string name="app_page.images">图像</string>
+    <string name="app_page.reviews">评论</string>
+    <string name="app_page.similar_applications">类似的应用程序</string>
+    <!-- Settings page strings -->
+    <string name="settings.title">设置</string>
+    <string name="settings.theme_mode">主题模式</string>
+    <string name="settings.dark_mode">暗色模式</string>
+    <string name="settings.dark_mode_description">打开暗色模式</string>
+    <string name="settings.locale">区域设置</string>
+    <string name="settings.locale_title">区域设置</string>
+    <string name="settings.locale_description">更改区域设置</string>
+    <!-- Search bar strings -->
+    <string name="searchbar.hint">搜索应用程序</string>
+    <!-- Updates page strings -->
+    <string name="updates.title">更新</string>
+    <string name="updates.update_button">更新</string>
+    <string name="updates.update_all_button">更新所有应用程序</string>
+    <string name="updates.update_cancel_all_button">取消所有应用程序</string>
+    <string name="updates.update_available">有新的更新可用</string>
+    <string name="updates.update_cancel_button">取消</string>
+</resources>

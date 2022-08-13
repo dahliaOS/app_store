@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Category strings -->
+    <string name="category.all">TODOS</string>
+    <string name="category.design">Projetar</string>
+    <string name="category.games">Partidas</string>
+    <string name="category.entertainment">Entretenimento</string>
+    <string name="category.development">Desenvolvimento</string>
+    <string name="category.music">Música</string>
+    <string name="category.productivity">Produtividade</string>
+    <string name="category.tools">Ferramentas</string>
+    <string name="category.finance">Finança</string>
+    <string name="category.health">Vida</string>
+    <string name="category.education">Educação</string>
+    <string name="category.fitness">Academia</string>
+    <string name="category.communication">Comunicaçao</string>
+    <string name="category.business">Empresas</string>
+    <!-- Applications topic strings -->
+    <string name="topic.show_all">Mostrar todas as categorias</string>
+    <string name="topic.trending">Tendências</string>
+    <string name="topic.trending_hint">Mostrar todos os aplicativos em alta</string>
+    <string name="topic.featured">Destaques</string>
+    <string name="topic.featured_hint">Mostrar todas as aplicações em destaque</string>
+    <string name="topic.newTopic">Novidades</string>
+    <string name="topic.new_hint">Mostrar todas as aplicações adicionadas recentemente</string>
+    <!-- Application page strings -->
+    <string name="app_page.download">BAIXAR</string>
+    <string name="app_page.download_dialog_title">Tem certeza de que deseja instalar?</string>
+    <string name="app_page.download_dialog_description">Se você tem certeza de que deseja instalar este aplicativo, pressione Sim, caso contrário, pressione Não.</string>
+    <string name="app_page.download_dialog_confirm_installation">sim</string>
+    <string name="app_page.download_dialog_cancel_installation">Não</string>
+    <string name="app_page.donate">Doar</string>
+    <string name="app_page.donate_dialog_title">Doar para o desenvolvedor do aplicativo</string>
+    <string name="app_page.donate_dialog_description">Se você deseja apoiar o desenvolvimento do aplicativo, clique nos links de doação abaixo.</string>
+    <string name="app_page.donate_dialog_close">FECHAR</string>
+    <string name="app_page.information_developer_hint">Desenvolvedores</string>
+    <string name="app_page.information_technology_hint">Tecnologia</string>
+    <string name="app_page.information_trending_hint">Posição em alta</string>
+    <string name="app_page.information_locale_hint">Localidade</string>
+    <string name="app_page.information_size_hint">Tamanho</string>
+    <string name="app_page.information_source_hint">fonte</string>
+    <string name="app_page.long_description_title">Descrição:</string>
+    <string name="app_page.images">Imagens</string>
+    <string name="app_page.reviews">Avaliações</string>
+    <string name="app_page.similar_applications">Aplicativos similares</string>
+    <!-- Settings page strings -->
+    <string name="settings.title">Confirgurações</string>
+    <string name="settings.theme_mode">Modo tema</string>
+    <string name="settings.dark_mode">Modo noturno</string>
+    <string name="settings.dark_mode_description">Ativar o modo escuro</string>
+    <string name="settings.locale">Localidade</string>
+    <string name="settings.locale_title">Localidade</string>
+    <string name="settings.locale_description">Alterar a localidade</string>
+    <!-- Search bar strings -->
+    <string name="searchbar.hint">Pesquisar aplicativos</string>
+    <!-- Updates page strings -->
+    <string name="updates.title">Atualizações</string>
+    <string name="updates.update_button">Atualização</string>
+    <string name="updates.update_all_button">Atualizar todos os aplicativos</string>
+    <string name="updates.update_cancel_all_button">Cancelar todas as aplicações</string>
+    <string name="updates.update_available">Nova atualização disponível</string>
+    <string name="updates.update_cancel_button">cancelar</string>
+</resources>

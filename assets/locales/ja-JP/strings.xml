@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Category strings -->
+    <string name="category.all">すべて</string>
+    <string name="category.design">デザイン</string>
+    <string name="category.games">ゲーム</string>
+    <string name="category.entertainment">エンターテイメント</string>
+    <string name="category.development">開発</string>
+    <string name="category.music">音楽</string>
+    <string name="category.productivity">Productivity</string>
+    <string name="category.tools">ツール</string>
+    <string name="category.finance">ファイナンス</string>
+    <string name="category.health">健康</string>
+    <string name="category.education">教育</string>
+    <string name="category.fitness">フィットネス</string>
+    <string name="category.communication">コミュニケーション</string>
+    <string name="category.business">ビジネス</string>
+    <!-- Applications topic strings -->
+    <string name="topic.show_all">すべてのカテゴリを表示</string>
+    <string name="topic.trending">トレンド</string>
+    <string name="topic.trending_hint">すべてのトレンドアプリケーションを表示</string>
+    <string name="topic.featured">注目の商品</string>
+    <string name="topic.featured_hint">すべての注目アプリケーションを表示</string>
+    <string name="topic.newTopic">新規作成</string>
+    <string name="topic.new_hint">最近追加されたすべてのアプリケーションを表示</string>
+    <!-- Application page strings -->
+    <string name="app_page.download">ダウンロード</string>
+    <string name="app_page.download_dialog_title">インストールしてもよろしいですか？</string>
+    <string name="app_page.download_dialog_description">このアプリケーションをインストールしたい場合は「はい」を押してください。それ以外の場合は「いいえ」を押してください。</string>
+    <string name="app_page.download_dialog_confirm_installation">はい</string>
+    <string name="app_page.download_dialog_cancel_installation">いいえ</string>
+    <string name="app_page.donate">寄付</string>
+    <string name="app_page.donate_dialog_title">アプリ開発者に寄付</string>
+    <string name="app_page.donate_dialog_description">アプリケーションの開発をサポートしたい場合は、以下の寄付リンクをクリックしてください。</string>
+    <string name="app_page.donate_dialog_close">閉じる</string>
+    <string name="app_page.information_developer_hint">開発者</string>
+    <string name="app_page.information_technology_hint">テクノロジー</string>
+    <string name="app_page.information_trending_hint">トレンドの位置</string>
+    <string name="app_page.information_locale_hint">ロケール</string>
+    <string name="app_page.information_size_hint">サイズ</string>
+    <string name="app_page.information_source_hint">ソース</string>
+    <string name="app_page.long_description_title">説明</string>
+    <string name="app_page.images">画像</string>
+    <string name="app_page.reviews">レビュー</string>
+    <string name="app_page.similar_applications">類似のアプリケーション</string>
+    <!-- Settings page strings -->
+    <string name="settings.title">設定</string>
+    <string name="settings.theme_mode">テーマモード</string>
+    <string name="settings.dark_mode">ダークモード</string>
+    <string name="settings.dark_mode_description">ダークモードを有効にする</string>
+    <string name="settings.locale">ロケール</string>
+    <string name="settings.locale_title">ロケール</string>
+    <string name="settings.locale_description">ロケールの変更</string>
+    <!-- Search bar strings -->
+    <string name="searchbar.hint">アプリケーションを検索</string>
+    <!-- Updates page strings -->
+    <string name="updates.title">更新</string>
+    <string name="updates.update_button">更新</string>
+    <string name="updates.update_all_button">すべてのアプリケーションを更新</string>
+    <string name="updates.update_cancel_all_button">すべてのアプリケーションをキャンセル</string>
+    <string name="updates.update_available">新しいアップデートが利用可能です</string>
+    <string name="updates.update_cancel_button">キャンセル</string>
+</resources>

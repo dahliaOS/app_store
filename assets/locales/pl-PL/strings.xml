@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Category strings -->
+    <string name="category.all">Wszystkie</string>
+    <string name="category.design">Projekt</string>
+    <string name="category.games">Gry</string>
+    <string name="category.entertainment">Rozrywka</string>
+    <string name="category.development">Rozwój</string>
+    <string name="category.music">Muzyka</string>
+    <string name="category.productivity">Wydajność</string>
+    <string name="category.tools">Narzędzia</string>
+    <string name="category.finance">Środki finansowe</string>
+    <string name="category.health">Zdrowie</string>
+    <string name="category.education">Edukacja</string>
+    <string name="category.fitness">Fitness</string>
+    <string name="category.communication">Komunikacja</string>
+    <string name="category.business">Biznes</string>
+    <!-- Applications topic strings -->
+    <string name="topic.show_all">Pokaż wszystkie kategorie</string>
+    <string name="topic.trending">Popularne</string>
+    <string name="topic.trending_hint">Pokaż wszystkie popularne aplikacje</string>
+    <string name="topic.featured">Polecane</string>
+    <string name="topic.featured_hint">Pokaż wszystkie polecane aplikacje</string>
+    <string name="topic.newTopic">Nowy</string>
+    <string name="topic.new_hint">Pokaż wszystkie ostatnio dodane aplikacje</string>
+    <!-- Application page strings -->
+    <string name="app_page.download">Pobierz</string>
+    <string name="app_page.download_dialog_title">Czy na pewno chcesz zainstalować?</string>
+    <string name="app_page.download_dialog_description">Jeśli jesteś pewien, że chcesz zainstalować tę aplikację, naciśnij Tak, w przeciwnym razie naciśnij nr</string>
+    <string name="app_page.download_dialog_confirm_installation">Tak</string>
+    <string name="app_page.download_dialog_cancel_installation">Nie</string>
+    <string name="app_page.donate">Wesprzyj</string>
+    <string name="app_page.donate_dialog_title">Wspomóż programistę aplikacji</string>
+    <string name="app_page.donate_dialog_description">Jeśli chcesz wesprzeć rozwój aplikacji, kliknij poniższy link do darowizny.</string>
+    <string name="app_page.donate_dialog_close">Zamknij</string>
+    <string name="app_page.information_developer_hint">Programista</string>
+    <string name="app_page.information_technology_hint">Technologia</string>
+    <string name="app_page.information_trending_hint">Popularna pozycja</string>
+    <string name="app_page.information_locale_hint">Język</string>
+    <string name="app_page.information_size_hint">Rozmiar</string>
+    <string name="app_page.information_source_hint">Źródło</string>
+    <string name="app_page.long_description_title">Opis</string>
+    <string name="app_page.images">Obrazy</string>
+    <string name="app_page.reviews">Recenzje</string>
+    <string name="app_page.similar_applications">Podobne aplikacje</string>
+    <!-- Settings page strings -->
+    <string name="settings.title">Ustawienia</string>
+    <string name="settings.theme_mode">Tryb motywu</string>
+    <string name="settings.dark_mode">Tryb ciemny</string>
+    <string name="settings.dark_mode_description">Włącz tryb ciemny</string>
+    <string name="settings.locale">Język</string>
+    <string name="settings.locale_title">Język</string>
+    <string name="settings.locale_description">Zmień ustawienia regionalne</string>
+    <!-- Search bar strings -->
+    <string name="searchbar.hint">Szukaj aplikacji</string>
+    <!-- Updates page strings -->
+    <string name="updates.title">Aktualizacje</string>
+    <string name="updates.update_button">Aktualizuj</string>
+    <string name="updates.update_all_button">Aktualizuj wszystkie aplikacje</string>
+    <string name="updates.update_cancel_all_button">Anuluj wszystkie aplikacje</string>
+    <string name="updates.update_available">Dostępna jest nowa aktualizacja</string>
+    <string name="updates.update_cancel_button">Anuluj</string>
+</resources>
