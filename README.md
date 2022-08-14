@@ -7,7 +7,7 @@
 <a href="https://dahliaos.io/donate">Donate</a> •
 <a href="https://docs.dahliaos.io">Documentation</a>
 
-# App store
+# App Store
 [![Crowdin](https://badges.crowdin.net/e/db82ee97ea486c56ac81a67f5b0ff7e9/localized.svg)](https://translate.dahliaos.io/app-store)
 
 - **Curated** marketplace for third-party applications on dahliaOS
