@@ -13,7 +13,7 @@
 - **Curated** marketplace for third-party applications on dahliaOS
 
 ![Screenshot](.github/images/screenshot.png)
-> App Store, landing page.
+> Landing page.
 
 ## Development
 
