@@ -12,6 +12,9 @@
 
 - **Curated** marketplace for third-party applications on dahliaOS
 
+![Screenshot](.github/images/screenshot.png)
+> App Store, landing page.
+
 ## Development
 
 To develop and locally test the application:
