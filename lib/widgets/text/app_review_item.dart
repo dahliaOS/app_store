@@ -55,17 +55,18 @@ class ReviewItem extends StatelessWidget {
               ),
               Text(
                 comment,
-                style: Theme.of(context)
-                    .textTheme
-                    .bodySmall!
-                    .apply(color: Colors.black),
+                style: Theme.of(context).textTheme.bodySmall!.apply(
+                      color: Theme.of(context).textTheme.subtitle2!.color,
+                    ),
               ),
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   Text(
                     rating.toString(),
-                    style: Theme.of(context).textTheme.bodyMedium,
+                    style: Theme.of(context).textTheme.bodyMedium!.apply(
+                          color: Theme.of(context).textTheme.subtitle2!.color,
+                        ),
                   ),
                   Icon(
                     Icons.star,

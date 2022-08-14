@@ -105,7 +105,12 @@ class _UpdatesState extends State<Updates> {
                                 style: Theme.of(context)
                                     .textTheme
                                     .bodySmall!
-                                    .apply(color: Colors.black),
+                                    .apply(
+                                      color: Theme.of(context)
+                                          .textTheme
+                                          .subtitle2!
+                                          .color,
+                                    ),
                               ),
                               trailing: TextButton(
                                 style: ButtonStyle(

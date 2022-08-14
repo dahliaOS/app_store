@@ -66,10 +66,9 @@ class Settings extends StatelessWidget {
                     ),
                     subtitle: Text(
                       strings.settings.darkModeDescription,
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodySmall!
-                          .apply(color: Colors.black),
+                      style: Theme.of(context).textTheme.bodySmall!.apply(
+                            color: Theme.of(context).textTheme.subtitle2!.color,
+                          ),
                     ),
                     shape: Theme.of(context).listTileTheme.shape,
                     tileColor: Theme.of(context).listTileTheme.tileColor,
@@ -111,10 +110,10 @@ class Settings extends StatelessWidget {
                       ),
                       subtitle: Text(
                         strings.settings.localeDescription,
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodySmall!
-                            .apply(color: Colors.black),
+                        style: Theme.of(context).textTheme.bodySmall!.apply(
+                              color:
+                                  Theme.of(context).textTheme.subtitle2!.color,
+                            ),
                       ),
                       leading: Icon(
                         Icons.language,
