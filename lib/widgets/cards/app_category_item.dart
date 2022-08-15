@@ -32,6 +32,7 @@ class AppCategoryItem extends StatelessWidget {
           ),
           Text(
             name,
+            textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.bodySmall!.apply(
                   color: Theme.of(context).textTheme.subtitle2!.color,
                 ),

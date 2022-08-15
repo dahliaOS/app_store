@@ -37,6 +37,6 @@ class ThemeProvider with ChangeNotifier {
 }
 
 ThemeData theme(BuildContext context) {
-  final _themeprovider = Provider.of<ThemeProvider>(context);
+  final ThemeProvider _themeprovider = Provider.of<ThemeProvider>(context);
   return _themeprovider.getTheme();
 }

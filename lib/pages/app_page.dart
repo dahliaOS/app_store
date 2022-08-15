@@ -385,7 +385,7 @@ class AppPage extends StatelessWidget {
                         icon: Icons.person,
                       ),
                       AppCategoryItem(
-                        name: technologies.join(', '),
+                        name: technologies.join('\n'),
                         tooltip: strings.appPage.informationTechnologyHint,
                         icon: Icons.code,
                       ),
