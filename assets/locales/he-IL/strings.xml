@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Category strings -->
+    <string name="category.all">הכול</string>
+    <string name="category.design">עיצוב</string>
+    <string name="category.games">משחקים</string>
+    <string name="category.entertainment">בידור</string>
+    <string name="category.development">תכנות</string>
+    <string name="category.music">מוזיקה</string>
+    <string name="category.productivity">הפקה</string>
+    <string name="category.tools">כלים</string>
+    <string name="category.finance">פיננסים</string>
+    <string name="category.health">בריאות</string>
+    <string name="category.education">חינוך</string>
+    <string name="category.fitness">חיטוב</string>
+    <string name="category.communication">תקשורת</string>
+    <string name="category.business">עסקים</string>
+    <!-- Applications topic strings -->
+    <string name="topic.show_all">הצגת כל הקטגוריות</string>
+    <string name="topic.trending">מובילים</string>
+    <string name="topic.trending_hint">הצגת כל היישומים המובילים</string>
+    <string name="topic.featured">מומלצים</string>
+    <string name="topic.featured_hint">הצגת כל היישומים המומלצים</string>
+    <string name="topic.newTopic">חדש</string>
+    <string name="topic.new_hint">הצגת כל היישומים שנוספו לאחרונה</string>
+    <!-- Application page strings -->
+    <string name="app_page.download">הורדה</string>
+    <string name="app_page.download_dialog_title">להתקין?</string>
+    <string name="app_page.download_dialog_description">אם ברור לך שיש לך עניין בהתקנת היישום יש ללחוץ על כן, אחרת על לא.</string>
+    <string name="app_page.download_dialog_confirm_installation">כן</string>
+    <string name="app_page.download_dialog_cancel_installation">לא</string>
+    <string name="app_page.donate">תרומה</string>
+    <string name="app_page.donate_dialog_title">לתרום למתכנתים היישום</string>
+    <string name="app_page.donate_dialog_description">כדי לתמוך בפיתוח היישום, נא ללחוץ על כפתורי התרומה שלהלן.</string>
+    <string name="app_page.donate_dialog_close">סגירה</string>
+    <string name="app_page.information_developer_hint">מתכנתים</string>
+    <string name="app_page.information_technology_hint">טכנולוגיה</string>
+    <string name="app_page.information_trending_hint">מיקום מוביל</string>
+    <string name="app_page.information_locale_hint">שפה</string>
+    <string name="app_page.information_size_hint">גודל</string>
+    <string name="app_page.information_source_hint">מקור</string>
+    <string name="app_page.long_description_title">תיאור</string>
+    <string name="app_page.images">תמונות</string>
+    <string name="app_page.reviews">ביקורות</string>
+    <string name="app_page.similar_applications">יישומים דומים</string>
+    <!-- Settings page strings -->
+    <string name="settings.title">הגדרות</string>
+    <string name="settings.theme_mode">מצב ערכות עיצוב</string>
+    <string name="settings.dark_mode">מצב כהה</string>
+    <string name="settings.dark_mode_description">הפעלת מצב כהה</string>
+    <string name="settings.locale">שפה</string>
+    <string name="settings.locale_title">שפה</string>
+    <string name="settings.locale_description">החלפת השפה</string>
+    <!-- Search bar strings -->
+    <string name="searchbar.hint">חיפוש יישומים</string>
+    <!-- Updates page strings -->
+    <string name="updates.title">עדכונים</string>
+    <string name="updates.update_button">עדכון</string>
+    <string name="updates.update_all_button">עדכון כל היישומים</string>
+    <string name="updates.update_cancel_all_button">ביטול כל העדכונים</string>
+    <string name="updates.update_available">יש עדכון חדש</string>
+    <string name="updates.update_cancel_button">ביטול</string>
+</resources>
