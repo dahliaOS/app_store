@@ -1,4 +1,6 @@
-![Banner](.github/images/banner.svg)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/dahliaOS/icons/b9b49601327995ae62ce27a8147464d6dc1fb4dc/icons/plastic/svg/AppStore.svg" />
+</p>
 
 <p align="center">
 <a href="https://dahliaos.io">Website</a> •
