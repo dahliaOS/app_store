@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/dahliaOS/icons/b9b49601327995ae62ce27a8147464d6dc1fb4dc/icons/plastic/svg/AppStore.svg" />
+  <img src="https://raw.githubusercontent.com/dahliaOS/icons/6efaca333786cdd96a8afa90de5ef7c5aee01c3a/icons/applications/plastic/svg/AppStore.svg" />
 </p>
 
 <p align="center">
