@@ -21,14 +21,14 @@
 
 To develop and locally test the application:
 
-### Step 1. Install development tools
+### 1. Install development tools
 
 1. Install [Flutter](https://docs.flutter.dev/get-started/install)
 2. Install an IDE of your choice (we recommend [VSCode](https://code.visualstudio.com/))
     * We also recommend installing Dart and Flutter extensions if you're opting in for VSCode.
     For other IDEs, please inform yourself.
 
-### Step 2. Install dependencies
+### 2. Install dependencies
 
 Install pub dependencies required to run the application by running:
 
@@ -36,7 +36,7 @@ Install pub dependencies required to run the application by running:
 flutter pub get
 ```
 
-### Step 3. Run the application
+### 3. Run the application
 
 Run the application in an enviroment of your choice by running:
 
