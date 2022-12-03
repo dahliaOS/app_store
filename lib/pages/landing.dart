@@ -27,7 +27,7 @@ import 'package:app_store/widgets/cards/app_item.dart';
 import 'package:app_store/widgets/text_fields/search_bar.dart';
 import 'package:badges/badges.dart';
 import 'package:expandable_page_view/expandable_page_view.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Badge;
 import 'package:provider/provider.dart';
 
 class Landing extends StatefulWidget {
